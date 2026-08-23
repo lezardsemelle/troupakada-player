@@ -258,7 +258,15 @@ Les vrais fichiers MP3 batucada seront fournis ultérieurement et remplaceront c
 
 ---
 
-### Modification 4 — Bouton Pause
+### ✅ Modification 4 — Bouton Pause (déjà présente, vérifié le 2026-08-23)
+
+**Constat** : contrairement à l'hypothèse ci-dessous, `Beatbox.stop(reset?: boolean)` accepte déjà un
+paramètre optionnel. `src/ui/play-pause-stop-button.vue` appelle `stop()` sans reset pour le bouton ▶/⏸
+(position conservée), un bouton "Stop" séparé appelle `stop()` puis `setPosition(0)` (vrai reset).
+Testé en direct dans le lecteur de pattern : pause au temps 4 → reprise exactement au temps 4.
+Aucun changement de code nécessaire.
+
+Paragraphe d'origine conservé pour mémoire (son constat de départ était erroné) :
 
 **Contexte** : beatbox.js ne supporte que play/stop. La pause se gère via l'API
 Web Audio nativement disponible dans le navigateur.
@@ -325,7 +333,18 @@ export const toggleFavorite = (tuneId: string): void => {
 
 ---
 
-### Modification 6 — Export PDF
+### ✅ Modification 6 — Export PDF (fait le 2026-08-23)
+
+**Réalisé** : `src/services/pdfExport.ts` (fonction unique `exportPatternToPdf(state, [tuneName, patternName])`,
+réutilisable pour le morceau principal ("Tune") et chaque break — pas besoin de deux fonctions séparées vu que
+dans ce fork les breaks sont juste des entrées `Pattern` comme les autres dans `tune.patterns`). Grille dessinée
+sur canvas off-screen puis intégrée au PDF via `addImage`, une ligne par instrument réellement utilisé, groupement
+visuel par temps (traits verticaux), mnémonique décodé automatiquement depuis les frappes `ot` (déjà mappées vers
+des mots via `config.strokes`). Bouton PDF ajouté dans `tune-info.vue` à côté du bouton MP3 existant, sur chaque
+ligne de la table "Sons" (donc sur le morceau et sur chaque break). Testé avec un vrai PDF généré et lu (Afoxé).
+La section "Gestes de maîstration" du PDF est différée à la Modification 7 (pas encore implémentée).
+
+Spécification d'origine conservée pour mémoire :
 
 **Dépendance à ajouter** :
 ```bash
@@ -379,7 +398,33 @@ export const exportBreakToPdf = (
 
 ---
 
-### Modification 7 — Gestes de maîstration
+### 🟡 Modification 7 — Gestes de maîstration (base + affichage fait le 2026-08-23, éditeur reporté)
+
+**Réalisé** (décidé avec Amel : base + affichage seul, pas assez de contenu réel pour justifier l'éditeur
+Compose ou le panneau pendant lecture) :
+- `src/maestrationSigns.ts` : modèle de données (`standardSigns` avec les 3 gestes d'exemple tourne/break/fin
+  du plan d'origine, `tunesMaestration` avec Afoxé comme seul exemple — à compléter avec Troup'akada).
+- Les photos ne sont **pas** chargées via un chemin runtime `"assets/maestration/x.jpg"` comme suggéré plus bas :
+  le build de prod empaquette tout dans un seul fichier HTML (`vite-plugin-singlefile`, voir `vite.config.ts`),
+  donc un chemin brut y donnerait un 404 permanent une fois construit. Utilisé `import.meta.glob` à la place
+  (même mécanisme que les fichiers i18n et les descriptions de morceaux) pour empaqueter correctement les
+  photos une fois ajoutées dans `assets/maestration/`, avec repli automatique sur le SVG si aucune photo n'existe
+  pour un geste donné.
+- `src/ui/listen/maestration-signs.vue` : section "Gestes" en accordéon Bootstrap, intégrée dans `tune-info.vue`.
+  N'affiche rien si le morceau n'a pas d'entrée dans `tunesMaestration`.
+- Intégration dans l'export PDF (Modification 6) : ligne "Gestes : ..." ajoutée sous la grille. Testé avec un
+  vrai PDF généré (Afoxé → "Gestes : Tourne, Break, Fin").
+- ⚠️ Ne pas confondre avec `src/ui/maestration/` : dossier de code AngularJS mort, vestige de l'ancienne version
+  du projet avant portage Vue, non référencé nulle part dans le build actuel. Sujet différent (cues de
+  conducteur en direct, pas photos de référence).
+
+**Reporté** : interface d'association geste↔morceau dans Composer, et panneau gestes visible pendant la lecture.
+Nécessitent d'abord une vraie liste de gestes/associations de la part de Troup'akada. Si l'éditeur Compose est
+repris plus tard, il faudra aussi décider où persister les associations utilisateur (`tunesMaestration` est un
+tableau statique en code source, pas éditable à l'exécution — probablement un calque localStorage façon favoris
+si c'est pensé comme une personnalisation par navigateur, pas partagée).
+
+Spécification d'origine conservée pour mémoire :
 
 **Dossier à créer** : `src/assets/maestration/`
 Stocker les images (JPG/PNG/SVG) nommées par identifiant de geste.
@@ -453,7 +498,17 @@ Les photos réelles sont ajoutées progressivement dans `assets/maestration/`.
 
 ---
 
-### Modification 8 — Affichage des croches (priorité basse)
+### ✅ Modification 8 — Affichage des croches (fait le 2026-08-23)
+
+**Réalisé** : `src/ui/pattern-player/pattern-player.vue` avait déjà exactement ce mécanisme pour
+`time: 12` et `time: 20` (suppression sélective de `border-right` par index de case, via la classe
+dynamique `time-${pattern.time}` déjà posée sur la table). Ajouté un bloc `&.time-8` du même type :
+bordure supprimée aux positions relatives 0/2/4/6 dans chaque temps de 8 croches, ce qui fusionne
+visuellement chaque paire tout en gardant le séparateur léger par défaut entre les paires (la bordure
+forte de fin de temps, elle, n'est pas touchée). Aucun changement de `config.ts` ni de logique JS, comme
+prévu. Testé sur "Bomba" → "Break 1" (a du `time: 8`) : le regroupement par paires est visible.
+
+Spécification d'origine conservée pour mémoire :
 
 **Contexte** : `playTime: 120` dans `config.ts` supporte déjà les subdivisions.
 Aucun changement moteur ni `config.ts` nécessaire.
@@ -474,16 +529,16 @@ Aucun changement moteur ni `config.ts` nécessaire.
    npm run dev-server                   ← sans Docker
 3. http://localhost:8080
 
-4. Appliquer les modifications dans l'ordre :
-   a. Bugfixes upstream (Prérequis)
-   b. Renommage (Modif 1)           → vérification immédiate dans le navigateur
-   c. Catégories troupakada (Modif 2) → liste latérale filtrée par défaut
-   d. Instruments + samples (Modif 3)
-   e. Pause (Modif 4)
-   f. Favoris (Modif 5)
-   g. Export PDF (Modif 6)          → yarn add jspdf avant
-   h. Gestes de maîstration (Modif 7)
-   i. Croches affichage (Modif 8)
+4. Appliquer les modifications dans l'ordre — toutes faites le 2026-08-23 :
+   a. ✅ Bugfixes upstream (Prérequis) — déjà inclus avant le début de la session
+   b. ✅ Renommage (Modif 1)
+   c. ✅ Catégories troupakada (Modif 2)
+   d. ✅ Instruments + samples (Modif 3)
+   e. ✅ Pause (Modif 4) — déjà présente, aucun code ajouté
+   f. ✅ Favoris (Modif 5)
+   g. ✅ Export PDF (Modif 6)
+   h. 🟡 Gestes de maîstration (Modif 7) — base + affichage fait, éditeur Compose et panneau lecture reportés
+   i. ✅ Croches affichage (Modif 8)
 
 5. Avant chaque mise en prod :
    docker compose --profile prod up --build
