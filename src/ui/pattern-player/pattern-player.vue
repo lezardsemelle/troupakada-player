@@ -364,6 +364,14 @@
 				}
 			}
 
+			&.time-8 {
+				// Group the 8 croches of a beat visually into pairs, keeping only the light default
+				// border between pairs (not the stronger beat/bar border) instead of one after every stroke
+				.stroke-0, .stroke-2, .stroke-4, .stroke-6 {
+					border-right: none;
+				}
+			}
+
 			&.time-12 {
 				.stroke-inner {
 					min-width: 1ex;
