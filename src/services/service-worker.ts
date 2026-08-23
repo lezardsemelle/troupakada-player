@@ -1,4 +1,9 @@
-const enable = !process?.env?.DISABLE_SW || process.env.DISABLE_SW === "false";
+// Désactivé en dev (yarn dev-server) : le service worker met en cache la page et les modules
+// servis par Vite, et republie un message "nouvelle version" à chaque changement de fichier —
+// perturbant en plein travail dans Composer (constaté : bannière de rafraîchissement intempestive
+// pendant une session d'édition). Vite gère déjà son propre rechargement à chaud, pas besoin d'une
+// couche de cache par-dessus en développement.
+const enable = import.meta.env.PROD && (!process?.env?.DISABLE_SW || process.env.DISABLE_SW === "false");
 
 export function registerServiceWorker(): void {
 	if("serviceWorker" in navigator) {

@@ -128,11 +128,16 @@
 	"trytry": {
 		"patterns": {
 			"Tune": {
-				"lg": "0XX                     00",
+				"lg": "0XXX 0  X               00",
 				"mg": "                     X",
 				"re": "       X",
 				"time": 8,
-				"length": 4
+				"length": 4,
+				"ca": "            X X X X XXXXr r  f",
+				"hg": "t",
+				"ta": "r",
+				"ag": "           o",
+				"ch": "     X"
 			}
 		}
 	}
