@@ -113,13 +113,13 @@
     },
     "config": {
         "stroke-volume-defaults": "Par défaut",
-        "instruments-ls": "Surdo grave",
-        "instruments-ms": "Surdo moyen",
-        "instruments-hs": "Surdo aigu",
-        "instruments-re": "Repi",
-        "instruments-sn": "Caisse claire",
+        "instruments-lg": "Surdo grave",
+        "instruments-mg": "Surdo médium",
+        "instruments-hg": "Surdo aigu",
+        "instruments-re": "Repique",
+        "instruments-ca": "Caixa",
         "instruments-ag": "Agogô",
-        "instruments-ot": "Cris",
+        "instruments-ot": "Voix / Autres",
         "stroke-description-hd": "Frapper avec la main",
         "stroke-description-0": "Étouffer avec la main",
         "stroke-description-sil": "Coup silencieux",
@@ -130,6 +130,8 @@
         "stroke-description-s": "Rebond doux",
         "time-with-quintuplets": "{{time}} avec quintolets",
         "category-all": "Tous les morceaux",
+        "category-troupakada": "Troup'akada",
+        "category-favorites": "Favoris",
         "category-common": "Morceaux communs",
         "category-uncommon": "Morceaux peu communs",
         "category-new": "Nouveaux morceaux",
@@ -140,7 +142,7 @@
         "category-cultural-appropriation": "Appropriation culturelle",
         "stroke-volume-shitty": "Haut-parleurs foireux",
         "instruments-ta": "Tamborim",
-        "instruments-sh": "Shaker",
+        "instruments-ch": "Chocalho",
         "stroke-description-w": "Baguette \"fouet\" (tamborim)",
         "category-tricky": "Complexe",
         "time-with-triplets": "{{time}} avec triolets",
@@ -216,6 +218,7 @@
         "video": "Vidéo",
         "sounds": "Sons",
         "download-mp3": "Télécharger en MP3",
+        "download-pdf": "Télécharger en PDF",
         "notation": "Notation",
         "notation-info": "Cliquer sur le {{pen}} sur les breaks ci-dessous pour voir les notes."
     },
@@ -252,6 +255,13 @@
     },
     "pattern-list-filter": {
         "filter-placeholder": "Filtre : {{category}}"
+    },
+    "tune-list": {
+        "add-favorite": "Ajouter aux favoris",
+        "remove-favorite": "Retirer des favoris"
+    },
+    "maestration-signs": {
+        "title": "Gestes"
     },
     "pattern-placeholder": {
         "restore-title": "Restaurer l'original",

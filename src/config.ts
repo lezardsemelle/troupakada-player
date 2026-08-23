@@ -1,7 +1,7 @@
 import * as z from "zod";
 import { getI18n } from "./services/i18n";
 
-const instrumentKeys = ["ls", "ms", "hs", "re", "sn", "ta", "ag", "sh", "ot"] as const;
+const instrumentKeys = ["lg", "mg", "hg", "re", "ca", "ta", "ag", "ch", "ot"] as const;
 export const instrumentValidator = z.enum(instrumentKeys);
 export type Instrument = z.infer<typeof instrumentValidator>;
 
@@ -9,7 +9,7 @@ export const strokeValidator = z.string();
 /** A stroke is a single sound that an instrument makes. It is identified by a single letter, corresponding to the file name of the audio file in assets/audio/. */
 export type Stroke = z.infer<typeof strokeValidator>;
 
-const categoryKeys = ["common", "uncommon", "new", "proposed", "custom", "onesurdo", "easy", "medium", "tricky", "western", "cultural-appropriation", "all"] as const;
+const categoryKeys = ["troupakada", "favorites", "common", "uncommon", "new", "proposed", "custom", "onesurdo", "easy", "medium", "tricky", "western", "cultural-appropriation", "all"] as const;
 export const categoryValidator = z.enum(categoryKeys);
 /** Categories by which the tune list can be filtered. Each tune can be part of any number of categories. */
 export type Category = z.infer<typeof categoryValidator>;
@@ -73,24 +73,24 @@ const config: Config = {
 	instrumentKeys: [...instrumentKeys],
 
 	instruments: {
-		ls: {
-			name: () => getI18n().t("config.instruments-ls"),
+		lg: {
+			name: () => getI18n().t("config.instruments-lg"),
 			strokes: [ "X", "0", "s", "t", "r" ]
 		},
-		ms: {
-			name: () => getI18n().t("config.instruments-ms"),
+		mg: {
+			name: () => getI18n().t("config.instruments-mg"),
 			strokes: [ "X", "0", "s", "t", "r" ]
 		},
-		hs: {
-			name: () => getI18n().t("config.instruments-hs"),
+		hg: {
+			name: () => getI18n().t("config.instruments-hg"),
 			strokes: [ "X", "0", "s", "t", "r" ]
 		},
 		re: {
 			name: () => getI18n().t("config.instruments-re"),
 			strokes: [ "X", "f", "r", "h", ".", "z", "s" ]
 		},
-		sn: {
-			name: () => getI18n().t("config.instruments-sn"),
+		ca: {
+			name: () => getI18n().t("config.instruments-ca"),
 			strokes: [ ".", "X", "r", "f" ]
 		},
 		ta: {
@@ -101,8 +101,8 @@ const config: Config = {
 			name: () => getI18n().t("config.instruments-ag"),
 			strokes: [ "o", "a", "r", "." ]
 		},
-		sh: {
-			name: () => getI18n().t("config.instruments-sh"),
+		ch: {
+			name: () => getI18n().t("config.instruments-ch"),
 			strokes: [ "X", "." ]
 		},
 		ot: {
@@ -246,28 +246,28 @@ const config: Config = {
 		"Defaults": {
 			displayName: () => getI18n().t("config.stroke-volume-defaults"),
 			volumes: {
-				ls: 0.7,
-				ms: 0.7,
-				hs: 0.7,
+				lg: 0.7,
+				mg: 0.7,
+				hg: 0.7,
 				re: 1.6,
-				sn: 1.2,
+				ca: 1.2,
 				ta: 1.4,
 				ag: 1,
-				sh: 0.5,
+				ch: 0.5,
 				ot: 1
 			}
 		},
 		"Shitty speakers": {
 			displayName: () => getI18n().t("config.stroke-volume-shitty"),
 			volumes: {
-				ls: 1,
-				ms: 1,
-				hs: 1.1,
+				lg: 1,
+				mg: 1,
+				hg: 1.1,
 				re: 1.5,
-				sn: 1.3,
+				ca: 1.3,
 				ta: 1.2,
 				ag: 1,
-				sh: 0.45,
+				ch: 0.45,
 				ot: 1
 			}
 		}
@@ -289,6 +289,8 @@ const config: Config = {
 
 	filterCats: {
 		all: () => getI18n().t("config.category-all"),
+		troupakada: () => getI18n().t("config.category-troupakada"),
+		favorites: () => getI18n().t("config.category-favorites"),
 		common: () => getI18n().t("config.category-common"),
 		uncommon: () => getI18n().t("config.category-uncommon"),
 		new: () => getI18n().t("config.category-new"),
@@ -302,7 +304,7 @@ const config: Config = {
 		"cultural-appropriation": () => getI18n().t("config.category-cultural-appropriation")
 	},
 
-	tuneOfTheYear: "The Roof Is on Fire",
+	tuneOfTheYear: "Afoxe", // TODO: à confirmer avec Troup'akada
 
 	defaultSpeed: 100
 };

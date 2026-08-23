@@ -33,6 +33,11 @@ i18n.init({
 	supportedLngs: Object.keys(resources),
 	fallbackLng: DEFAULT_LANGUAGE,
 	resources: resources,
+	interpolation: {
+		// Vue already escapes everything it renders, so i18next's own HTML-escaping of interpolated
+		// values would just double-escape (e.g. turning a translated string containing "'" into "&#39;")
+		escapeValue: false
+	},
 	detection: {
 		order: ['querystring', 'localStorage', 'navigator'],
 		lookupQuerystring: LANG_QUERY,

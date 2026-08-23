@@ -181,7 +181,8 @@
 		"tune-sheet-pdf": "Tune sheet (PDF)",
 		"video": "Video",
 		"sounds": "Sounds",
-		"download-mp3": "Download as MP3"
+		"download-mp3": "Download as MP3",
+		"download-pdf": "Download as PDF"
 	},
 	"pattern-length-picker": {
 		"length": "Length: {{length}}"
@@ -226,6 +227,13 @@
 	"pattern-list-filter": {
 		"filter-placeholder": "Filter: {{category}}"
 	},
+	"tune-list": {
+		"add-favorite": "Add to favorites",
+		"remove-favorite": "Remove from favorites"
+	},
+	"maestration-signs": {
+		"title": "Gestures"
+	},
 	"pattern-placeholder": {
 		"restore-title": "Restore original",
 		"restore-message": "Are you sure that you want to revert your modifications to {{patternName}} ({{tuneName}}) and restore the original break?",
@@ -247,15 +255,15 @@
 		"refresh-refresh": "Refresh the page"
 	},
 	"config": {
-		"instruments-ls": "Low Surdo",
-		"instruments-ms": "Mid Surdo",
-		"instruments-hs": "High Surdo",
-		"instruments-re": "Repi",
-		"instruments-sn": "Snare",
+		"instruments-lg": "Low Surdo",
+		"instruments-mg": "Mid Surdo",
+		"instruments-hg": "High Surdo",
+		"instruments-re": "Repique",
+		"instruments-ca": "Caixa",
 		"instruments-ta": "Tamborim",
 		"instruments-ag": "Agogô",
-		"instruments-sh": "Shaker",
-		"instruments-ot": "Shouting",
+		"instruments-ch": "Chocalho",
+		"instruments-ot": "Voice / Other",
 		"stroke-description-hd": "Slap with hand",
 		"stroke-description-0": "Damp with hand",
 		"stroke-description-sil": "Silent stroke",
@@ -268,6 +276,8 @@
 		"time-with-triplets": "{{time}} with triplets",
 		"time-with-quintuplets": "{{time}} with quintuplets",
 		"category-all": "All tunes",
+		"category-troupakada": "Troup'akada",
+		"category-favorites": "Favorites",
 		"category-common": "Common tunes",
 		"category-uncommon": "Uncommon tunes",
 		"category-new": "New tunes",

@@ -3,8 +3,8 @@
 	import { Instrument } from '../../config';
 	import { PlaybackSettings } from '../../state/playbackSettings';
 
-	const SURDOS: Instrument[] = ["ls", "ms", "hs"];
-	const MAIN_SURDO: Instrument = "ms";
+	const SURDOS: Instrument[] = ["lg", "mg", "hg"];
+	const MAIN_SURDO: Instrument = "mg";
 </script>
 <script setup lang="ts">
 

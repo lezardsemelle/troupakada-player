@@ -2,7 +2,8 @@
 	import { computed, nextTick, ref, watch } from "vue";
 	import { injectStateRequired } from "../../services/state";
 	import PatternListFilter, { Filter, filterPatternList } from "../pattern-list-filter.vue";
-	import { getLocalizedDisplayName } from "../../services/i18n";
+	import { getLocalizedDisplayName, useI18n } from "../../services/i18n";
+	import { isFavorite, toggleFavorite } from "../../services/favorites";
 
 	const props = defineProps<{
 		tuneName: string | null | undefined;
@@ -41,6 +42,8 @@
 	const scrollToTune = () => {
 		tuneListRef.value?.querySelector('.nav-link.active')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 	};
+
+	const i18n = useI18n();
 </script>
 
 <template>
@@ -52,6 +55,16 @@
 		<ul class="nav nav-pills flex-column flex-nowrap" ref="tuneListRef">
 			<li v-for="thisTuneName in tuneList" :key="thisTuneName" class="nav-item">
 				<a class="nav-link" :class="{ active: thisTuneName == tuneName }" href="javascript:" @click="tuneName = thisTuneName" draggable="false">
+					<span
+						class="bb-favorite-toggle"
+						:class="{ active: isFavorite(thisTuneName) }"
+						role="button"
+						tabindex="0"
+						:title="isFavorite(thisTuneName) ? i18n.t('tune-list.remove-favorite') : i18n.t('tune-list.add-favorite')"
+						@click.stop="toggleFavorite(thisTuneName)"
+						@keydown.enter.stop.prevent="toggleFavorite(thisTuneName)"
+						@keydown.space.stop.prevent="toggleFavorite(thisTuneName)"
+					><fa icon="star" /></span>
 					{{getLocalizedDisplayName(state.tunes[thisTuneName].displayName || thisTuneName)}}
 				</a>
 			</li>
@@ -78,6 +91,22 @@
 			position: relative;
 			padding: 0 1.2em 1.2em 1.2em;
 			margin: 0 -1.2em -1.2em -1.2em;
+		}
+	}
+
+	.bb-favorite-toggle {
+		display: inline-block;
+		margin-right: 0.4em;
+		opacity: 0.35;
+		cursor: pointer;
+
+		&:hover, &:focus-visible {
+			opacity: 0.7;
+		}
+
+		&.active {
+			color: #f5c518;
+			opacity: 1;
 		}
 	}
 </style>

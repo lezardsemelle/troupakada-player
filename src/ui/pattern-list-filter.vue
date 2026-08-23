@@ -4,13 +4,14 @@
 	import config, { Category } from "../config";
 	import { computed } from "vue";
 	import { useI18n } from "../services/i18n";
+	import { isFavorite } from "../services/favorites";
 
 	export interface Filter {
 		text: string;
 		cat: Category;
 	}
 
-	export const DEFAULT_FILTER: Filter = { text: "", cat: "all" };
+	export const DEFAULT_FILTER: Filter = { text: "", cat: "troupakada" };
 
 	function textIsInTuneName(state: State, name: string, text: string): boolean {
 		const tune = state.tunes[name];
@@ -25,7 +26,8 @@
 		const tuneNames = getSortedTuneList(state);
 		const text = params && params.text.trim().toLowerCase() || "";
 		for(let i = 0; i < tuneNames.length; i++) {
-			if(text ? textIsInTuneName(state, tuneNames[i], text) : tuneIsInCategory(state.tunes[tuneNames[i]], params.cat))
+			const isInCat = params.cat === "favorites" ? isFavorite(tuneNames[i]) : tuneIsInCategory(state.tunes[tuneNames[i]], params.cat);
+			if(text ? textIsInTuneName(state, tuneNames[i], text) : isInCat)
 				ret.push(tuneNames[i]);
 		}
 		return ret;
