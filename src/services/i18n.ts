@@ -52,6 +52,13 @@ for (const [filename, module] of Object.entries(import.meta.glob('../../assets/t
 	i18n.addResource(m[2], TUNE_DESCRIPTIONS_NS, m[1], (module as any).html);
 }
 
+const HOME_NS = "home";
+const HOME_KEY = "home";
+for (const [filename, module] of Object.entries(import.meta.glob('../../assets/home/*.md', { eager: true }))) {
+	const m = filename.match(/([^/\\]+)\.md/)!;
+	i18n.addResource(m[1], HOME_NS, HOME_KEY, (module as any).html);
+}
+
 const APP_INSTRUCTIONS_NS = "app-instructions";
 const APP_INSTRUCTIONS_KEY = "app-instructions";
 for (const [filename, module] of Object.entries(import.meta.glob('../../assets/appInstructions/*.md', { eager: true }))) {
@@ -107,6 +114,10 @@ export function getTuneDescriptionHtml(tuneName: string): string {
 
 export function getAppInstructionsHtml(): string {
 	return i18n.t(APP_INSTRUCTIONS_KEY, { ns: APP_INSTRUCTIONS_NS });
+}
+
+export function getHomeHtml(): string {
+	return i18n.t(HOME_KEY, { ns: HOME_NS, defaultValue: "" });
 }
 
 export function getLocalizedDisplayName(name: string): string {

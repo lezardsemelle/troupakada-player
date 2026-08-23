@@ -10,10 +10,13 @@ export type Route = {
 	tuneName?: string;
 	patternName?: string;
 	importData?: string;
+} | {
+	tab: "home";
 };
 
 const ROUTES = {
 	"root": "/",
+	"home": "/home/",
 	"listen-tune": "/listen/:tuneName/",
 	"listen-pattern": "/listen/:tuneName/:patternName",
 	"compose": "/compose/",
@@ -77,6 +80,9 @@ function pathToRoute(path: string): Route {
 
 		case "root":
 			return { tab: "listen" };
+
+		case "home":
+			return { tab: "home" };
 	};
 }
 
@@ -101,6 +107,11 @@ function routeToPath(route: Route): string {
 			} else {
 				match = { name: route.importData ? "compose-importAndPattern" : "compose-pattern", params: { importData: route.importData, tuneName: route.tuneName, patternName: route.patternName } };
 			}
+			break;
+
+		case "home":
+			match = { name: "home" };
+			break;
 	}
 
 	if (!match) {

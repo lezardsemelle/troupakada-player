@@ -226,7 +226,8 @@
 	},
 	"overview": {
 		"listen": "Listen",
-		"compose": "Compose"
+		"compose": "Compose",
+		"home": "Home"
 	},
 	"pattern-list-filter": {
 		"filter-placeholder": "Filter: {{category}}"

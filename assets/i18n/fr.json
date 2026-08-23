@@ -255,7 +255,8 @@
     },
     "overview": {
         "listen": "Écouter",
-        "compose": "Composer"
+        "compose": "Composer",
+        "home": "Accueil"
     },
     "pattern-list-filter": {
         "filter-placeholder": "Filtre : {{category}}"
