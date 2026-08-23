@@ -4,6 +4,7 @@ import { AllVolumeHack, normalizePattern, Pattern, compressedPatternValidator } 
 import { normalizeTune, Tune } from "./state/tune";
 import * as z from "zod";
 import { PatternReference } from "./state/song";
+import { troupakadaTunes } from "./troupakadaTunes";
 
 function stretch(from: number, to: number, pattern: string): string {
 	return pattern.split("").concat([ "" ]).join(repeat((to/from)-1, " "));
@@ -35,7 +36,7 @@ function decrescendo(length: number): AllVolumeHack {
 
 const sheetUrl = "https://github.com/rhythms-of-resistance/sheetbook/blob/master/generated/single/";
 
-type RawTune = Partial<Omit<Tune, 'patterns'>> & {
+export type RawTune = Partial<Omit<Tune, 'patterns'>> & {
 	patterns: Record<string, z.input<typeof compressedPatternValidator>>;
 	time?: number;
 };
@@ -1318,7 +1319,7 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		exampleSong: ["Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune", "Break 3", "Tune", "Tune", "Ping Pong Break", "Tune", "Tune", "Kick back", "Kick back", "Kick back", "Kick back", "Tune", "Tune", "Call Break", "Tune", "Tune"]
 	},
 	'Funk': {
-		categories: [ "troupakada", "common", "onesurdo", "easy" ],
+		categories: [ "common", "onesurdo", "easy" ],
 		sheet: sheetUrl + "funk.pdf",
 		descriptionFilename: "funk",
 		patterns: {
@@ -2525,7 +2526,7 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		exampleSong: [ "Tune", "Tune", "Tune", "Tune", "Bra Break", "Tune", "Tune", "Tune", "Tune", "Break 1", "Tune", "Tune", "Tune", "Tune", "Break 2", "Tune", "Tune", "Tune", "Tune", "Break 3", "Tune", "Tune", "Tune", "Tune", "SOS Break", "Tune", "Tune", "Tune", "Tune", "Knock On The Door Break", "Knock On The Door (Cut)", "Tune", "Tune", "Tune", "Tune", "Dancing Break", "Tune", "Tune", "Tune", "Tune" ]
 	},
 	"Samba Reggae High": {
-		categories: [ "troupakada", "proposed", "cultural-appropriation" ],
+		categories: [ "proposed", "cultural-appropriation" ],
 		descriptionFilename: "samba-reggae-high",
 		patterns: {
 			Tune: {
@@ -2596,7 +2597,7 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		exampleSong: [ "Tune", "Tune", "Tune", "Tune", "Break 1", "Tune", "Tune", "Tune", "Tune", "Break 2", "Tune", "Tune", "Tune", "Tune", "Break 3", "Tune", "Tune", "Tune", "Tune", "Stop on 1" ]
 	},
 	"Samba Reggae Low": {
-		categories: [ "troupakada", "proposed", "cultural-appropriation" ],
+		categories: [ "proposed", "cultural-appropriation" ],
 		descriptionFilename: "samba-reggae-low",
 		patterns: {
 			Tune: {
@@ -3363,7 +3364,10 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Bra Break", "Tune", "Tune", "Kick Back 1", "Kick Back 1", "Kick Back 2", "Kick Back 2", "Tune", "Tune" ]
-	}
+	},
+
+	// Morceaux composés par Troup'akada d'Échirolles : voir src/troupakadaTunes.ts / .json
+	...troupakadaTunes
 };
 
 const defaultTunes: { [tuneName: string]: Tune } = { };
