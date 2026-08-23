@@ -423,7 +423,11 @@
 
 			&.time-12 {
 				.stroke-inner {
-					min-width: 1ex;
+					// 1ex d'origine rendait les cases quasi illisibles (bien plus étroites qu'en 8/8) :
+					// les triolets/quintolets ont plus de cases par temps que les autres subdivisions,
+					// mais le conteneur défile déjà horizontalement (overflow-x: auto plus haut), donc
+					// autant garder des cases lisibles plutôt que les comprimer au minimum.
+					min-width: 1.8ex;
 				}
 
 				.stroke-0, .stroke-1, .stroke-3, .stroke-4, .stroke-6, .stroke-7, .stroke-9, .stroke-10 {
@@ -433,7 +437,11 @@
 
 			&.time-20 {
 				.stroke-inner {
-					min-width: 1ex;
+					// 1ex d'origine rendait les cases quasi illisibles (bien plus étroites qu'en 8/8) :
+					// les triolets/quintolets ont plus de cases par temps que les autres subdivisions,
+					// mais le conteneur défile déjà horizontalement (overflow-x: auto plus haut), donc
+					// autant garder des cases lisibles plutôt que les comprimer au minimum.
+					min-width: 1.8ex;
 				}
 
 				.stroke-0, .stroke-1, .stroke-2, .stroke-3,
