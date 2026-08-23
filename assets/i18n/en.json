@@ -194,7 +194,11 @@
 		"restore-title": "Restore original",
 		"restore-message": "Are you sure that you want to revert your modifications and restore the original break?",
 		"restore-ok": "Restore",
-		"restore": "Restore original"
+		"restore": "Restore original",
+		"save": "Save",
+		"save-success-title": "Saved",
+		"save-success-message": "Reload the page to see the result in the Listen tab.",
+		"save-error-title": "Could not save"
 	},
 	"time-signature-picker": {
 		"time-signature": "Time signature: {{time}}"

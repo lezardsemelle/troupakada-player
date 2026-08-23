@@ -9,7 +9,7 @@
 <script setup lang="ts">
 	import config, { Instrument } from "../../config";
 	import { BeatboxReference, createBeatbox, patternToBeatbox } from "../../services/player";
-	import { patternEquals, updateStroke } from "../../state/pattern";
+	import { compressPattern, patternEquals, updateStroke } from "../../state/pattern";
 	import { normalizePlaybackSettings, PlaybackSettings, updatePlaybackSettings } from "../../state/playbackSettings";
 	import { createPattern, getPatternFromState } from "../../state/state";
 	import { clone } from "../../utils";
@@ -18,7 +18,7 @@
 	import StrokeDropdown from "./stroke-dropdown.vue";
 	import { injectStateRequired } from "../../services/state";
 	import { computed, nextTick, ref, watch } from "vue";
-	import { showConfirm } from "../utils/alert";
+	import { showAlert, showConfirm } from "../utils/alert";
 	import vTooltip from "../utils/tooltip";
 	import { CustomPopover } from "../utils/popover.vue";
 	import PatternPlayerToolbar from "./pattern-player-toolbar.vue";
@@ -159,6 +159,12 @@
 
 	const hasLocalChanges = computed(() => originalPattern.value && !patternEquals(originalPattern.value, pattern.value));
 
+	// Un morceau/pattern flambant neuf (créé via "+ Nouveau morceau" ou "+" break, jamais encore
+	// intégré) n'a pas d'original à comparer : hasLocalChanges resterait toujours faux pour lui.
+	// On propose quand même "Enregistrer" dès qu'il contient au moins une frappe.
+	const hasContent = computed(() => config.instrumentKeys.some((instr) => (pattern.value[instr] || []).some((stroke) => stroke && stroke.trim() !== "")));
+	const canSaveToJson = computed(() => hasLocalChanges.value || (!originalPattern.value && hasContent.value));
+
 	const reset = async () => {
 		if(await showConfirm({
 			title: () => i18n.t("pattern-player.restore-title"),
@@ -167,6 +173,45 @@
 			okLabel: () => i18n.t("pattern-player.restore-ok")
 		}))
 			createPattern(state.value, props.tuneName, props.patternName, originalPattern.value || undefined);
+	};
+
+	// Ne fonctionne qu'avec `yarn dev-server` : écrit directement dans src/troupakadaTunes.json via
+	// le plugin Vite troupakadaSavePlugin (vite.config.ts). Sans effet dans un build de production.
+	const isDev = import.meta.env.DEV;
+	const saving = ref(false);
+
+	const saveToTroupakadaTunes = async () => {
+		saving.value = true;
+		try {
+			const compressed = compressPattern(pattern.value, originalPattern.value || undefined, false);
+			const response = await fetch("/__troupakada/save-pattern", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ tuneName: props.tuneName, patternName: props.patternName, pattern: compressed })
+			});
+			const result = await response.json();
+			if(!response.ok) {
+				await showAlert({
+					title: () => i18n.t("pattern-player.save-error-title"),
+					message: (result.errors || [response.statusText]).join("\n"),
+					variant: "danger"
+				});
+				return;
+			}
+			await showAlert({
+				title: () => i18n.t("pattern-player.save-success-title"),
+				message: () => i18n.t("pattern-player.save-success-message"),
+				variant: "success"
+			});
+		} catch(e: any) {
+			await showAlert({
+				title: () => i18n.t("pattern-player.save-error-title"),
+				message: e.message,
+				variant: "danger"
+			});
+		} finally {
+			saving.value = false;
+		}
 	};
 
 	const clickStroke = (instrumentKey: Instrument, i: number) => {
@@ -229,6 +274,7 @@
 		>
 			<slot />
 
+			<button v-if="canSaveToJson && isDev" type="button" class="btn btn-success" :disabled="saving" @click="saveToTroupakadaTunes()"><fa icon="save"/>{{" "}}{{i18n.t("pattern-player.save")}}</button>
 			<button v-if="hasLocalChanges" type="button" class="btn btn-warning" @click="reset()"><fa icon="eraser"/>{{" "}}{{i18n.t("pattern-player.restore")}}</button>
 		</PatternPlayerToolbar>
 
@@ -301,6 +347,9 @@
 
 				&.has-changes {
 					background-color: var(--bb-modified);
+					// --bb-modified est une teinte claire/moyenne dans les deux thèmes ; le texte
+					// hérité (clair en thème sombre) devient illisible dessus sans cette couleur fixe.
+					color: #212529;
 				}
 			}
 

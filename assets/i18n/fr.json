@@ -229,7 +229,11 @@
         "restore-title": "Restaurer l'original",
         "restore-ok": "Restaurer",
         "restore": "Restaurer l'original",
-        "restore-message": "Êtes-vous sûr.e de vouloir annuler vos modifications et restaurer le break original ?"
+        "restore-message": "Êtes-vous sûr.e de vouloir annuler vos modifications et restaurer le break original ?",
+        "save": "Enregistrer",
+        "save-success-title": "Enregistré",
+        "save-success-message": "Recharge la page pour voir le résultat dans l'onglet Écouter.",
+        "save-error-title": "Échec de l'enregistrement"
     },
     "mute-button": {
         "unmute-all": "Rétablir le son de tous les instruments",

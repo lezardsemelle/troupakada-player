@@ -3,6 +3,7 @@ import vuePlugin from '@vitejs/plugin-vue';
 import { plugin as mdPlugin, Mode } from 'vite-plugin-markdown';
 import audioFilesPlugin from './rollup-audio-files';
 import { viteSingleFile } from "vite-plugin-singlefile";
+import troupakadaSaveTunePlugin from './scripts/vite-plugin-save-tune';
 
 export default defineConfig(({ mode }) => ({
 	define: {
@@ -12,7 +13,8 @@ export default defineConfig(({ mode }) => ({
 		vuePlugin(),
 		mdPlugin({ mode: [Mode.HTML] }),
 		audioFilesPlugin(),
-		viteSingleFile()
+		viteSingleFile(),
+		troupakadaSaveTunePlugin()
 	],
 	build: {
 		sourcemap: true,
