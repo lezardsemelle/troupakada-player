@@ -72,14 +72,20 @@ export function mergeTuneData(current, exported) {
 
 	for (const [tuneName, patterns] of Object.entries(translated)) {
 		if (!data[tuneName]) {
-			data[tuneName] = patterns;
+			// Nouveau morceau : { patterns: {...} } — la place est laissée pour d'autres champs de
+			// RawTune (descriptionFilename, displayName, sheet, video, speed, exampleSong...) que ce
+			// mécanisme n'écrit jamais lui-même (ce sont des modifications manuelles, pas via l'UI).
+			data[tuneName] = { patterns };
 			addedTunes.push(tuneName);
 		} else {
+			if (!data[tuneName].patterns)
+				data[tuneName].patterns = {};
+
 			for (const [patternName, pattern] of Object.entries(patterns)) {
 				// Fusion champ par champ, pas un remplacement : compressPattern() (utilisée par le
 				// bouton "Enregistrer" et par Partager) ne renvoie que les instruments/propriétés qui
 				// diffèrent de l'original — un pattern déjà existant doit garder ses autres champs.
-				data[tuneName][patternName] = { ...(data[tuneName][patternName] ?? {}), ...pattern };
+				data[tuneName].patterns[patternName] = { ...(data[tuneName].patterns[patternName] ?? {}), ...pattern };
 				updatedPatterns.push(`${tuneName} – ${patternName}`);
 			}
 		}

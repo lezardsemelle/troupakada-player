@@ -1,107 +1,113 @@
 {
 	"Samba Echirolles": {
-		"Tune": {
-			"lg": "    X       X   X   X   X   X",
-			"mg": "X       X       X       X",
-			"hg": "    XX X    X X     XX X    X X",
-			"re": "X  X  X   X X   X  X  X   X X",
-			"ca": "X..X..X...X.X...X..X..X...X.X...",
-			"ta": "X X XX X X XX X X X XX X X XX X",
-			"ag": "a a oo o a ao o a a oo o a ao o",
-			"ch": ".X....X........XX...X...X...X...",
-			"length": 8
-		},
-		"break 1": {
-			"lg": "X             X X           X X X         X X X   X   X   X   X",
-			"mg": "X             X X           X X X         X X X X   X   X   X",
-			"hg": "@lg",
-			"re": "X             X X           X X X         X X X",
-			"ca": "@re",
-			"ta": "@re",
-			"ag": "a             a a           a a a         a a a",
-			"length": 16
-		},
-		"Break 2": {
-			"lg": "X   X   X   X",
-			"mg": "@lg",
-			"hg": "@lg",
-			"re": "                X X X X X X X",
-			"ca": "@re",
-			"ta": "@re",
-			"ag": "                a a a a a a a",
-			"ot": "                              F",
-			"length": 8
+		"patterns": {
+			"Tune": {
+				"lg": "    X       X   X   X   X   X",
+				"mg": "X       X       X       X",
+				"hg": "    XX X    X X     XX X    X X",
+				"re": "X  X  X   X X   X  X  X   X X",
+				"ca": "X..X..X...X.X...X..X..X...X.X...",
+				"ta": "X X XX X X XX X X X XX X X XX X",
+				"ag": "a a oo o a ao o a a oo o a ao o",
+				"ch": ".X....X........XX...X...X...X...",
+				"length": 8
+			},
+			"break 1": {
+				"lg": "X             X X           X X X         X X X   X   X   X   X",
+				"mg": "X             X X           X X X         X X X X   X   X   X",
+				"hg": "@lg",
+				"re": "X             X X           X X X         X X X",
+				"ca": "@re",
+				"ta": "@re",
+				"ag": "a             a a           a a a         a a a",
+				"length": 16
+			},
+			"Break 2": {
+				"lg": "X   X   X   X",
+				"mg": "@lg",
+				"hg": "@lg",
+				"re": "                X X X X X X X",
+				"ca": "@re",
+				"ta": "@re",
+				"ag": "                a a a a a a a",
+				"ot": "                              F",
+				"length": 8
+			}
 		}
 	},
 	"OLODUM": {
-		"Tune": {
-			"lg": "X       X       X       X   X   X       X       X       X   X",
-			"mg": "   X       X       X        X      X       X       X        X",
-			"hg": "      X       X       X   X   X       X       X       X   X   X",
-			"re": "hXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXX",
-			"ca": "X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...",
-			"ta": "X XXX X   X   X X XXX X   X   X X XXX X   X   X X XXX X   X   X",
-			"ag": "a  o  a   o o   a  o  a   o o   a  o  a   o o   a  o  a   o o",
-			"length": 16
-		},
-		"Break d'entree": {
-			"lg": "X  X  X X  X  X                 X  X  X X  X  X",
-			"mg": "@lg",
-			"hg": "@lg",
-			"re": "                X  X  X X  X  X",
-			"ca": "@re",
-			"ta": "@re",
-			"ag": "                o  o  o o  o  o",
-			"length": 12
-		},
-		"Break2": {
-			"lg": "X  X  X X  X  X",
-			"length": 8
+		"patterns": {
+			"Tune": {
+				"lg": "X       X       X       X   X   X       X       X       X   X",
+				"mg": "   X       X       X        X      X       X       X        X",
+				"hg": "      X       X       X   X   X       X       X       X   X   X",
+				"re": "hXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXX",
+				"ca": "X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...",
+				"ta": "X XXX X   X   X X XXX X   X   X X XXX X   X   X X XXX X   X   X",
+				"ag": "a  o  a   o o   a  o  a   o o   a  o  a   o o   a  o  a   o o",
+				"length": 16
+			},
+			"Break d'entree": {
+				"lg": "X  X  X X  X  X                 X  X  X X  X  X",
+				"mg": "@lg",
+				"hg": "@lg",
+				"re": "                X  X  X X  X  X",
+				"ca": "@re",
+				"ta": "@re",
+				"ag": "                o  o  o o  o  o",
+				"length": 12
+			},
+			"Break2": {
+				"lg": "X  X  X X  X  X",
+				"length": 8
+			}
 		}
 	},
 	"Rap Echirolles": {
-		"Tune": {
-			"lg": "X           r     X           X     r     X     X           r     X     X     X     r           X           r     X           X     r     X     X           r     X     X     X     r",
-			"mg": "@lg",
-			"hg": "@lg",
-			"re": "            X                       X                       X                 X     X                       X                       X                       X                 X     X",
-			"ca": "@re",
-			"ag": "o                             a     a     a     o     o                                   o     o                       o     a     a     o     o",
-			"time": 12,
-			"length": 16
-		},
-		"Costeau": {
-			"lg": "X X X X X X X X X X X X X X X X X X X X X X X X X",
-			"mg": "X X",
-			"hg": "X X",
-			"re": "X X",
-			"ca": "X X",
-			"ta": "X X",
-			"ag": "o",
-			"length": 16
+		"patterns": {
+			"Tune": {
+				"lg": "X           r     X           X     r     X     X           r     X     X     X     r           X           r     X           X     r     X     X           r     X     X     X     r",
+				"mg": "@lg",
+				"hg": "@lg",
+				"re": "            X                       X                       X                 X     X                       X                       X                       X                 X     X",
+				"ca": "@re",
+				"ag": "o                             a     a     a     o     o                                   o     o                       o     a     a     o     o",
+				"time": 12,
+				"length": 16
+			},
+			"Costeau": {
+				"lg": "X X X X X X X X X X X X X X X X X X X X X X X X X",
+				"mg": "X X",
+				"hg": "X X",
+				"re": "X X",
+				"ca": "X X",
+				"ta": "X X",
+				"ag": "o",
+				"length": 16
+			}
 		}
 	},
 	"TECHNO": {
-		"Tune": {
-			"lg": "s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X",
-			"mg": "@lg",
-			"hg": "@lg",
-			"re": "  XX rr   XX rr   XX rr   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r",
-			"ca": "X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r",
-			"ta": "X  X  X X       X  X  X X      XX X   X X X   X X  X  X X   X     X   X   X   X X  X  X X         X   X   X   X  XXX XXX XXXX",
-			"ag": "o  o  a o       o  o  a o      oa o   o a o   o o  o  a o   a     o   o   o   o o  o  a o         o   o   o   o  aaa aaa aaaa",
-			"length": 32
-		},
-		"Break 1": {
-			"lg": "            X               X       X       X                       X   X   X                       X   X   X",
-			"mg": "@lg",
-			"hg": "@lg",
-			"re": "X  X  X X       X  X  X X      XX X   X X X   X X  X  X X   X     X   X   X   X X  X  X X         X   X   X  XXX XXX XXX XXXX",
-			"ta": "@re",
-			"ag": "o  o  a o       o  o  a o      oa o   o a o   o o  o  a o   a     o   o   o   o o  o  a o         o   o   o  aaa aaa aaa aaaa",
-			"length": 32,
-			"ch": "",
-			"ot": ""
+		"patterns": {
+			"Tune": {
+				"lg": "s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X",
+				"mg": "@lg",
+				"hg": "@lg",
+				"re": "  XX rr   XX rr   XX rr   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r",
+				"ca": "X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r",
+				"ta": "X  X  X X       X  X  X X      XX X   X X X   X X  X  X X   X     X   X   X   X X  X  X X         X   X   X   X  XXX XXX XXXX",
+				"ag": "o  o  a o       o  o  a o      oa o   o a o   o o  o  a o   a     o   o   o   o o  o  a o         o   o   o   o  aaa aaa aaaa",
+				"length": 32
+			},
+			"Break 1": {
+				"lg": "            X               X       X       X                       X   X   X                       X   X   X",
+				"mg": "@lg",
+				"hg": "@lg",
+				"re": "X  X  X X       X  X  X X      XX X   X X X   X X  X  X X   X     X   X   X   X X  X  X X         X   X   X  XXX XXX XXX XXXX",
+				"ta": "@re",
+				"ag": "o  o  a o       o  o  a o      oa o   o a o   o o  o  a o   a     o   o   o   o o  o  a o         o   o   o  aaa aaa aaa aaaa",
+				"length": 32
+			}
 		}
 	}
 }
