@@ -79,7 +79,7 @@ function pathToRoute(path: string): Route {
 			};
 
 		case "root":
-			return { tab: "listen" };
+			return { tab: "home" };
 
 		case "home":
 			return { tab: "home" };

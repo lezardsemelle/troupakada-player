@@ -50,9 +50,9 @@
 
 		<div class="nav nav-tabs">
 			<span class="bb-sidebar-toggle-container" ref="sidebarToggleContainer"></span>
+			<span class="nav-item"><a class="nav-link" :class="{ active: route.tab === 'home' }" href="javascript:" @click="route.tab = 'home'">{{i18n.t('overview.home')}}</a></span>
 			<span class="nav-item"><a class="nav-link" :class="{ active: route.tab === 'listen' }" href="javascript:" @click="route.tab = 'listen'">{{i18n.t('overview.listen')}}</a></span>
 			<span class="nav-item"><a class="nav-link" :class="{ active: route.tab === 'compose' }" href="javascript:" @click="route.tab = 'compose'">{{i18n.t('overview.compose')}}</a></span>
-			<span class="nav-item"><a class="nav-link" :class="{ active: route.tab === 'home' }" href="javascript:" @click="route.tab = 'home'">{{i18n.t('overview.home')}}</a></span>
 		</div>
 
 		<div class="bb-overview-content">
