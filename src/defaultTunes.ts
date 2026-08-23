@@ -2187,7 +2187,7 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 	},
 	'Police': {
 		displayName: "Sound of da Police",
-		categories: [ "new", "uncommon", "medium" ],
+		categories: [ "new", "uncommon", "medium" ,"troupakada"],
 		sheet: sheetUrl + "sound-of-da-police.pdf",
 		descriptionFilename: "police",
 		video: "https://tube.rhythms-of-resistance.org/videos/embed/a8253384-c3bb-4b9f-a50c-aa954288bb37",
@@ -3254,7 +3254,7 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 	},
 	'Xango': {
 		displayName: "Xangô",
-		categories: [ "uncommon", "tricky", "cultural-appropriation" ],
+		categories: [ "uncommon", "tricky", "cultural-appropriation","troupakada" ],
 		sheet: sheetUrl + "xango.pdf",
 		descriptionFilename: "xango",
 		video: "https://tube.rhythms-of-resistance.org/videos/embed/ae1fe3a3-dd7e-4670-9415-b47ee60a54b0",
@@ -3382,6 +3382,8 @@ for(const i in rawTunes) {
 		const newPattern = clone(pattern) as any as Pattern;
 		if(!newPattern.time && tune.time)
 			newPattern.time = tune.time;
+		if(!newPattern.speed && tune.speed)
+			newPattern.speed = tune.speed;
 
 		for(const k of config.instrumentKeys) {
 			const thisPattern = pattern[k] = pattern[k] || "";

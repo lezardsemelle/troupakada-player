@@ -1,5 +1,6 @@
 {
-	"Samba Echirolles": {
+	"Samba Troupakada": {
+		"descriptionFilename": "samba-troupakada",
 		"patterns": {
 			"Tune": {
 				"lg": "    X       X   X   X   X   X",
@@ -35,7 +36,8 @@
 			}
 		}
 	},
-	"OLODUM": {
+	"Olodum": {
+		"descriptionFilename": "olodum",
 		"patterns": {
 			"Tune": {
 				"lg": "X       X       X       X   X   X       X       X       X   X",
@@ -63,7 +65,8 @@
 			}
 		}
 	},
-	"Rap Echirolles": {
+	"Rap": {
+		"descriptionFilename": "rap",
 		"patterns": {
 			"Tune": {
 				"lg": "X           r     X           X     r     X     X           r     X     X     X     r           X           r     X           X     r     X     X           r     X     X     X     r",
@@ -75,7 +78,7 @@
 				"time": 12,
 				"length": 16
 			},
-			"Costeau": {
+			"Break - Costeau": {
 				"lg": "X X X X X X X X X X X X X X X X X X X X X X X X X",
 				"mg": "X X",
 				"hg": "X X",
@@ -85,15 +88,19 @@
 				"ag": "o",
 				"length": 16
 			}
-		}
+		},
+		"exampleSong": [ "Tune", "Break - Costeau", "Tune" ]
+
 	},
-	"TECHNO": {
+	"Techno": {
+		"descriptionFilename": "techno",
+		"speed": 130,
 		"patterns": {
 			"Tune": {
 				"lg": "s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X",
 				"mg": "@lg",
 				"hg": "@lg",
-				"re": "  XX rr   XX rr   XX rr   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r",
+				"re": "  XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r",
 				"ca": "X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r",
 				"ta": "X  X  X X       X  X  X X      XX X   X X X   X X  X  X X   X     X   X   X   X X  X  X X         X   X   X   X  XXX XXX XXXX",
 				"ag": "o  o  a o       o  o  a o      oa o   o a o   o o  o  a o   a     o   o   o   o o  o  a o         o   o   o   o  aaa aaa aaaa",
@@ -108,6 +115,8 @@
 				"ag": "o  o  a o       o  o  a o      oa o   o a o   o o  o  a o   a     o   o   o   o o  o  a o         o   o   o  aaa aaa aaa aaaa",
 				"length": 32
 			}
-		}
+		},
+		"exampleSong": [ "Tune", "Break 1", "Tune" ]
+
 	}
 }
