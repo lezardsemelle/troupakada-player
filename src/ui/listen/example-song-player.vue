@@ -59,7 +59,10 @@
 		} as SongParts;
 		for(const part of normalizedSong.value) {
 			result[i] = allInstruments([ part.tuneName, part.patternName ], part.instruments);
-			i += part.length / 4;
+			// Math.ceil : un pattern dont la longueur n'est pas un multiple de 4 temps (ex. un break
+			// non finalisé) ne doit pas produire un index fractionnaire, sous peine de casser
+			// getEffectiveSongLength (qui suppose des clés entières, cf. getMaxIndex).
+			i += Math.ceil(part.length / 4);
 		}
 		return result;
 	});
