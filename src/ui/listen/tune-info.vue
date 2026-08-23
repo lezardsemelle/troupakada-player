@@ -7,10 +7,12 @@
 	import PlaybackSettingsPicker from "../playback-settings/playback-settings-picker.vue";
 	import ExampleSongPlayer from "./example-song-player.vue";
 	import PatternPlaceholder, { PatternPlaceholderItem } from "../pattern-placeholder.vue";
+	import MaestrationSigns from "./maestration-signs.vue";
 	import vTooltip from "../utils/tooltip";
 	import { download, ExportType } from "../utils/export";
 	import { BeatboxReference, getPlayerById } from "../../services/player";
 	import { getLocalizedDisplayName, getTuneDescriptionHtml, T, useI18n } from "../../services/i18n";
+	import { exportPatternToPdf } from "../../services/pdfExport";
 
 	const state = injectStateRequired();
 
@@ -60,6 +62,10 @@
 		});
 	};
 
+	const handleExportPdf = (patternName: string) => {
+		exportPatternToPdf(state.value, [props.tuneName, patternName]);
+	};
+
 	const handleEditorDialog = (patternName: string, show: boolean) => {
 		if (show) {
 			editPattern.value = patternName;
@@ -94,6 +100,8 @@
 			</div>
 		</div>
 
+		<MaestrationSigns :tune-name="tuneName" />
+
 		<h2 v-if="tuneDescriptionHtml || tune.sheet" class="d-flex align-items-center">
 			<span class="flex-grow-1">{{i18n.t("tune-info.sounds")}}</span>
 			<PlaybackSettingsPicker v-model="playbackSettings" :default-speed="tune.speed" />
@@ -117,6 +125,7 @@
 			@update:showEditorDialog="handleEditorDialog(patternName, $event)"
 		>
 			<PatternPlaceholderItem><a href="javascript:" v-tooltip="i18n.t('tune-info.download-mp3')" @click="handleDownload(patternName, getPlayer())" draggable="false"><fa icon="download"/></a></PatternPlaceholderItem>
+			<PatternPlaceholderItem><a href="javascript:" v-tooltip="i18n.t('tune-info.download-pdf')" @click="handleExportPdf(patternName)" draggable="false"><fa icon="file-pdf"/></a></PatternPlaceholderItem>
 		</PatternPlaceholder>
 	</div>
 </template>
