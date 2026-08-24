@@ -92,6 +92,14 @@ export function generateId(): number {
 	return idCounter++;
 }
 
+/** Converts a data: URI into a blob: URL. Chrome refuses to navigate a link to a data: URL (even without
+ * target="_blank"), unlike blob: URLs, which is why this is needed for links to assets bundled as data: URIs
+ * by vite-plugin-singlefile (see troupakadaTunes.ts). Caller is responsible for URL.revokeObjectURL() once done. */
+export async function dataUriToBlobUrl(dataUri: string): Promise<string> {
+	const blob = await (await fetch(dataUri)).blob();
+	return URL.createObjectURL(blob);
+}
+
 export async function sleep(millis: number = 0): Promise<void> {
 	await new Promise((resolve) => {
 		setTimeout(resolve, millis);

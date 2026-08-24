@@ -181,8 +181,7 @@
 		"tune-sheet-pdf": "Tune sheet (PDF)",
 		"video": "Video",
 		"sounds": "Sounds",
-		"download-mp3": "Download as MP3",
-		"download-pdf": "Download as PDF"
+		"download-mp3": "Download as MP3"
 	},
 	"pattern-length-picker": {
 		"length": "Length: {{length}}"

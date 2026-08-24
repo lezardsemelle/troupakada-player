@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 	import defaultTunes from "../../defaultTunes";
 	import config from "../../config";
-	import { clone, useRefWithOverride } from "../../utils";
+	import { clone, dataUriToBlobUrl, useRefWithOverride } from "../../utils";
 	import { computed, ref, watch } from "vue";
 	import { injectStateRequired } from "../../services/state";
 	import PlaybackSettingsPicker from "../playback-settings/playback-settings-picker.vue";
@@ -12,7 +12,6 @@
 	import { download, ExportType } from "../utils/export";
 	import { BeatboxReference, getPlayerById } from "../../services/player";
 	import { getLocalizedDisplayName, getTuneDescriptionHtml, T, useI18n } from "../../services/i18n";
-	import { exportPatternToPdf } from "../../services/pdfExport";
 
 	const state = injectStateRequired();
 
@@ -42,6 +41,24 @@
 		return el.innerHTML;
 	});
 
+	// Chrome refuses to navigate a link to a data: URL — troupakadaTunes.ts's own generated sheets are bundled
+	// as data: URIs (vite-plugin-singlefile), so they need converting to a blob: URL to be clickable.
+	const sheetUrl = ref<string>();
+	watch(() => tune.value && tune.value.sheet, async (sheet, previousSheet, onCleanup) => {
+		if (!sheet) {
+			sheetUrl.value = undefined;
+			return;
+		}
+		if (!sheet.startsWith("data:")) {
+			sheetUrl.value = sheet;
+			return;
+		}
+
+		const blobUrl = await dataUriToBlobUrl(sheet);
+		onCleanup(() => URL.revokeObjectURL(blobUrl));
+		sheetUrl.value = blobUrl;
+	}, { immediate: true });
+
 	const playbackSettings = ref(clone(state.value.playbackSettings));
 
 	playbackSettings.value.speed = (tune.value && tune.value.speed) || config.defaultSpeed;
@@ -60,10 +77,6 @@
 			player: getPlayerById(playerRef.id),
 			filename: `${props.tuneName} - ${patternName}`
 		});
-	};
-
-	const handleExportPdf = (patternName: string) => {
-		exportPatternToPdf(state.value, [props.tuneName, patternName]);
 	};
 
 	const handleEditorDialog = (patternName: string, show: boolean) => {
@@ -91,7 +104,7 @@
 				</T>
 			</em>
 		</p>
-		<p v-if="tune.sheet"><a :href="tune.sheet" target="_blank">{{i18n.t("tune-info.tune-sheet-pdf")}}</a></p>
+		<p v-if="sheetUrl"><a :href="sheetUrl" target="_blank">{{i18n.t("tune-info.tune-sheet-pdf")}}</a></p>
 
 		<div v-if="tune.video">
 			<h2>{{i18n.t("tune-info.video")}}</h2>
@@ -125,7 +138,6 @@
 			@update:showEditorDialog="handleEditorDialog(patternName, $event)"
 		>
 			<PatternPlaceholderItem><a href="javascript:" v-tooltip="i18n.t('tune-info.download-mp3')" @click="handleDownload(patternName, getPlayer())" draggable="false"><fa icon="download"/></a></PatternPlaceholderItem>
-			<PatternPlaceholderItem><a href="javascript:" v-tooltip="i18n.t('tune-info.download-pdf')" @click="handleExportPdf(patternName)" draggable="false"><fa icon="file-pdf"/></a></PatternPlaceholderItem>
 		</PatternPlaceholder>
 	</div>
 </template>
