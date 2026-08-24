@@ -12,11 +12,14 @@ export type Route = {
 	importData?: string;
 } | {
 	tab: "home";
+} | {
+	tab: "gestes";
 };
 
 const ROUTES = {
 	"root": "/",
 	"home": "/home/",
+	"gestes": "/gestes/",
 	"listen-tune": "/listen/:tuneName/",
 	"listen-pattern": "/listen/:tuneName/:patternName",
 	"compose": "/compose/",
@@ -83,6 +86,9 @@ function pathToRoute(path: string): Route {
 
 		case "home":
 			return { tab: "home" };
+
+		case "gestes":
+			return { tab: "gestes" };
 	};
 }
 
@@ -111,6 +117,10 @@ function routeToPath(route: Route): string {
 
 		case "home":
 			match = { name: "home" };
+			break;
+
+		case "gestes":
+			match = { name: "gestes" };
 			break;
 	}
 

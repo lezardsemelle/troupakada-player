@@ -227,7 +227,8 @@
 	"overview": {
 		"listen": "Listen",
 		"compose": "Compose",
-		"home": "Home"
+		"home": "Home",
+		"gestes": "Gestures"
 	},
 	"pattern-list-filter": {
 		"filter-placeholder": "Filter: {{category}}"
@@ -238,6 +239,10 @@
 	},
 	"maestration-signs": {
 		"title": "Gestures"
+	},
+	"gestes-glossary": {
+		"title": "Maestration gestures",
+		"description": "Full reference of the maestration gestures used by Troup'akada. Which gestures apply to which tune is not mapped here yet."
 	},
 	"pattern-placeholder": {
 		"restore-title": "Restore original",

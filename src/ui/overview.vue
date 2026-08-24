@@ -5,6 +5,7 @@
 	import Help from "./help/help.vue";
 	import Listen from "./listen/listen.vue";
 	import Home from "./home/home.vue";
+	import Gestes from "./gestes/gestes.vue";
 	import { History } from "../services/history";
 	import { Route, useRouter } from "../services/router";
 	import Compose from "./compose/compose.vue";
@@ -53,11 +54,16 @@
 			<span class="nav-item"><a class="nav-link" :class="{ active: route.tab === 'home' }" href="javascript:" @click="route.tab = 'home'">{{i18n.t('overview.home')}}</a></span>
 			<span class="nav-item"><a class="nav-link" :class="{ active: route.tab === 'listen' }" href="javascript:" @click="route.tab = 'listen'">{{i18n.t('overview.listen')}}</a></span>
 			<span class="nav-item"><a class="nav-link" :class="{ active: route.tab === 'compose' }" href="javascript:" @click="route.tab = 'compose'">{{i18n.t('overview.compose')}}</a></span>
+			<span class="nav-item"><a class="nav-link" :class="{ active: route.tab === 'gestes' }" href="javascript:" @click="route.tab = 'gestes'">{{i18n.t('overview.gestes')}}</a></span>
 		</div>
 
 		<div class="bb-overview-content">
 			<template v-if="route.tab === 'home'">
 				<Home />
+			</template>
+
+			<template v-if="route.tab === 'gestes'">
+				<Gestes />
 			</template>
 
 			<template v-if="route.tab === 'listen'">

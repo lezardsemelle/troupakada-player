@@ -256,7 +256,8 @@
     "overview": {
         "listen": "Écouter",
         "compose": "Composer",
-        "home": "Accueil"
+        "home": "Accueil",
+        "gestes": "Gestes"
     },
     "pattern-list-filter": {
         "filter-placeholder": "Filtre : {{category}}"
@@ -267,6 +268,10 @@
     },
     "maestration-signs": {
         "title": "Gestes"
+    },
+    "gestes-glossary": {
+        "title": "Gestes de maestration",
+        "description": "Répertoire complet des gestes de maestration utilisés par Troup'akada. Les associations avec les morceaux ne sont pas encore renseignées ici."
     },
     "pattern-placeholder": {
         "restore-title": "Restaurer l'original",
