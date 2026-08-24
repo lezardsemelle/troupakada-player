@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 	import { computed } from "vue";
-	import { getMaestrationForTune, getSignImageUrl } from "../../maestrationSigns";
+	import { defaultSignSvg, getMaestrationForTune, getSignImageUrl } from "../../maestrationSigns";
 	import { useI18n } from "../../services/i18n";
 
 	const props = defineProps<{
@@ -25,7 +25,7 @@
 				<div :id="`bb-maestration-${tuneName}-${sign.id}`" class="accordion-collapse collapse">
 					<div class="accordion-body">
 						<img v-if="getSignImageUrl(sign.id)" :src="getSignImageUrl(sign.id)" :alt="sign.label" />
-						<div v-else class="bb-maestration-svg" v-html="sign.svgFallback"></div>
+						<div v-else class="bb-maestration-svg" v-html="sign.svgFallback ?? defaultSignSvg"></div>
 					</div>
 				</div>
 			</div>

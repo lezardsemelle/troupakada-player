@@ -1,9 +1,17 @@
 export type MaestrationSign = {
 	id: string;
 	label: string;
-	/** Shown if no photo exists yet for this gesture in assets/maestration/ (see getSignImageUrl()). */
-	svgFallback: string;
+	/** Shown if no photo exists yet for this gesture in assets/maestration/ (see getSignImageUrl()). Falls back to defaultSignSvg if unset. */
+	svgFallback?: string;
 };
+
+/** Generic placeholder icon used when a gesture has neither a photo nor its own svgFallback. */
+export const defaultSignSvg = `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor">
+	<circle cx="20" cy="20" r="16" stroke-width="2"/>
+	<path d="M14 24 Q20 30 26 24" stroke-width="2" stroke-linecap="round"/>
+	<circle cx="14" cy="16" r="1.5" fill="currentColor"/>
+	<circle cx="26" cy="16" r="1.5" fill="currentColor"/>
+</svg>`;
 
 export type TuneMaestration = {
 	tuneId: string;
@@ -26,36 +34,30 @@ export function getSignImageUrl(signId: string): string | undefined {
 }
 
 /**
- * The vocabulary of maestration gestures shared across tunes. Real photos are added progressively to
- * assets/maestration/; until a photo exists for a given gesture, getSignImageUrl() returns undefined and
- * the UI falls back to svgFallback below.
+ * The vocabulary of maestration gestures used by Troup'akada, transcribed from the reference sheet made by
+ * Natacha (maestro). All 18 have a real photo in assets/maestration/ (imported via getSignImageUrl()), so
+ * svgFallback is unused here in practice — kept optional on the type for gestures added later without a photo yet.
  */
 export const standardSigns: MaestrationSign[] = [
-	{
-		id: "tourne",
-		label: "Tourne",
-		svgFallback: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor">
-			<circle cx="20" cy="20" r="16" stroke-width="2"/>
-			<path d="M20 4 A16 16 0 0 1 36 20" stroke-width="2" marker-end="url(#arr)"/>
-		</svg>`
-	},
-	{
-		id: "break",
-		label: "Break",
-		svgFallback: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor">
-			<rect x="8" y="10" width="24" height="20" rx="3" stroke-width="2"/>
-			<line x1="20" y1="10" x2="20" y2="30" stroke-width="2"/>
-		</svg>`
-	},
-	{
-		id: "fin",
-		label: "Fin",
-		svgFallback: `<svg viewBox="0 0 40 40" fill="none" stroke="currentColor">
-			<line x1="8" y1="20" x2="32" y2="20" stroke-width="3" stroke-linecap="round"/>
-			<line x1="30" y1="12" x2="30" y2="28" stroke-width="3" stroke-linecap="round"/>
-		</svg>`
-	}
-	// Compléter selon le répertoire Troup'akada
+	{ id: "x4-doux-fort", label: "X4 – De doux à fort" },
+	{ id: "silence-4", label: "4 temps de silence" },
+	{ id: "silence-8", label: "8 temps de silence" },
+	{ id: "accelerer", label: "Accélérer" },
+	{ id: "arret-immediat", label: "Arrêt immédiat" },
+	{ id: "baguette-magique-surdos", label: "Baguette magique surdos" },
+	{ id: "break-bra", label: "Break Bra" },
+	{ id: "break-chante", label: "Break chanté" },
+	{ id: "break-tambourine", label: "Break tambourine" },
+	{ id: "changement-tourne", label: "Changement de tourne" },
+	{ id: "encore", label: "Encore" },
+	{ id: "vague-boucle", label: "La vague – En boucle" },
+	{ id: "break-loup-garou", label: "Break Loup-garou" },
+	{ id: "volume", label: "Monter / Descendre le volume" },
+	{ id: "bloc", label: "On se met en bloc" },
+	{ id: "ralentir", label: "Ralentir" },
+	{ id: "stop", label: "Stop" },
+	{ id: "autres-instrus", label: "Tous les autres instrus" }
+	// Compléter si Natacha ajoute d'autres gestes au répertoire
 ];
 
 export function getSignById(id: string): MaestrationSign | undefined {
@@ -63,15 +65,11 @@ export function getSignById(id: string): MaestrationSign | undefined {
 }
 
 /**
- * Association geste ↔ morceau. À compléter avec Troup'akada — pour l'instant seul Afoxé a un exemple,
- * les autres morceaux n'affichent simplement pas de section "Gestes".
+ * Association geste ↔ morceau. Pas encore renseignée : le vocabulaire de gestes ci-dessus vient de la
+ * fiche de Natacha, mais quels gestes s'appliquent à quel morceau reste à définir avec Troup'akada. Tant
+ * qu'un morceau n'a pas d'entrée ici, sa section "Gestes" ne s'affiche simplement pas (cf. maestration-signs.vue).
  */
-export const tunesMaestration: TuneMaestration[] = [
-	{
-		tuneId: "Afoxe",
-		signs: ["tourne", "break", "fin"].map((id) => getSignById(id)!)
-	}
-];
+export const tunesMaestration: TuneMaestration[] = [];
 
 export function getMaestrationForTune(tuneId: string): MaestrationSign[] | undefined {
 	return tunesMaestration.find((t) => t.tuneId === tuneId)?.signs;
