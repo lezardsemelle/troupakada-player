@@ -20,7 +20,7 @@ Sur chaque morceau, un lien **« Livret des morceaux (PDF) »** donne accès à 
 de notation complète du morceau et de ses breaks, dans le même format que les livrets Rhythms of Resistance
 officiels. Pratique à emmener en répétition ou pour envoyer un rappel avant un défilé.
 
-## Gestes de maîstration
+## Gestes de maestration
 
 L'onglet **Gestes** rassemble le répertoire des gestes utilisés pour diriger la troupe pendant un morceau
 (changements de tourne, breaks, silences...), chacun illustré par une photo.
@@ -33,7 +33,7 @@ Une étoile ☆ sur chaque morceau permet de le marquer en favori, pour le retro
 ## À venir
 
 Quelques chantiers en cours :
-- associer chaque geste de maîstration au(x) morceau(x) où il s'utilise, pour qu'il apparaisse directement
+- associer chaque geste de maestration au(x) morceau(x) où il s'utilise, pour qu'il apparaisse directement
   sur la page du morceau concerné ;
 - un panneau affichant les gestes en direct pendant la lecture ;
 - les vrais échantillons audio batucada (Surdo, Repique, Caixa...), en remplacement des sons provisoires
