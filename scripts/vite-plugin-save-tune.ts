@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 // @ts-expect-error pas de types pour ce petit module JS partagé avec les scripts CLI
-import { mergeTuneData } from "./lib/tuneData.mjs";
+import { mergeTuneData, removeTuneOrPattern } from "./lib/tuneData.mjs";
 
 const dataPath = join(dirname(fileURLToPath(import.meta.url)), "..", "src", "troupakadaTunes.json");
 
@@ -38,6 +38,42 @@ export default function troupakadaSaveTunePlugin(): Plugin {
 
 						const current = JSON.parse(readFileSync(dataPath, "utf-8"));
 						const { data, errors } = mergeTuneData(current, { patterns: { [tuneName]: { [patternName]: pattern } } });
+
+						if (errors.length > 0) {
+							res.statusCode = 400;
+							res.end(JSON.stringify({ errors }));
+							return;
+						}
+
+						writeFileSync(dataPath, JSON.stringify(data, null, "\t") + "\n");
+
+						res.statusCode = 200;
+						res.end(JSON.stringify({ ok: true }));
+					} catch (e: any) {
+						res.statusCode = 400;
+						res.end(JSON.stringify({ errors: [e.message] }));
+					}
+				});
+			});
+
+			server.middlewares.use("/__troupakada/delete-pattern", (req, res) => {
+				if (req.method !== "POST") {
+					res.statusCode = 405;
+					res.end("Method not allowed");
+					return;
+				}
+
+				let body = "";
+				req.on("data", (chunk) => { body += chunk; });
+				req.on("end", () => {
+					res.setHeader("Content-Type", "application/json");
+					try {
+						const { tuneName, patternName } = JSON.parse(body);
+						if (typeof tuneName !== "string" || (patternName != null && typeof patternName !== "string"))
+							throw new Error("Requête invalide : tuneName (string) requis, patternName (string) optionnel.");
+
+						const current = JSON.parse(readFileSync(dataPath, "utf-8"));
+						const { data, errors } = removeTuneOrPattern(current, tuneName, patternName ?? null);
 
 						if (errors.length > 0) {
 							res.statusCode = 400;

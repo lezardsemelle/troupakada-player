@@ -2,6 +2,8 @@
 	import { copyTune, createPattern, createTune, getPatternFromState, removePattern, removeTune, renameTune } from "../../state/state";
 	import PatternListFilter, { DEFAULT_FILTER, Filter, filterPatternList } from "../pattern-list-filter.vue";
 	import defaultTunes from "../../defaultTunes";
+	import { troupakadaTunes } from "../../troupakadaTunes";
+	import { deleteFromTroupakadaTunes } from "../../services/troupakadaSave";
 	import PatternPlaceholder, { PatternPlaceholderItem } from "../pattern-placeholder.vue";
 	import { useRefWithOverride } from "../../utils";
 	import RenamePatternDialog from "./rename-pattern-dialog.vue";
@@ -9,9 +11,13 @@
 	import Collapse from "../utils/collapse.vue";
 	import { computed, ref, watch } from "vue";
 	import { injectStateRequired } from "../../services/state";
-	import { showConfirm, showPrompt } from "../utils/alert";
+	import { showAlert, showConfirm, showPrompt } from "../utils/alert";
 	import vTooltip from "../utils/tooltip";
 	import { getLocalizedDisplayName, useI18n } from "../../services/i18n";
+
+	// "Enregistrer" (pattern-player.vue) et la suppression d'un morceau/break Troup'akada déjà
+	// intégré n'existent qu'en développement : pas de serveur en production pour écrire le fichier.
+	const isDev = import.meta.env.DEV;
 
 	const props = defineProps<{
 		expandTune?: string;
@@ -49,6 +55,12 @@
 		return defaultTunes[tuneName] == null;
 	};
 
+	// Un morceau déjà intégré dans troupakadaTunes.json (donc plus "personnalisé" au sens de
+	// isCustomTune) reste supprimable, contrairement à un morceau officiel du répertoire RoR.
+	const isTroupakadaTune = (tuneName: string) => {
+		return Object.prototype.hasOwnProperty.call(troupakadaTunes, tuneName);
+	};
+
 	watch(expandTune, () => {
 		if (expandTune.value) {
 			isOpened.value[expandTune.value] = true;
@@ -70,6 +82,7 @@
 	const visibleTunes = computed(() => filterPatternList(state.value, filter.value).map((tuneName) => ({
 		tuneName,
 		isCustom: isCustomTune(tuneName),
+		isTroupakada: isTroupakadaTune(tuneName),
 		displayName: state.value.tunes[tuneName].displayName || tuneName,
 		patterns: Object.keys(state.value.tunes[tuneName].patterns).map((patternName) => ({
 			patternName,
@@ -107,7 +120,27 @@
 			variant: 'danger',
 			okLabel: () => i18n.t("pattern-list.remove-pattern-ok")
 		})) {
-			removePattern(state.value, tuneName, patternName);
+			// Un break déjà intégré dans troupakadaTunes.json (pas juste une addition locale non
+			// enregistrée) doit aussi être retiré du fichier, sinon il réapparaît au prochain chargement.
+			if (isTroupakadaTune(tuneName) && !isCustomPattern(tuneName, patternName)) {
+				const result = await deleteFromTroupakadaTunes(tuneName, patternName);
+				if (!result.ok) {
+					await showAlert({
+						title: () => i18n.t("pattern-list.remove-error-title"),
+						message: result.errors.join("\n"),
+						variant: "danger"
+					});
+					return;
+				}
+				removePattern(state.value, tuneName, patternName);
+				await showAlert({
+					title: () => i18n.t("pattern-list.remove-success-title"),
+					message: () => i18n.t("pattern-list.remove-success-message"),
+					variant: "success"
+				});
+			} else {
+				removePattern(state.value, tuneName, patternName);
+			}
 		}
 	};
 
@@ -186,7 +219,27 @@
 			variant: 'danger',
 			okLabel: () => i18n.t("pattern-list.remove-tune-ok")
 		})) {
-			removeTune(state.value, tuneName);
+			// Un morceau Troup'akada déjà intégré doit aussi être retiré de troupakadaTunes.json
+			// (avec tous ses breaks), sinon il réapparaît au prochain chargement.
+			if (isTroupakadaTune(tuneName)) {
+				const result = await deleteFromTroupakadaTunes(tuneName);
+				if (!result.ok) {
+					await showAlert({
+						title: () => i18n.t("pattern-list.remove-error-title"),
+						message: result.errors.join("\n"),
+						variant: "danger"
+					});
+					return;
+				}
+				removeTune(state.value, tuneName);
+				await showAlert({
+					title: () => i18n.t("pattern-list.remove-success-title"),
+					message: () => i18n.t("pattern-list.remove-success-message"),
+					variant: "success"
+				});
+			} else {
+				removeTune(state.value, tuneName);
+			}
 		}
 	};
 
@@ -241,14 +294,14 @@
 							@dragEnd="isDraggingPattern = false"
 						>
 							<PatternPlaceholderItem><a href="javascript:" v-tooltip="pattern.isCustom ? i18n.t('pattern-list.copy-move-rename-break') : i18n.t('pattern-list.copy-break')" @click="copyPattern(tune.tuneName, pattern.patternName)" draggable="false"><fa icon="copy"/></a></PatternPlaceholderItem>
-							<PatternPlaceholderItem v-if="pattern.isCustom"><a href="javascript:" v-tooltip="i18n.t('pattern-list.remove-break')" @click="removePatternFromTune(tune.tuneName, pattern.patternName)" draggable="false"><fa icon="trash"/></a></PatternPlaceholderItem>
+							<PatternPlaceholderItem v-if="pattern.isCustom || (tune.isTroupakada && isDev)"><a href="javascript:" v-tooltip="i18n.t('pattern-list.remove-break')" @click="removePatternFromTune(tune.tuneName, pattern.patternName)" draggable="false"><fa icon="trash"/></a></PatternPlaceholderItem>
 							<slot :tuneName="tune.tuneName" :patternName="pattern.patternName"/>
 						</PatternPlaceholder>
 						<div class="tune-actions">
 							<a href="javascript:" @click="createPatternInTune(tune.tuneName)" v-tooltip="i18n.t('pattern-list.create-break')" draggable="false"><fa icon="plus"/></a>
 							<a v-if="tune.isCustom" href="javascript:" @click="handleRenameTune(tune.tuneName)" v-tooltip="i18n.t('pattern-list.rename-tune')" draggable="false"><fa icon="pen"/></a>
 							<a href="javascript:" @click="handleCopyTune(tune.tuneName)" v-tooltip="i18n.t('pattern-list.copy-tune')" draggable="false"><fa icon="copy"/></a>
-							<a v-if="tune.isCustom" href="javascript:" @click="handleRemoveTune(tune.tuneName)" v-tooltip="i18n.t('pattern-list.remove-tune')" draggable="false"><fa icon="trash"/></a>
+							<a v-if="tune.isCustom || (tune.isTroupakada && isDev)" href="javascript:" @click="handleRemoveTune(tune.tuneName)" v-tooltip="i18n.t('pattern-list.remove-tune')" draggable="false"><fa icon="trash"/></a>
 						</div>
 					</div>
 				</Collapse>

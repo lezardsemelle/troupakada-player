@@ -93,3 +93,36 @@ export function mergeTuneData(current, exported) {
 
 	return { data, addedTunes, updatedPatterns, errors };
 }
+
+/**
+ * Supprime un break (`patternName` fourni) ou un morceau entier (`patternName` omis/null, tous
+ * ses breaks disparaissent avec lui) de `current`. Si supprimer un break laisse le morceau sans
+ * aucun pattern, le morceau entier est retiré aussi (pas d'entrée fantôme dans le fichier).
+ * Retourne { data, errors }. N'écrit rien sur le disque. Si `errors` n'est pas vide, `data` est
+ * inchangé (identique à `current`).
+ */
+export function removeTuneOrPattern(current, tuneName, patternName) {
+	const data = structuredClone(current);
+	const errors = [];
+
+	if (!data[tuneName]) {
+		errors.push(`Le morceau "${tuneName}" n'existe pas dans troupakadaTunes.json.`);
+		return { data: current, errors };
+	}
+
+	if (patternName == null) {
+		delete data[tuneName];
+		return { data, errors };
+	}
+
+	if (!data[tuneName].patterns || !(patternName in data[tuneName].patterns)) {
+		errors.push(`Le break "${patternName}" n'existe pas dans le morceau "${tuneName}" de troupakadaTunes.json.`);
+		return { data: current, errors };
+	}
+
+	delete data[tuneName].patterns[patternName];
+	if (Object.keys(data[tuneName].patterns).length === 0)
+		delete data[tuneName];
+
+	return { data, errors };
+}
