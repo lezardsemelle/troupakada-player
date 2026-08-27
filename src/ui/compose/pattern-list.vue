@@ -153,10 +153,18 @@
 		}
 	};
 
+	const getDefaultCopyTuneName = (tuneName: string) => {
+		let suffixed = `${tuneName} (${i18n.t("pattern-list.copy-tune-suffix")})`;
+		for(let i = 2; state.value.tunes[suffixed]; i++) {
+			suffixed = `${tuneName} (${i18n.t("pattern-list.copy-tune-suffix")} ${i})`;
+		}
+		return suffixed;
+	};
+
 	const handleCopyTune = async (tuneName: string) => {
 		const newTuneName = await showPrompt({
 			title: () => i18n.t("pattern-list.copy-tune-title"),
-			initialValue: tuneName,
+			initialValue: getDefaultCopyTuneName(tuneName),
 			validate: (newTuneName) => {
 				if(newTuneName.trim().length == 0 || newTuneName == tuneName)
 					return i18n.t("pattern-list.copy-tune-empty-name-error");

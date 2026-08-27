@@ -139,8 +139,15 @@ export class History {
 		if(this.currentKey.value && newKey - this.currentKey.value < 3600)
 			delete this._storage[`bbState-${this.currentKey.value}`];
 
+		// Ne réutiliser une clé existante que si elle n'est pas plus ancienne que l'état courant :
+		// une correspondance sur une clé plus vieille peut se produire sans lien avec une vraie
+		// annulation locale (ex. la liste des morceaux par défaut a changé depuis que cette
+		// ancienne clé a été enregistrée), et pointer le curseur partagé en arrière écraserait
+		// silencieusement une mise à jour plus récente faite entre-temps par un autre onglet
+		// (c'est ce qui causait la perte de morceaux nouvellement créés/copiés quand plusieurs
+		// onglets du Player étaient ouverts en même temps, voir CLAUDE.md).
 		const sameState = this._findSameState(obj);
-		if(sameState) {
+		if(sameState && (this.currentKey.value == null || sameState >= this.currentKey.value)) {
 			this._storage.bbState = `${sameState}`;
 			this.currentKey.value = sameState;
 			return;

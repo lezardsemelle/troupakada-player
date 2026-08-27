@@ -11,7 +11,7 @@ import { getI18n } from "../services/i18n";
 export type State = z.infer<typeof stateValidator>;
 export const stateValidator = z.object({
 	songs: z.array(songValidator).default(() => []),
-	tunes: z.record(z.string(), tuneValidator).default(() => defaultTunes),
+	tunes: z.record(z.string(), tuneValidator).default(() => clone(defaultTunes)),
 	songIdx: z.number().default(0),
 	playbackSettings: playbackSettingsValidator
 }).default(() => ({}));

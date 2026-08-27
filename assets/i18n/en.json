@@ -86,6 +86,7 @@
 		"rename-tune-duplicate-name-error": "This name is already taken. Please enter a different one.",
 		"rename-tune-ok": "Rename",
 		"copy-tune-title": "Copy tune",
+		"copy-tune-suffix": "copy",
 		"copy-tune-empty-name-error": "Please enter a new name for the tune.",
 		"copy-tune-duplicate-name-error": "This name is already taken. Please enter a different one.",
 		"copy-tune-ok": "Copy",

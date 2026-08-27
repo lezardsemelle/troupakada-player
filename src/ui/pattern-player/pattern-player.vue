@@ -14,6 +14,7 @@
 	import { createPattern, getPatternFromState } from "../../state/state";
 	import { clone } from "../../utils";
 	import defaultTunes from "../../defaultTunes";
+	import { troupakadaTunes } from "../../troupakadaTunes";
 	import { isEqual } from "lodash-es";
 	import StrokeDropdown from "./stroke-dropdown.vue";
 	import { injectStateRequired } from "../../services/state";
@@ -163,7 +164,14 @@
 	// intégré) n'a pas d'original à comparer : hasLocalChanges resterait toujours faux pour lui.
 	// On propose quand même "Enregistrer" dès qu'il contient au moins une frappe.
 	const hasContent = computed(() => config.instrumentKeys.some((instr) => (pattern.value[instr] || []).some((stroke) => stroke && stroke.trim() !== "")));
-	const canSaveToJson = computed(() => hasLocalChanges.value || (!originalPattern.value && hasContent.value));
+
+	// "Enregistrer" écrit dans troupakadaTunes.json (voir CLAUDE.md) : ce fichier ne doit contenir que
+	// les morceaux de Troup'akada, jamais un morceau officiel du répertoire RoR (ex. modifier un break
+	// de "Xango" par erreur et cliquer "Enregistrer" y écrirait "Xango" à tort). On n'autorise donc le
+	// bouton que pour un morceau déjà présent dans troupakadaTunes.json, ou un morceau entièrement
+	// nouveau (absent de tout le répertoire par défaut, donc forcément créé par l'utilisateur·ice).
+	const isTroupakadaOrNewTune = computed(() => Object.prototype.hasOwnProperty.call(troupakadaTunes, props.tuneName) || !defaultTunes[props.tuneName]);
+	const canSaveToJson = computed(() => isTroupakadaOrNewTune.value && (hasLocalChanges.value || (!originalPattern.value && hasContent.value)));
 
 	const reset = async () => {
 		if(await showConfirm({

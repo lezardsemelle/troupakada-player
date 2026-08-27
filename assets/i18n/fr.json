@@ -82,6 +82,7 @@
         "rename-tune-empty-name-error": "Veuillez entrer un nouveau nom pour le morceau.",
         "rename-tune-ok": "Renommer",
         "copy-tune-title": "Copier le morceau",
+        "copy-tune-suffix": "copie",
         "copy-tune-ok": "Copier",
         "remove-tune-title": "Supprimer le morceau",
         "remove-tune-ok": "Supprimer",
