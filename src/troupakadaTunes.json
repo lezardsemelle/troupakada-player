@@ -76,22 +76,11 @@
 				"ca": "@re",
 				"ag": "o                             a     a     a     o     o                                   o     o                       o     a     a     o     o",
 				"time": 12,
-				"length": 16
-			},
-			"Break - Costeau": {
-				"lg": "X X X X X X X X X X X X X X X X X X X X X X X X X",
-				"mg": "X X",
-				"hg": "X X",
-				"re": "X X",
-				"ca": "X X",
-				"ta": "X X",
-				"ag": "o",
-				"length": 16
+				"length": 16,
+				"ch": ".  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
 			}
 		},
 		"exampleSong": [
-			"Tune",
-			"Break - Costeau",
 			"Tune"
 		]
 	},
@@ -124,5 +113,21 @@
 			"Break 1",
 			"Tune"
 		]
+	},
+	"trytry": {
+		"patterns": {
+			"Tune": {
+				"lg": "0XXX 0  X               00",
+				"mg": "                     X",
+				"re": "       X",
+				"time": 8,
+				"length": 4,
+				"ca": "            X X X X XXXXr r  f",
+				"hg": "t",
+				"ta": "r",
+				"ag": "           o",
+				"ch": "     X"
+			}
+		}
 	}
 }
