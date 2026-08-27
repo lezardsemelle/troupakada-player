@@ -11,6 +11,11 @@
 		"descriptionFilename": "samba-troupakada-break-2"
 	},
 	{
+		"tuneName": "Samba Troupakada",
+		"patternName": "Clave Samba",
+		"descriptionFilename": ""
+	},
+	{
 		"tuneName": "Xango",
 		"patternName": "Intro",
 		"descriptionFilename": ""
