@@ -1,0 +1,12 @@
+[
+	{
+		"tuneName": "Samba Troupakada",
+		"patternName": "break 1",
+		"descriptionFilename": "samba-troupakada-break-1"
+	},
+	{
+		"tuneName": "Samba Troupakada",
+		"patternName": "Break 2",
+		"descriptionFilename": "samba-troupakada-break-2"
+	}
+]

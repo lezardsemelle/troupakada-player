@@ -185,7 +185,11 @@
 		"tune-sheet-pdf": "Tune sheet (PDF)",
 		"video": "Video",
 		"sounds": "Sounds",
-		"download-mp3": "Download as MP3"
+		"download-mp3": "Download as MP3",
+		"highlighted-break": "Featured break"
+	},
+	"highlighted-breaks": {
+		"title": "Featured breaks"
 	},
 	"pattern-length-picker": {
 		"length": "Length: {{length}}"

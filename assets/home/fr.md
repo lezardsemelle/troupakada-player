@@ -14,6 +14,13 @@ mouvement Rhythms of Resistance ? Il suffit de changer le filtre pour **Tous**.
 Chaque morceau peut être écouté en entier ou break par break, à la vitesse de ton choix, avec un métronome
 visuel pendant la lecture.
 
+## Breaks à la une
+
+En haut de la liste des morceaux dans **Écouter**, l'entrée **★ Breaks à la une** rassemble une sélection de
+breaks à connaître ou à travailler en particulier — qu'ils viennent du répertoire Troup'akada ou du répertoire
+international Rhythms of Resistance. Chacun peut être écouté et téléchargé comme n'importe quel break, avec
+son propre petit mot d'explication quand il y en a un.
+
 ## Fiches PDF
 
 Sur chaque morceau, un lien **« Livret des morceaux (PDF) »** donne accès à une fiche imprimable — la grille

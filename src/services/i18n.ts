@@ -52,6 +52,12 @@ for (const [filename, module] of Object.entries(import.meta.glob('../../assets/t
 	i18n.addResource(m[2], TUNE_DESCRIPTIONS_NS, m[1], (module as any).html);
 }
 
+const BREAK_DESCRIPTIONS_NS = "break-descriptions";
+for (const [filename, module] of Object.entries(import.meta.glob('../../assets/breakDescriptions/*/*.md', { eager: true }))) {
+	const m = filename.match(/([^/\\]+)[/\\]([^/\\]+)\.md/)!;
+	i18n.addResource(m[2], BREAK_DESCRIPTIONS_NS, m[1], (module as any).html);
+}
+
 const HOME_NS = "home";
 const HOME_KEY = "home";
 for (const [filename, module] of Object.entries(import.meta.glob('../../assets/home/*.md', { eager: true }))) {
@@ -110,6 +116,10 @@ export function useI18n(): ReturnType<typeof getI18n> {
 
 export function getTuneDescriptionHtml(tuneName: string): string {
 	return i18n.t(tuneName, { ns: TUNE_DESCRIPTIONS_NS, defaultValue: "" });
+}
+
+export function getBreakDescriptionHtml(descriptionFilename: string): string {
+	return i18n.t(descriptionFilename, { ns: BREAK_DESCRIPTIONS_NS, defaultValue: "" });
 }
 
 export function getAppInstructionsHtml(): string {

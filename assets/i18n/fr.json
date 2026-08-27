@@ -223,7 +223,11 @@
         "sounds": "Sons",
         "download-mp3": "Télécharger en MP3",
         "notation": "Notation",
-        "notation-info": "Cliquer sur le {{pen}} sur les breaks ci-dessous pour voir les notes."
+        "notation-info": "Cliquer sur le {{pen}} sur les breaks ci-dessous pour voir les notes.",
+        "highlighted-break": "Break à la une"
+    },
+    "highlighted-breaks": {
+        "title": "Breaks à la une"
     },
     "pattern-length-picker": {
         "length": "Longueur : {{length}}"

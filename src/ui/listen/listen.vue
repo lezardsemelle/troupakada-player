@@ -4,6 +4,8 @@
 	import { stopAllPlayers } from "../../services/player";
 	import { provideState } from "../../services/state";
 	import TuneInfo from "./tune-info.vue";
+	import HighlightedBreaksInfo from "./highlighted-breaks-info.vue";
+	import { HIGHLIGHTED_BREAKS_TUNE_NAME } from "../../highlightedBreaks";
 	import { useRefWithOverride } from "../../utils";
 	import { getTuneOfTheYear } from "../../services/utils";
 	import TuneList from "./tune-list.vue";
@@ -52,7 +54,8 @@
 		</HybridSidebar>
 
 		<div class="bb-listen-info">
-			<TuneInfo v-if="tuneName" :tuneName="tuneName" v-model:editPattern="editPattern" />
+			<HighlightedBreaksInfo v-if="tuneName === HIGHLIGHTED_BREAKS_TUNE_NAME" />
+			<TuneInfo v-else-if="tuneName" :tuneName="tuneName" v-model:editPattern="editPattern" />
 		</div>
 	</div>
 </template>

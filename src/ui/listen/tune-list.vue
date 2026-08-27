@@ -4,6 +4,7 @@
 	import PatternListFilter, { Filter, filterPatternList } from "../pattern-list-filter.vue";
 	import { getLocalizedDisplayName, useI18n } from "../../services/i18n";
 	import { isFavorite, toggleFavorite } from "../../services/favorites";
+	import { highlightedBreaks, HIGHLIGHTED_BREAKS_TUNE_NAME } from "../../highlightedBreaks";
 
 	const props = defineProps<{
 		tuneName: string | null | undefined;
@@ -30,7 +31,10 @@
 
 	watch(tuneName, () => {
 		if (tuneName.value) {
-			if(!filterPatternList(state.value, filter.value).includes(tuneName.value))
+			// "Breaks à la une" n'est pas un vrai morceau : il ne peut jamais apparaître dans la
+			// liste filtrée, donc ne pas changer le filtre en place quand on y navigue (sinon le
+			// filtre "Troup'akada" ou autre se réinitialiserait sur "Tous" à chaque clic dessus).
+			if(tuneName.value !== HIGHLIGHTED_BREAKS_TUNE_NAME && !filterPatternList(state.value, filter.value).includes(tuneName.value))
 				filter.value = { text: "", cat: "all" };
 
 			void nextTick(() => {
@@ -53,6 +57,12 @@
 		<hr />
 
 		<ul class="nav nav-pills flex-column flex-nowrap" ref="tuneListRef">
+			<li v-if="highlightedBreaks.length > 0" class="nav-item">
+				<a class="nav-link" :class="{ active: tuneName === HIGHLIGHTED_BREAKS_TUNE_NAME }" href="javascript:" @click="tuneName = HIGHLIGHTED_BREAKS_TUNE_NAME" draggable="false">
+					<fa icon="star" />
+					{{i18n.t("highlighted-breaks.title")}}
+				</a>
+			</li>
 			<li v-for="thisTuneName in tuneList" :key="thisTuneName" class="nav-item">
 				<a class="nav-link" :class="{ active: thisTuneName == tuneName }" href="javascript:" @click="tuneName = thisTuneName" draggable="false">
 					<span
