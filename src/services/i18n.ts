@@ -65,6 +65,13 @@ for (const [filename, module] of Object.entries(import.meta.glob('../../assets/h
 	i18n.addResource(m[1], HOME_NS, HOME_KEY, (module as any).html);
 }
 
+const HIGHLIGHTED_BREAKS_INTRO_NS = "highlighted-breaks-intro";
+const HIGHLIGHTED_BREAKS_INTRO_KEY = "intro";
+for (const [filename, module] of Object.entries(import.meta.glob('../../assets/highlightedBreaksIntro/*.md', { eager: true }))) {
+	const m = filename.match(/([^/\\]+)\.md/)!;
+	i18n.addResource(m[1], HIGHLIGHTED_BREAKS_INTRO_NS, HIGHLIGHTED_BREAKS_INTRO_KEY, (module as any).html);
+}
+
 const APP_INSTRUCTIONS_NS = "app-instructions";
 const APP_INSTRUCTIONS_KEY = "app-instructions";
 for (const [filename, module] of Object.entries(import.meta.glob('../../assets/appInstructions/*.md', { eager: true }))) {
@@ -128,6 +135,10 @@ export function getAppInstructionsHtml(): string {
 
 export function getHomeHtml(): string {
 	return i18n.t(HOME_KEY, { ns: HOME_NS, defaultValue: "" });
+}
+
+export function getHighlightedBreaksIntroHtml(): string {
+	return i18n.t(HIGHLIGHTED_BREAKS_INTRO_KEY, { ns: HIGHLIGHTED_BREAKS_INTRO_NS, defaultValue: "" });
 }
 
 export function getLocalizedDisplayName(name: string): string {

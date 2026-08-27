@@ -6,7 +6,7 @@
 	import vTooltip from "../utils/tooltip";
 	import { download, ExportType } from "../utils/export";
 	import { BeatboxReference, getPlayerById } from "../../services/player";
-	import { getBreakDescriptionHtml, getLocalizedDisplayName, useI18n } from "../../services/i18n";
+	import { getBreakDescriptionHtml, getHighlightedBreaksIntroHtml, getLocalizedDisplayName, useI18n } from "../../services/i18n";
 
 	const state = injectStateRequired();
 	const i18n = useI18n();
@@ -19,6 +19,11 @@
 		}
 		return el.innerHTML;
 	}
+
+	const introHtml = computed(() => {
+		const html = getHighlightedBreaksIntroHtml();
+		return html ? openLinksInNewTab(html) : null;
+	});
 
 	const items = computed(() => highlightedBreaks.map((entry) => {
 		const tune = state.value.tunes[entry.tuneName];
@@ -43,6 +48,8 @@
 <template>
 	<div class="bb-tune-info bb-highlighted-breaks-info">
 		<h1>{{i18n.t("highlighted-breaks.title")}}</h1>
+
+		<div v-if="introHtml" v-html="introHtml"></div>
 
 		<template v-for="item in items" :key="`${item.tuneName}//${item.patternName}`">
 			<h2>{{item.tuneDisplayName}} <small class="text-muted">({{item.patternDisplayName}})</small></h2>

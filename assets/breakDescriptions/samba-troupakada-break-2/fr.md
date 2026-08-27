@@ -2,5 +2,4 @@
 
 ## Signe
 
-*(Optionnel — décris le geste, ou colle ici une image en base64 comme dans
-`assets/tuneDescriptions/afoxe/fr.md` : `![](data:image/png;base64,...)`)*
+
