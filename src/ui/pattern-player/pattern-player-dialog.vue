@@ -5,7 +5,7 @@
 	import { patternEquals } from "../../state/pattern";
 	import PatternPlayer from "./pattern-player.vue";
 	import ShareDialog from "../compose/share-dialog.vue";
-	import { computed, ref } from "vue";
+	import { computed, ref, watch } from "vue";
 	import { injectStateRequired } from "../../services/state";
 	import { useModal } from "./../utils/modal";
 	import { getLocalizedDisplayName, useI18n } from "../../services/i18n";
@@ -28,7 +28,7 @@
 	const i18n = useI18n();
 
 	const modalRef = ref<HTMLElement>();
-	useModal(modalRef, {
+	const modalActions = useModal(modalRef, {
 		onHide: () => {
 			stopAllPlayers();
 		},
@@ -37,13 +37,25 @@
 		}
 	});
 
-	const pattern = computed(() => getPatternFromState(state.value, props.tuneName, props.patternName)!);
+	// Peut devenir undefined si le pattern disparaît du state pendant que la modale reste ouverte
+	// (ex. rechargement d'un state plus ancien depuis un autre onglet) — fermer la modale plutôt que
+	// de laisser le contenu planter sur un pattern inexistant.
+	const pattern = computed(() => getPatternFromState(state.value, props.tuneName, props.patternName));
+
+	watch(pattern, (p) => {
+		if (!p)
+			modalActions.hide();
+	});
 
 	const originalPattern = computed(() => defaultTunes.getPattern(props.tuneName, props.patternName));
 
-	const title = computed(() => `${getLocalizedDisplayName(state.value.tunes[props.tuneName].displayName || props.tuneName)} – ${getLocalizedDisplayName(state.value.tunes[props.tuneName].patterns[props.patternName].displayName || props.patternName)}`);
+	const title = computed(() => {
+		const tune = state.value.tunes[props.tuneName];
+		const patternDisplayName = tune?.patterns[props.patternName]?.displayName;
+		return `${getLocalizedDisplayName(tune?.displayName || props.tuneName)} – ${getLocalizedDisplayName(patternDisplayName || props.patternName)}`;
+	});
 
-	const hasChanged = computed(() => !originalPattern.value || !patternEquals(originalPattern.value, pattern.value));
+	const hasChanged = computed(() => !!pattern.value && (!originalPattern.value || !patternEquals(originalPattern.value, pattern.value)));
 
 	const showShareDialog = ref(false);
 
@@ -61,7 +73,7 @@
 						<h1 class="modal-title fs-5">{{title}}</h1>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" :aria-label="i18n.t('general.dialog-close')"></button>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body" v-if="pattern">
 						<PatternPlayer :tuneName="tuneName" :patternName="patternName" :readonly="readonly" :player="playerRef">
 							<button type="button" class="btn btn-info" v-if="hasChanged" @click="share()"><fa icon="share"/>{{" "}}{{i18n.t("pattern-player-dialog.share")}}</button>
 						</PatternPlayer>

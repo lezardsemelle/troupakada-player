@@ -104,6 +104,12 @@
 	};
 
 	const getPositionMarkerLeft = ({ beat }: PositionData<false>) => {
+		// pattern.value peut devenir undefined si le pattern disparaît du state pendant que la
+		// modale reste ouverte (ex. rechargement d'un state plus ancien depuis un autre onglet) —
+		// éviter un crash plutôt que planter sur .time d'un pattern inexistant.
+		if (!pattern.value)
+			return 0;
+
 		const stroke = beat * pattern.value.time;
 		const strokeIdx = Math.floor(stroke);
 		const strokeEl = containerRef.value!.querySelector<HTMLElement>(".stroke-i-"+strokeIdx);

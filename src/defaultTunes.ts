@@ -3411,8 +3411,9 @@ for(const i in rawTunes) {
 	defaultTunes[i] = normalizeTune(newTune);
 
 	const unknown = (defaultTunes[i].exampleSong || [])
-		.map((patternName) => typeof patternName === 'string' ? patternName : patternName.patternName)
-		.filter((patternName) => !defaultTunes[i].patterns[patternName]);
+		.map((entry) => typeof entry === 'string' ? { tuneName: i, patternName: entry } : { tuneName: entry.tuneName || i, patternName: entry.patternName })
+		.filter(({ tuneName, patternName }) => !defaultTunes[tuneName]?.patterns[patternName])
+		.map(({ tuneName, patternName }) => tuneName === i ? patternName : `${patternName} (${tuneName})`);
 	if(unknown.length > 0) {
 		// eslint-disable-next-line no-console
 		console.error(`Unknown breaks in example song for ${i}: ${unknown.join(", ")}`);
