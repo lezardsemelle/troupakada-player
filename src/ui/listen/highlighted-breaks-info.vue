@@ -1,12 +1,22 @@
 <script setup lang="ts">
-	import { computed } from "vue";
-	import { highlightedBreaks } from "../../highlightedBreaks";
+	import { computed, watch } from "vue";
+	import { highlightedBreaks, getHighlightedBreakKey } from "../../highlightedBreaks";
 	import { injectStateRequired } from "../../services/state";
 	import PatternPlaceholder, { PatternPlaceholderItem } from "../pattern-placeholder.vue";
 	import vTooltip from "../utils/tooltip";
 	import { download, ExportType } from "../utils/export";
 	import { BeatboxReference, getPlayerById } from "../../services/player";
 	import { getBreakDescriptionHtml, getHighlightedBreaksIntroHtml, getLocalizedDisplayName, useI18n } from "../../services/i18n";
+
+	const props = defineProps<{
+		/** Clé (voir getHighlightedBreakKey) du break à afficher. Si absente ou invalide (break
+		 * renommé/supprimé depuis), le premier de la liste est choisi et reflété ici via l'event. */
+		selectedKey?: string;
+	}>();
+
+	const emit = defineEmits<{
+		"update:selectedKey": [key: string | undefined];
+	}>();
 
 	const state = injectStateRequired();
 	const i18n = useI18n();
@@ -30,11 +40,21 @@
 		const pattern = tune.patterns[entry.patternName];
 		return {
 			...entry,
-			tuneDisplayName: getLocalizedDisplayName(tune.displayName || entry.tuneName),
-			patternDisplayName: getLocalizedDisplayName(pattern.displayName || entry.patternName),
+			key: getHighlightedBreakKey(entry),
+			displayName: entry.name || `${getLocalizedDisplayName(tune.displayName || entry.tuneName)} (${getLocalizedDisplayName(pattern.displayName || entry.patternName)})`,
 			descriptionHtml: entry.descriptionFilename ? openLinksInNewTab(getBreakDescriptionHtml(entry.descriptionFilename)) : null
 		};
 	}));
+
+	const selectedItem = computed(() => items.value.find((item) => item.key === props.selectedKey) || items.value[0]);
+
+	// Rien ou une clé invalide sélectionnée : retomber sur le premier break plutôt qu'une page vide,
+	// et refléter ce choix par défaut dans l'URL (via le v-model du parent) pour qu'elle reste correcte.
+	watch(() => selectedItem.value?.key, (key) => {
+		if (key && key !== props.selectedKey) {
+			emit("update:selectedKey", key);
+		}
+	}, { immediate: true });
 
 	const handleDownload = (tuneName: string, patternName: string, playerRef: BeatboxReference) => {
 		void download({
@@ -51,16 +71,16 @@
 
 		<div v-if="introHtml" v-html="introHtml"></div>
 
-		<template v-for="item in items" :key="`${item.tuneName}//${item.patternName}`">
-			<h2>{{item.tuneDisplayName}} <small class="text-muted">({{item.patternDisplayName}})</small></h2>
-			<div v-if="item.descriptionHtml" v-html="item.descriptionHtml"></div>
+		<template v-if="selectedItem">
+			<h2>{{selectedItem.displayName}}</h2>
+			<div v-if="selectedItem.descriptionHtml" v-html="selectedItem.descriptionHtml"></div>
 			<PatternPlaceholder
-				:tune-name="item.tuneName"
-				:pattern-name="item.patternName"
+				:tune-name="selectedItem.tuneName"
+				:pattern-name="selectedItem.patternName"
 				:readonly="true"
 				v-slot="{ getPlayer }"
 			>
-				<PatternPlaceholderItem><a href="javascript:" v-tooltip="i18n.t('tune-info.download-mp3')" @click="handleDownload(item.tuneName, item.patternName, getPlayer())" draggable="false"><fa icon="download"/></a></PatternPlaceholderItem>
+				<PatternPlaceholderItem><a href="javascript:" v-tooltip="i18n.t('tune-info.download-mp3')" @click="handleDownload(selectedItem.tuneName, selectedItem.patternName, getPlayer())" draggable="false"><fa icon="download"/></a></PatternPlaceholderItem>
 			</PatternPlaceholder>
 		</template>
 	</div>

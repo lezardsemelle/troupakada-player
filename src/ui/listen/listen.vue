@@ -44,7 +44,7 @@
 <template>
 	<div class="bb-listen">
 		<HybridSidebar v-model:isExpanded="isSidebarExpanded" :toggleContainer="sidebarToggleContainer">
-			<TuneList v-model:tuneName="tuneName" />
+			<TuneList v-model:tuneName="tuneName" v-model:editPattern="editPattern" />
 
 			<template v-slot:toggle>
 				<button type="button" class="btn btn-secondary" @click="isSidebarExpanded = !isSidebarExpanded">
@@ -54,7 +54,7 @@
 		</HybridSidebar>
 
 		<div class="bb-listen-info">
-			<HighlightedBreaksInfo v-if="tuneName === HIGHLIGHTED_BREAKS_TUNE_NAME" />
+			<HighlightedBreaksInfo v-if="tuneName === HIGHLIGHTED_BREAKS_TUNE_NAME" v-model:selectedKey="editPattern" />
 			<TuneInfo v-else-if="tuneName" :tuneName="tuneName" v-model:editPattern="editPattern" />
 		</div>
 	</div>

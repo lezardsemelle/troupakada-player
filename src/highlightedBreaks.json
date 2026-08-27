@@ -8,5 +8,40 @@
 		"tuneName": "Samba Troupakada",
 		"patternName": "Break 2",
 		"descriptionFilename": "samba-troupakada-break-2"
+	},
+	{
+		"tuneName": "Xango",
+		"patternName": "Intro",
+		"descriptionFilename": ""
+	},
+	{
+		"tuneName": "Xango",
+		"patternName": "Intro+Surdos",
+		"descriptionFilename": ""
+	},
+	{
+		"tuneName": "Xango",
+		"patternName": "Boum Shakala Break",
+		"descriptionFilename": ""
+	},
+	{
+		"tuneName": "Techno",
+		"patternName": "Break 1",
+		"descriptionFilename": ""
+	},
+	{
+		"tuneName": "Olodum",
+		"patternName": "Break d'entree",
+		"descriptionFilename": ""
+	},
+	{
+		"tuneName": "Afoxe",
+		"patternName": "Bra Break",
+		"descriptionFilename": ""
+	},
+	{
+		"tuneName": "Afoxe",
+		"patternName":"Tamborim Stroke",
+		"descriptionFilename": ""
 	}
 ]

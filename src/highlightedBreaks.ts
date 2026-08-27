@@ -17,6 +17,12 @@ export const HIGHLIGHTED_BREAKS_TUNE_NAME = "__highlighted-breaks";
 export type HighlightedBreak = {
 	tuneName: string;
 	patternName: string;
+	/**
+	 * Nom personnalisé affiché à la place de "NomMorceau (NomBreak)" — utile quand le morceau
+	 * source n'est pas pertinent à montrer (ex. un break isolé pris à un morceau que Troup'akada ne
+	 * joue pas par ailleurs).
+	 */
+	name?: string;
 	/** Nom de dossier sous assets/breakDescriptions/, même principe que descriptionFilename pour un morceau. */
 	descriptionFilename?: string;
 };
@@ -29,3 +35,10 @@ export const highlightedBreaks: HighlightedBreak[] = (rawHighlightedBreaks as Hi
 	}
 	return true;
 });
+
+/** Identifiant stable d'un break mis en avant, utilisé pour naviguer vers lui individuellement
+ * (route "patternName" sur le pseudo-morceau HIGHLIGHTED_BREAKS_TUNE_NAME). Ne dépend ni de l'ordre
+ * de la liste ni du nom personnalisé, seulement de la référence morceau/break elle-même. */
+export function getHighlightedBreakKey(entry: Pick<HighlightedBreak, "tuneName" | "patternName">): string {
+	return `${entry.tuneName}//${entry.patternName}`;
+}

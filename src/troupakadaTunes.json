@@ -63,7 +63,10 @@
 				"lg": "X  X  X X  X  X",
 				"length": 8
 			}
-		}
+		},
+		"exampleSong": [
+			"Break d'entree","Tune","Tune"
+		]
 	},
 	"Rap": {
 		"descriptionFilename": "rap",
@@ -113,21 +116,5 @@
 			"Break 1",
 			"Tune"
 		]
-	},
-	"trytry": {
-		"patterns": {
-			"Tune": {
-				"lg": "0XXX 0  X               00",
-				"mg": "                     X",
-				"re": "       X",
-				"time": 8,
-				"length": 4,
-				"ca": "            X X X X XXXXr r  f",
-				"hg": "t",
-				"ta": "r",
-				"ag": "           o",
-				"ch": "     X"
-			}
-		}
 	}
 }
