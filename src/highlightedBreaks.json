@@ -2,7 +2,8 @@
 	{
 		"tuneName": "Samba Troupakada",
 		"patternName": "break 1",
-		"descriptionFilename": "samba-troupakada-break-1"
+		"descriptionFilename": "samba-troupakada-break-1",
+		"name":"Break 1 Samba Troupakada"
 	},
 	{
 		"tuneName": "Samba Troupakada",
@@ -37,11 +38,14 @@
 	{
 		"tuneName": "Afoxe",
 		"patternName": "Bra Break",
-		"descriptionFilename": ""
+		"descriptionFilename": "",
+		"name":"Bra Break"
 	},
 	{
 		"tuneName": "Afoxe",
 		"patternName":"Tamborim Stroke",
-		"descriptionFilename": ""
+		"descriptionFilename": "tamborim-stroke",
+		"name":"Tamborim Stroke"
+
 	}
 ]

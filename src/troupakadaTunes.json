@@ -1,6 +1,7 @@
 {
 	"Samba Troupakada": {
 		"descriptionFilename": "samba-troupakada",
+		"speed": 120,
 		"patterns": {
 			"Tune": {
 				"lg": "    X       X   X   X   X   X",
@@ -34,7 +35,18 @@
 				"ot": "                              F",
 				"length": 8
 			}
-		}
+		},
+		"exampleSong": [
+			"Tune",
+			"Tune",
+			  { "tuneName": "General Breaks", "patternName": "Whistle in" },
+			"break 1",
+			"Tune",
+			  { "tuneName": "General Breaks", "patternName": "Whistle in" },
+			"Break 2",
+			"Tune"
+		]
+
 	},
 	"Olodum": {
 		"descriptionFilename": "olodum",
