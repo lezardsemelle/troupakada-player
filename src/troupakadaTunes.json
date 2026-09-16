@@ -45,6 +45,29 @@
 				"ta": "X  X  X X X X   X X XX X X XX X X  X  X X X X   X X XX X X XX X X  X  X X X X   X X XX X X XX X",
 				"ag": "o  o  o o o o   a a oo o a ao o o  o  o o o o   a a oo o a ao o o  o  o o o o   a a oo o a ao o",
 				"ch": "X..X..X.X.X.X....X....X........XX..X..X.X.X.X....X....X........XX..X..X.X.X.X....X....X........X"
+			},
+			"Clave Samba Modifié": {
+				"lg": "X  X  X   X X X     X       X   X  X  X   X X X     X       X   X  X  X   X X X     X       X   X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"mg": "X  X  X   X X X X       X       X  X  X   X X X X       X       X  X  X   X X X X       X       X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"hg": "X  X  X   X X X     XX X    X X X  X  X   X X X     XX X    X X X  X  X   X X X     XX X    X X X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"re": "X  X  X   X X X X  X  X   X X   X  X  X   X X X X  X  X   X X   X  X  X   X X X X  X  X   X X   X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"ca": "X  X  X   X X X X..X..X...X.X...X  X  X   X X X X..X..X...X.X...X  X  X   X X X X..X..X...X.X...X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"ta": "X  X  X   X X X X X XX X X XX X X  X  X   X X X X X XX X X XX X X  X  X   X X X X X XX X X XX X X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"ag": "o  o  o   o o o a a oo o a ao o o  o  o   o o o a a oo o a ao o o  o  o   o o o a a oo o a ao o o  o  o   o o o o  o  o   o o o o  o  o   o o o",
+				"ch": "X..X..X. .X.X.X..X....X........XX..X..X. .X.X.X..X....X........XX..X..X. .X.X.X..X....X........XX  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"length": 36
+			},
+			"Baguettes dans le nez": {
+				"lg": "                  X     X                 X     X                       X   X   X   X   X   X   X           X                                   ",
+				"mg": "@lg",
+				"hg": "@lg",
+				"re": "   XXXX  X  X              XXXX  X  X              XXXX  X  X           X   X   X   X   X   X   X           X                                   ",
+				"ca": "@lg",
+				"ta": "@lg",
+				"ag": "                  o     o                 o     o                       o   o   o   o   o   o   o           o                                   ",
+				"ch": "@lg",
+				"time": 12,
+				"length": 12
 			}
 		},
 		"exampleSong": [
@@ -75,6 +98,8 @@
 				"ca": "X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...",
 				"ta": "X XXX X   X   X X XXX X   X   X X XXX X   X   X X XXX X   X   X",
 				"ag": "a  o  a   o o   a  o  a   o o   a  o  a   o o   a  o  a   o o",
+				"ch": "X..XX..XX..XX..XX..XX..XX..XX..XX  X  X X  X  X X..XX..XX..XX..X",
+
 				"length": 16
 			},
 			"Break d'entree": {
@@ -86,6 +111,18 @@
 				"ta": "@re",
 				"ag": "                o  o  o o  o  o",
 				"length": 12
+			},
+			"Tune modifie": {
+				"ta": "X XXX X   X   X X XXX X   X   X X XXX X   X   X X XXX X X XXX X",
+				"ag": "a  o  a   o o   a  o  a   o o   a  o  a a  o  a a  o  a   o o",
+				"ch": "X..XX..XX..XX..XX..XX..XX..XX..XX  X  X X  X  X X..XX..XX..XX..X",
+				"length": 16
+			},
+			"Olodum - deuxième partie variante tambourim": {
+				"ta": "X        X        X     X        X        X                                                     X        X        X     X        X        X     X   X   X   X   X   X   X",
+				"ot": "                                                F        F        F     F        F        F                                                                                         F",
+				"time": 12,
+				"length": 16
 			}
 		},
 		"exampleSong": [
@@ -107,6 +144,18 @@
 				"time": 12,
 				"length": 16,
 				"ch": ".  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+			},
+			"Tune modifie": {
+				"lg": "X           r     X           X     r   X       X           r     X     X     X     r           X           r     X           X     r   X       X           r     X     X     X     r",
+				"mg": "@lg",
+				"hg": "@lg",
+				"re": "            X                       X                       X               X       X                       X                       X                       X              X        X",
+				"ca": "@re",
+				"ta": "X        X              X     X     X     X     X        X              X     X     X     X     X        X              X     X     X     X     X        X              X     X     X     X",
+				"ag": "o     o                       a     a     a     o     o                                   o     o                       o     a     a     o     o           a     o  a     a     o  a     a",
+				"ch": "      X           X           X           X           X           X           X           X           X           X           X           X           X           X           X           X",
+				"time": 12,
+				"length": 16
 			}
 		},
 		"exampleSong": [
@@ -143,4 +192,5 @@
 			"Tune"
 		]
 	}
+
 }
