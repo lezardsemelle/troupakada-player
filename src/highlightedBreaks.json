@@ -48,6 +48,12 @@
 	},
 	{
 		"tuneName": "Afoxe",
+		"patternName": "Wolf Break",
+		"descriptionFilename": "",
+		"name":"Loup-Garou Break"
+	},
+	{
+		"tuneName": "Afoxe",
 		"patternName":"Tamborim Stroke",
 		"descriptionFilename": "tamborim-stroke",
 		"name":"Tamborim Stroke"

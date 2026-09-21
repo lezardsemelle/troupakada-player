@@ -395,28 +395,7 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 				ag: '@re',
 				ch: '@re'
 			},
-			"Break 2": {
-				lg: 's   s   s   s   s   s   X   X   ',
-				mg: '      X       X       X   XXXXX ',
-				hg: '@mg',
-				re: 'f  hs r f  hs r f  hs r s r s r ',
-				ca: 'X...X..XX..X....X...X..XX..X....',
-				ta: 'X X X X XX XX X X X X X XX XX X ',
-				ag: 'a a o o aa o oo a a o o aa o oo ',
-				ch: '................................'
-			},
-			"Break 3": {
-				lg: 's   s   s   s   s   s   X   X   ',
-				mg: '   XXXX    XXXX    XXXX X XXXXX ',
-				hg: '@mg',
-				re: 'f  hs r f  hs r f  hs r s r s r ',
-				ca: 'X...X..XX..X....X...X..XX..X....',
-				ta: 'X X X X XX XX X X X X X XX XX X ',
-				ag: 'a a o o aa o oo a a o o aa o oo ',
-				ch: '................................'
-			},
 			"Bra Break": {
-				displayName: "Call Break",
 				lg: '        XX XX           XX XX           XX XX   X X X X XX XX X ',
 				mg: '@lg',
 				hg: '@lg',
@@ -425,6 +404,20 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 				ta: '@lg',
 				ag: '@lg',
 				ch: '@lg'
+			},
+			// Repris tel quel de "Special Breaks" / "Wulf Break" : la description du morceau le cite
+			// parmi les breaks d'Afoxé, autant l'avoir directement sous la main en Composer.
+			"Wolf Break": {
+				displayName: "Loup-Garou Break",
+				lg: 'X X   XXX X    XX X    XX X     X X   XXX X    XX X X X X       ',
+				mg: '@lg',
+				hg: '@lg',
+				re: '    X       X       X       X       X       X  XX X X X X       ',
+				ca: '@re',
+				ta: '@re',
+				ag: '@re',
+				ch: '@re',
+				ot: '                                                          E D   '
 			},
 			"Tamborim Stroke": {
 				lg: 'X X X X XX XX X ',
