@@ -1,7 +1,10 @@
-const version = "v1";
+const version = "v2";
 
+// "./" (relatif au service worker) et non "/" : le player est servi dans un sous-dossier
+// (GitHub Pages, /troupakada-player/). "/" pointait la racine du domaine, qui y renvoie 404 :
+// addAll() échouait, le service worker ne s'installait jamais (ni hors ligne, ni alerte de mise à jour).
 self.addEventListener('install', (e) => {
-	e.waitUntil(caches.open(version).then((cache) => cache.addAll(["/"])));
+	e.waitUntil(caches.open(version).then((cache) => cache.addAll(["./"])));
 });
 
 self.addEventListener('activate', event => {
