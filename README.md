@@ -60,6 +60,8 @@ All the parameters (such as the instruments, samples, time measurements) are con
 
 The samples are available as MP3 files in [`assets/audio`](./assets/audio). Their file names have the format `${instrumentKey}_${strokeHex}.mp3`, where `strokeHex` is the stroke key char code in hex.
 
+The timbal samples (`ti_*.mp3`) come from the free-licensed "Brazilian Percussion Drum Rack" by ChicoCorrea.
+
 The tune descriptions can be found in [`assets/tuneDescriptions`](./assets/tuneDescriptions).
 
 More details can be found in the [documentation](https://player-docs.rhythms-of-resistance.org/guide/technical/config.html).
