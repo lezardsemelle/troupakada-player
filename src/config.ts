@@ -1,7 +1,7 @@
 import * as z from "zod";
 import { getI18n } from "./services/i18n";
 
-const instrumentKeys = ["lg", "mg", "hg", "re", "ca", "ta", "ag", "ch", "ot"] as const;
+const instrumentKeys = ["lg", "mg", "hg", "ti", "re", "ca", "ta", "ag", "ch", "ot"] as const;
 export const instrumentValidator = z.enum(instrumentKeys);
 export type Instrument = z.infer<typeof instrumentValidator>;
 
@@ -84,6 +84,13 @@ const config: Config = {
 		hg: {
 			name: () => getI18n().t("config.instruments-hg"),
 			strokes: [ "X", "0", "s", "t", "r" ]
+		},
+		// Timbal (tambour à main brésilien) : les lettres/chiffres étant tous déjà pris dans `strokes`, ses frappes
+		// utilisent des caractères accentués en interne (ğ = grave, ø = ouvert, ç = claqué) — seul le libellé
+		// est affiché. Sons provisoires (assets/audio/ti_*.mp3) en attendant de vrais enregistrements.
+		ti: {
+			name: () => getI18n().t("config.instruments-ti"),
+			strokes: [ "ğ", "ø", "ç" ]
 		},
 		re: {
 			name: () => getI18n().t("config.instruments-re"),
@@ -227,6 +234,9 @@ const config: Config = {
 		"Ò": "que",
 		"Ó": "re",
 		"Ô": "mos",
+		"ğ": "gr", // Timbal : grave
+		"ø": "ou", // Timbal : ouvert
+		"ç": "cl", // Timbal : claqué
 		// ]
 	},
 
@@ -239,7 +249,10 @@ const config: Config = {
 		".": () => getI18n().t("config.stroke-description-."),
 		"w" :() => getI18n().t("config.stroke-description-wh"),
 		"y" :() => getI18n().t("config.stroke-description-wh2"),
-		"z": () => getI18n().t("config.stroke-description-s")
+		"z": () => getI18n().t("config.stroke-description-s"),
+		"ğ": () => getI18n().t("config.stroke-description-ti-grave"),
+		"ø": () => getI18n().t("config.stroke-description-ti-ouvert"),
+		"ç": () => getI18n().t("config.stroke-description-ti-claque")
 	},
 
 	volumePresets: {
@@ -249,6 +262,7 @@ const config: Config = {
 				lg: 0.7,
 				mg: 0.7,
 				hg: 0.7,
+				ti: 1,
 				re: 1.6,
 				ca: 1.2,
 				ta: 1.4,
@@ -263,6 +277,7 @@ const config: Config = {
 				lg: 1,
 				mg: 1,
 				hg: 1.1,
+				ti: 1,
 				re: 1.5,
 				ca: 1.3,
 				ta: 1.2,

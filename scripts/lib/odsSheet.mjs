@@ -10,13 +10,14 @@
 
 import { buildZip } from "./zip.mjs";
 
-export const INSTRUMENT_KEYS = ["lg", "mg", "hg", "re", "ca", "ta", "ag", "ch", "ot"];
+export const INSTRUMENT_KEYS = ["lg", "mg", "hg", "ti", "re", "ca", "ta", "ag", "ch", "ot"];
 
 // French display names, kept in sync by hand with src/config.ts's `instruments-*` translations (assets/i18n/fr.json).
 const INSTRUMENT_NAMES = {
 	lg: "Surdo grave",
 	mg: "Surdo médium",
 	hg: "Surdo aigu",
+	ti: "Timbal",
 	re: "Repique",
 	ca: "Caixa",
 	ta: "Tamborim",
@@ -39,7 +40,10 @@ const STROKES = {
 	"a": "h",
 	"t": "w",
 	".": ".",
-	"F": "Hey!"
+	"F": "Hey!",
+	"ğ": "gr", // Timbal : grave
+	"ø": "ou", // Timbal : ouvert
+	"ç": "cl"  // Timbal : claqué
 };
 
 const DEFAULT_SPEED = 100;

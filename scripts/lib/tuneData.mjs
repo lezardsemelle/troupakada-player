@@ -2,7 +2,7 @@
 // Utilisée à la fois par scripts/import-tunes.mjs (CLI) et par le plugin Vite du bouton
 // "Enregistrer" (vite.config.ts), pour ne pas dupliquer la validation entre les deux.
 
-export const VALID_INSTRUMENTS = new Set([ "lg", "mg", "hg", "re", "ca", "ta", "ag", "ch", "ot" ]);
+export const VALID_INSTRUMENTS = new Set([ "lg", "mg", "hg", "ti", "re", "ca", "ta", "ag", "ch", "ot" ]);
 export const VALID_PATTERN_PROPERTIES = new Set([ "length", "time", "speed", "upbeat", "loop", "displayName", "volumeHack" ]);
 
 const INSTRUMENT_MAP = {

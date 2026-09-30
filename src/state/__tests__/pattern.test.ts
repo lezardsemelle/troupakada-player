@@ -11,6 +11,7 @@ test('normalizePattern', () => {
 		lg: [],
 		mg: [],
 		hg: [],
+		ti: [],
 		re: [],
 		ca: [],
 		ta: [],
