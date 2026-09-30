@@ -3076,7 +3076,8 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		exampleSong: [ "Tune", "Tune", "Scissor Break", "Tune", "Tune" ]
 	},
 	'Walc(z)': {
-		categories: [ "uncommon", "easy", "western" ],
+		categories: [ "troupakada","uncommon", "easy", "western" ],
+		displayName:"Valse",
 		time: 6,
 		speed: 60,
 		sheet: sheetUrl + "walc.pdf",
