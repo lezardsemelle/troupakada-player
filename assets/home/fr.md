@@ -43,5 +43,5 @@ Quelques chantiers en cours :
 - associer chaque geste de maestration au(x) morceau(x) où il s'utilise, pour qu'il apparaisse directement
   sur la page du morceau concerné ;
 - un panneau affichant les gestes en direct pendant la lecture ;
-- les vrais échantillons audio batucada (Surdo, Repique, Caixa...), en remplacement des sons provisoires
-  actuels.
+- à terme, des sons enregistrés sur les instruments de la troupe (surdos, repique, caixa, timbal...),
+  pour une écoute encore plus fidèle à ce qu'on joue en répétition.
