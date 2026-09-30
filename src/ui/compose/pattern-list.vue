@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import { copyTune, createPattern, createTune, getPatternFromState, removePattern, removeTune, renameTune } from "../../state/state";
-	import PatternListFilter, { DEFAULT_FILTER, Filter, filterPatternList } from "../pattern-list-filter.vue";
+	import PatternListFilter, { Filter, filterPatternList } from "../pattern-list-filter.vue";
 	import defaultTunes from "../../defaultTunes";
 	import { troupakadaTunes } from "../../troupakadaTunes";
 	import { deleteFromTroupakadaTunes } from "../../services/troupakadaSave";
@@ -42,7 +42,9 @@
 
 	const state = injectStateRequired();
 
-	const filter = ref<Filter>(DEFAULT_FILTER);
+	// Composer affiche tous les morceaux par défaut (le filtre "Troup'akada" reste le défaut d'Écouter) :
+	// avec un filtre, créer un morceau sans catégorie basculait la liste sur "Personnalisés".
+	const filter = ref<Filter>({ text: "", cat: "all" });
 	const isOpened = ref<Opened>({});
 	const showPatternEditor = ref<{ tuneName: string; patternName: string }>();
 	const showRename = ref<{ tuneName: string; patternName: string }>();
