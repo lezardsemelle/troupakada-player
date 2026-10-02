@@ -21,16 +21,17 @@ const tuneSheetUrls = Object.fromEntries(
  *
  * Le contenu (patterns, et au besoin descriptionFilename/displayName/sheet/video/speed/exampleSong,
  * cf. le type RawTune) vit dans troupakadaTunes.json ; ce fichier se contente d'y ajouter la
- * catégorie "troupakada" et, si un PDF a été généré pour ce morceau, le champ "sheet" (même lien
- * "Livret des morceaux (PDF)" que pour les morceaux RoR officiels, voir tune-info.vue) — sauf si le
- * JSON définit déjà son propre "sheet" à la main.
+ * catégorie "troupakada" (sauf si le JSON précise ses propres "categories", par ex. [ "combatucada" ]
+ * ou [ "frappas" ] pour le répertoire des autres groupes) et, si un PDF a été généré pour ce morceau,
+ * le champ "sheet" (même lien "Livret des morceaux (PDF)" que pour les morceaux RoR officiels, voir
+ * tune-info.vue) — sauf si le JSON définit déjà son propre "sheet" à la main.
  */
 export const troupakadaTunes: Record<string, RawTune> = Object.fromEntries(
-	Object.entries(tunesData as Record<string, Omit<RawTune, "categories">>).map(([tuneName, tune]) => [
+	Object.entries(tunesData as Record<string, RawTune>).map(([tuneName, tune]) => [
 		tuneName,
 		{
 			...tune,
-			categories: [ "troupakada" ],
+			categories: tune.categories ?? [ "troupakada" ],
 			sheet: tune.sheet ?? (tune.descriptionFilename ? tuneSheetUrls[tune.descriptionFilename] : undefined)
 		} satisfies RawTune
 	])

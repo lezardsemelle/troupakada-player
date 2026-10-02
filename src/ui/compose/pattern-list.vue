@@ -3,7 +3,9 @@
 	import PatternListFilter, { Filter, filterPatternList } from "../pattern-list-filter.vue";
 	import defaultTunes from "../../defaultTunes";
 	import { troupakadaTunes } from "../../troupakadaTunes";
-	import { deleteFromTroupakadaTunes } from "../../services/troupakadaSave";
+	import { deleteFromTroupakadaTunes, saveRepertoireCategories } from "../../services/troupakadaSave";
+	import { REPERTOIRE_CATEGORIES, RepertoireCategory, isRepertoireCategory, withRepertoireCategories } from "../../repertoireCategories";
+	import config from "../../config";
 	import PatternPlaceholder, { PatternPlaceholderItem } from "../pattern-placeholder.vue";
 	import { useRefWithOverride } from "../../utils";
 	import RenamePatternDialog from "./rename-pattern-dialog.vue";
@@ -86,12 +88,41 @@
 		isCustom: isCustomTune(tuneName),
 		isTroupakada: isTroupakadaTune(tuneName),
 		displayName: state.value.tunes[tuneName].displayName || tuneName,
+		repertoireCategories: state.value.tunes[tuneName].categories.filter(isRepertoireCategory),
 		patterns: Object.keys(state.value.tunes[tuneName].patterns).map((patternName) => ({
 			patternName,
 			isCustom: isCustomPattern(tuneName, patternName)
 		})),
-		height: Object.keys(state.value.tunes[tuneName].patterns).length * 50 + 24
+		height: Object.keys(state.value.tunes[tuneName].patterns).length * 50 + 24 + (isDev ? 48 : 0)
 	})));
+
+	// Cases Troup'akada / Combatucada / Les Frappas (développement uniquement) : écrites dans
+	// troupakadaTunes.json ou, pour un morceau RoR, dans repertoireCategories.json. Un morceau pas encore
+	// enregistré garde ses cases en mémoire, envoyées à son premier "Enregistrer" (pattern-player.vue).
+	const savingCategories = ref<string>();
+	const toggleRepertoireCategory = async (tuneName: string, category: RepertoireCategory, checked: boolean) => {
+		const tune = state.value.tunes[tuneName];
+		const selected = REPERTOIRE_CATEGORIES.filter((c) => c === category ? checked : tune.categories.includes(c));
+
+		if (!isCustomTune(tuneName) || isTroupakadaTune(tuneName)) {
+			savingCategories.value = tuneName;
+			try {
+				const result = await saveRepertoireCategories(tuneName, selected, isTroupakadaTune(tuneName) ? "tune" : "repertoire");
+				if (!result.ok) {
+					await showAlert({
+						title: () => i18n.t("pattern-list.categories-error-title"),
+						message: result.errors.join("\n"),
+						variant: "danger"
+					});
+					return;
+				}
+			} finally {
+				savingCategories.value = undefined;
+			}
+		}
+
+		tune.categories = withRepertoireCategories(tune.categories, selected);
+	};
 
 	const createPatternInTune = async (tuneName: string) => {
 		const newPatternName = await showPrompt({
@@ -305,6 +336,18 @@
 							<a href="javascript:" @click="handleCopyTune(tune.tuneName)" v-tooltip="i18n.t('pattern-list.copy-tune')" draggable="false"><fa icon="copy"/></a>
 							<a v-if="tune.isCustom || (tune.isTroupakada && isDev)" href="javascript:" @click="handleRemoveTune(tune.tuneName)" v-tooltip="i18n.t('pattern-list.remove-tune')" draggable="false"><fa icon="trash"/></a>
 						</div>
+						<div v-if="isDev" class="tune-categories">
+							<label v-for="category in REPERTOIRE_CATEGORIES" :key="category" class="form-check form-check-inline">
+								<input
+									type="checkbox"
+									class="form-check-input"
+									:checked="tune.repertoireCategories.includes(category)"
+									:disabled="savingCategories === tune.tuneName"
+									@change="toggleRepertoireCategory(tune.tuneName, category, ($event.target as HTMLInputElement).checked)"
+								/>
+								<span class="form-check-label">{{config.filterCats[category]()}}</span>
+							</label>
+						</div>
 					</div>
 				</Collapse>
 			</div>
@@ -367,6 +410,15 @@
 
 			> * + * {
 				margin-left: 0.25rem;
+			}
+		}
+
+		.tune-categories {
+			text-align: center;
+			font-size: 0.875em;
+
+			.form-check-inline {
+				margin-right: 0.5rem;
 			}
 		}
 

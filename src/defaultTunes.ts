@@ -5,6 +5,7 @@ import { normalizeTune, Tune } from "./state/tune";
 import * as z from "zod";
 import { PatternReference } from "./state/song";
 import { troupakadaTunes } from "./troupakadaTunes";
+import { repertoireCategoryOverrides, withRepertoireCategories } from "./repertoireCategories";
 
 function stretch(from: number, to: number, pattern: string): string {
 	return pattern.split("").concat([ "" ]).join(repeat((to/from)-1, " "));
@@ -3363,6 +3364,12 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 	// Morceaux composés par Troup'akada d'Échirolles : voir src/troupakadaTunes.ts / .json
 	...troupakadaTunes
 };
+
+// Catégories du répertoire réglées depuis Composer pour les morceaux RoR (voir src/repertoireCategories.ts)
+for(const [tuneName, selected] of Object.entries(repertoireCategoryOverrides)) {
+	if(rawTunes[tuneName] && !troupakadaTunes[tuneName])
+		rawTunes[tuneName].categories = withRepertoireCategories(rawTunes[tuneName].categories, selected);
+}
 
 const defaultTunes: { [tuneName: string]: Tune } = { };
 

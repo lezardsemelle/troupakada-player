@@ -3,9 +3,10 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 // @ts-expect-error pas de types pour ce petit module JS partagé avec les scripts CLI
-import { mergeTuneData, removeTuneOrPattern } from "./lib/tuneData.mjs";
+import { findInvalidCategories, mergeTuneData, removeTuneOrPattern, setTuneCategories } from "./lib/tuneData.mjs";
 
 const dataPath = join(dirname(fileURLToPath(import.meta.url)), "..", "src", "troupakadaTunes.json");
+const repertoireCategoriesPath = join(dirname(fileURLToPath(import.meta.url)), "..", "src", "repertoireCategories.json");
 
 /**
  * Sert le bouton "Enregistrer" du lecteur de pattern (src/ui/pattern-player/pattern-player.vue) :
@@ -32,12 +33,20 @@ export default function troupakadaSaveTunePlugin(): Plugin {
 				req.on("end", () => {
 					res.setHeader("Content-Type", "application/json");
 					try {
-						const { tuneName, patternName, pattern } = JSON.parse(body);
+						const { tuneName, patternName, pattern, categories } = JSON.parse(body);
 						if (typeof tuneName !== "string" || typeof patternName !== "string" || typeof pattern !== "object" || pattern === null)
 							throw new Error("Requête invalide : tuneName, patternName et pattern sont requis.");
 
 						const current = JSON.parse(readFileSync(dataPath, "utf-8"));
-						const { data, errors } = mergeTuneData(current, { patterns: { [tuneName]: { [patternName]: pattern } } });
+						const { data, addedTunes, errors } = mergeTuneData(current, { patterns: { [tuneName]: { [patternName]: pattern } } });
+
+						// Un morceau neuf arrive avec les catégories cochées dans Composer (sinon : "troupakada"
+						// par défaut, voir src/troupakadaTunes.ts). Celles d'un morceau déjà présent se règlent
+						// par /__troupakada/set-categories.
+						if (categories != null && addedTunes.includes(tuneName)) {
+							errors.push(...findInvalidCategories(categories));
+							data[tuneName] = { categories, ...data[tuneName] };
+						}
 
 						if (errors.length > 0) {
 							res.statusCode = 400;
@@ -82,6 +91,48 @@ export default function troupakadaSaveTunePlugin(): Plugin {
 						}
 
 						writeFileSync(dataPath, JSON.stringify(data, null, "\t") + "\n");
+
+						res.statusCode = 200;
+						res.end(JSON.stringify({ ok: true }));
+					} catch (e: any) {
+						res.statusCode = 400;
+						res.end(JSON.stringify({ errors: [e.message] }));
+					}
+				});
+			});
+
+			// Cases à cocher Troup'akada / Combatucada / Les Frappas de Composer (pattern-list.vue) : écrit
+			// dans troupakadaTunes.json (target "tune") ou, pour un morceau RoR officiel qu'on ne réécrit pas,
+			// dans repertoireCategories.json (target "repertoire", voir src/repertoireCategories.ts).
+			server.middlewares.use("/__troupakada/set-categories", (req, res) => {
+				if (req.method !== "POST") {
+					res.statusCode = 405;
+					res.end("Method not allowed");
+					return;
+				}
+
+				let body = "";
+				req.on("data", (chunk) => { body += chunk; });
+				req.on("end", () => {
+					res.setHeader("Content-Type", "application/json");
+					try {
+						const { tuneName, categories, target } = JSON.parse(body);
+						if (typeof tuneName !== "string" || (target !== "tune" && target !== "repertoire"))
+							throw new Error("Requête invalide : tuneName (string), categories et target (\"tune\" ou \"repertoire\") sont requis.");
+
+						const path = target === "tune" ? dataPath : repertoireCategoriesPath;
+						const current = JSON.parse(readFileSync(path, "utf-8"));
+						const { data, errors } = target === "tune"
+							? setTuneCategories(current, tuneName, categories)
+							: { data: { ...current, [tuneName]: categories }, errors: findInvalidCategories(categories) };
+
+						if (errors.length > 0) {
+							res.statusCode = 400;
+							res.end(JSON.stringify({ errors }));
+							return;
+						}
+
+						writeFileSync(path, JSON.stringify(data, null, "\t") + "\n");
 
 						res.statusCode = 200;
 						res.end(JSON.stringify({ ok: true }));

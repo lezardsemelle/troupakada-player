@@ -126,3 +126,33 @@ export function removeTuneOrPattern(current, tuneName, patternName) {
 
 	return { data, errors };
 }
+
+// Catégories du répertoire de l'asso et des groupes amis, réglables par cases à cocher dans Composer.
+// Même liste que REPERTOIRE_CATEGORIES (src/repertoireCategories.ts).
+export const REPERTOIRE_CATEGORIES = [ "troupakada", "combatucada", "frappas" ];
+
+export function findInvalidCategories(categories) {
+	if (!Array.isArray(categories))
+		return [ "categories doit être un tableau." ];
+	return categories.filter((category) => !REPERTOIRE_CATEGORIES.includes(category))
+		.map((category) => `Catégorie inconnue "${category}" (attendu : ${REPERTOIRE_CATEGORIES.join(", ")}).`);
+}
+
+/**
+ * Remplace les catégories du répertoire (REPERTOIRE_CATEGORIES) d'un morceau de troupakadaTunes.json
+ * par `categories`, sans toucher à ses éventuelles autres catégories (easy, western...). Un morceau sans
+ * champ "categories" est dans "troupakada" par défaut (voir src/troupakadaTunes.ts).
+ * Retourne { data, errors } ; si `errors` n'est pas vide, `data` est inchangé (identique à `current`).
+ */
+export function setTuneCategories(current, tuneName, categories) {
+	const errors = findInvalidCategories(categories);
+	if (!current[tuneName])
+		errors.push(`Le morceau "${tuneName}" n'existe pas dans troupakadaTunes.json.`);
+	if (errors.length > 0)
+		return { data: current, errors };
+
+	const data = structuredClone(current);
+	const others = (data[tuneName].categories ?? [ "troupakada" ]).filter((category) => !REPERTOIRE_CATEGORIES.includes(category));
+	data[tuneName].categories = [ ...REPERTOIRE_CATEGORIES.filter((category) => categories.includes(category)), ...others ];
+	return { data, errors };
+}

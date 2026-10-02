@@ -25,3 +25,12 @@ async function postTroupakada(path: string, body: object): Promise<TroupakadaFil
 export function deleteFromTroupakadaTunes(tuneName: string, patternName?: string): Promise<TroupakadaFileResult> {
 	return postTroupakada("delete-pattern", { tuneName, patternName });
 }
+
+/**
+ * Règle les catégories du répertoire (Troup'akada / Combatucada / Les Frappas) d'un morceau : dans
+ * src/troupakadaTunes.json pour un morceau de l'asso (`target: "tune"`), dans src/repertoireCategories.json
+ * pour un morceau RoR officiel (`target: "repertoire"`). Développement uniquement, comme ci-dessus.
+ */
+export function saveRepertoireCategories(tuneName: string, categories: string[], target: "tune" | "repertoire"): Promise<TroupakadaFileResult> {
+	return postTroupakada("set-categories", { tuneName, categories, target });
+}

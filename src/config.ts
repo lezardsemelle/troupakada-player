@@ -9,7 +9,7 @@ export const strokeValidator = z.string();
 /** A stroke is a single sound that an instrument makes. It is identified by a single letter, corresponding to the file name of the audio file in assets/audio/. */
 export type Stroke = z.infer<typeof strokeValidator>;
 
-const categoryKeys = ["troupakada", "favorites", "common", "uncommon", "new", "proposed", "custom", "onesurdo", "easy", "medium", "tricky", "western", "cultural-appropriation", "all"] as const;
+const categoryKeys = ["troupakada", "combatucada", "frappas", "favorites", "common", "uncommon", "new", "proposed", "custom", "onesurdo", "easy", "medium", "tricky", "western", "cultural-appropriation", "all"] as const;
 export const categoryValidator = z.enum(categoryKeys);
 /** Categories by which the tune list can be filtered. Each tune can be part of any number of categories. */
 export type Category = z.infer<typeof categoryValidator>;
@@ -305,6 +305,8 @@ const config: Config = {
 	filterCats: {
 		all: () => getI18n().t("config.category-all"),
 		troupakada: () => getI18n().t("config.category-troupakada"),
+		combatucada: () => getI18n().t("config.category-combatucada"),
+		frappas: () => getI18n().t("config.category-frappas"),
 		favorites: () => getI18n().t("config.category-favorites"),
 		common: () => getI18n().t("config.category-common"),
 		uncommon: () => getI18n().t("config.category-uncommon"),

@@ -15,6 +15,7 @@
 	import { clone } from "../../utils";
 	import defaultTunes from "../../defaultTunes";
 	import { troupakadaTunes } from "../../troupakadaTunes";
+	import { isRepertoireCategory } from "../../repertoireCategories";
 	import { isEqual } from "lodash-es";
 	import StrokeDropdown from "./stroke-dropdown.vue";
 	import { injectStateRequired } from "../../services/state";
@@ -176,7 +177,8 @@
 	// de "Xango" par erreur et cliquer "Enregistrer" y écrirait "Xango" à tort). On n'autorise donc le
 	// bouton que pour un morceau déjà présent dans troupakadaTunes.json, ou un morceau entièrement
 	// nouveau (absent de tout le répertoire par défaut, donc forcément créé par l'utilisateur·ice).
-	const isTroupakadaOrNewTune = computed(() => Object.prototype.hasOwnProperty.call(troupakadaTunes, props.tuneName) || !defaultTunes[props.tuneName]);
+	const isTroupakadaTune = computed(() => Object.prototype.hasOwnProperty.call(troupakadaTunes, props.tuneName));
+	const isTroupakadaOrNewTune = computed(() => isTroupakadaTune.value || !defaultTunes[props.tuneName]);
 	const canSaveToJson = computed(() => isTroupakadaOrNewTune.value && (hasLocalChanges.value || (!originalPattern.value && hasContent.value)));
 
 	const reset = async () => {
@@ -194,6 +196,13 @@
 	const isDev = import.meta.env.DEV;
 	const saving = ref(false);
 
+	// Pour un morceau neuf : les cases Troup'akada / Combatucada / Les Frappas cochées dans Composer
+	// (aucune cochée : "troupakada" par défaut, voir src/troupakadaTunes.ts).
+	const newTuneCategories = computed(() => {
+		const categories = isTroupakadaTune.value ? [] : (state.value.tunes[props.tuneName]?.categories ?? []).filter(isRepertoireCategory);
+		return categories.length > 0 ? categories : undefined;
+	});
+
 	const saveToTroupakadaTunes = async () => {
 		saving.value = true;
 		try {
@@ -201,7 +210,12 @@
 			const response = await fetch("/__troupakada/save-pattern", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ tuneName: props.tuneName, patternName: props.patternName, pattern: compressed })
+				body: JSON.stringify({
+					tuneName: props.tuneName,
+					patternName: props.patternName,
+					pattern: compressed,
+					categories: newTuneCategories.value
+				})
 			});
 			const result = await response.json();
 			if(!response.ok) {
