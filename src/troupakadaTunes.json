@@ -165,7 +165,8 @@
 	},
 	"Funk Combatucada": {
 		"categories": [
-			"combatucada"
+			"combatucada",
+			"frappas"
 		],
 		"descriptionFilename": "funk-combatucada",
 		"patterns": {
@@ -179,6 +180,58 @@
 				"ag": "o  a  o o o a a o  a  o o aaa   o  a  o o o a a o  a  o o aaa   ",
 				"ch": "X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.",
 				"length": 16
+			}
+		}
+	},
+	"Sambalek": {
+		"categories": [
+			"combatucada",
+			"frappas"
+		],
+		"descriptionFilename": "sambalek",
+		"patterns": {
+			"Tune": {
+				"lg": "X       X       X       X       ",
+				"mg": "    X       X       X       X   ",
+				"hg": "         X X XXX     X X    XXXX",
+				"re": "X XXX XX X XX X X XXX XX X XX X ",
+				"ca": "X.....f.X.....f.X.....f.X.....f.",
+				"ag": "o a o aao aao aao a o aao aao aa",
+				"length": 8
+			}
+		}
+	},
+	"Reggaeton": {
+		"categories": [
+			"combatucada",
+			"frappas"
+		],
+		"descriptionFilename": "reggaeton",
+		"patterns": {
+			"Tune": {
+				"lg": "X       X       X       X   X   ",
+				"mg": "   X       X       X     X X    ",
+				"hg": "      X       X       X       X ",
+				"re": "  X   X   X   X   X   X  XXX  X ",
+				"ca": "....X.......X.......X.......f...",
+				"ta": "X XX  X X XX  X X XX  X X X X X ",
+				"ch": "X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.",
+				"length": 8
+			},
+			"Cubanito": {
+				"lg": "X   X   X   X   X   X   X   X   ",
+				"re": "   X  X    X  X    X  X   XX  X ",
+				"ca": "@re",
+				"length": 8
+			},
+			"Agogoton": {
+				"ag": "o  ao a o  ao a o  ao a oo ao a ",
+				"ch": "X   X   X   X   X   X   X   X   ",
+				"length": 8
+			},
+			"Hey are you ready": {
+				"ca": "....f.......f.......f.......f...",
+				"length": 8
 			}
 		}
 	}
