@@ -1,15 +1,19 @@
-# Bienvenue sur le Player Troup'akada
+# Bienvenue sur le Player Batucada Grenoble
 
-Ce site est l'outil de répétition et de référence de **Troup'akada d'Échirolles**, adapté du
-[Player officiel Rhythms of Resistance](https://player.rhythms-of-resistance.org). Il permet d'écouter,
-apprendre et retrouver les morceaux joués par la troupe, avec les frappes de chaque instrument détaillées
+Ce site est un outil de répétition et de référence partagé entre plusieurs batucadas de l'agglomération
+grenobloise : **Troup'akada** (Échirolles), **Combatucada** et **Les Frappas**. Adapté du
+[Player officiel Rhythms of Resistance](https://player.rhythms-of-resistance.org), il permet d'écouter,
+apprendre et retrouver les morceaux joués par chaque groupe, avec les frappes de chaque instrument détaillées
 temps par temps.
 
 ## Écouter les morceaux
 
-Dans l'onglet **Écouter**, le filtre est réglé par défaut sur **Troup'akada** : seuls les morceaux joués par
-la troupe s'affichent dans la liste, pour aller droit au but. Envie d'explorer le répertoire international du
+Dans l'onglet **Écouter**, chaque batucada a sa catégorie : **Troup'akada**, **Combatucada** et
+**Les Frappas**. Le filtre est réglé par défaut sur **Troup'akada** ; il suffit de choisir la catégorie de
+son groupe pour n'afficher que ses morceaux. Envie d'explorer le répertoire international du
 mouvement Rhythms of Resistance ? Il suffit de changer le filtre pour **Tous**.
+
+Un même morceau peut se trouver dans plusieurs catégories quand il est joué par plusieurs groupes.
 
 Chaque morceau peut être écouté en entier ou break par break, à la vitesse de ton choix, avec un métronome
 visuel pendant la lecture.
@@ -17,8 +21,8 @@ visuel pendant la lecture.
 ## Breaks à la une
 
 En haut de la liste des morceaux dans **Écouter**, l'entrée **★ Breaks à la une** rassemble une sélection de
-breaks à connaître ou à travailler en particulier — qu'ils viennent du répertoire Troup'akada ou du répertoire
-international Rhythms of Resistance. Chacun peut être écouté et téléchargé comme n'importe quel break, avec
+breaks à connaître ou à travailler en particulier — qu'ils viennent des répertoires des batucadas grenobloises
+(Troup'akada, Combatucada, Les Frappas) ou du répertoire international Rhythms of Resistance. Chacun peut être écouté et téléchargé comme n'importe quel break, avec
 son propre petit mot d'explication quand il y en a un.
 
 ## Fiches PDF
@@ -31,6 +35,9 @@ officiels. Pratique à emmener en répétition ou pour envoyer un rappel avant u
 
 L'onglet **Gestes** rassemble le répertoire des gestes utilisés pour diriger la troupe pendant un morceau
 (changements de tourne, breaks, silences...), chacun illustré par une photo.
+
+Ce répertoire est en cours de construction : pour les morceaux de Troup'akada (Baião, Olodum, Rap,
+Samba Troupakada...), on rassemble les gestes Rhythms of Resistance et les gestes des différents maestres.
 
 ## Favoris
 
