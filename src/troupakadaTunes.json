@@ -234,5 +234,26 @@
 				"length": 8
 			}
 		}
+	},
+	"Samba Reggae Combatucada": {
+		"categories": [
+			"troupakada",
+			"combatucada",
+			"frappas"
+		],
+		"descriptionFilename": "samba-reggae-combatucada",
+		"patterns": {
+			"Tune": {
+				"lg": "    X       X X     X       X X     X       X X     X       X X ",
+				"mg": "X       X       X       X       X       X       X       X       ",
+				"hg": "    X X     XXXX    X X     XXXX    X X     XXXXXXXXXXXXXXXXXXXX",
+				"ti": "                                                                ",
+				"re": "X  X  X   X X   X         X XXXXX  X  X   X X   X  X  X   X X   ",
+				"ca": "X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..",
+				"ta": "X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   ",
+				"ag": "a  a  a   o o   a  a  a   o o   a  a  a   o o   o a a oo a aa o ",
+				"length": 16
+			}
+		}
 	}
 }
