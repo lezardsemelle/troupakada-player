@@ -1,41 +1,14 @@
 #!/usr/bin/env node
-// Convertit un export JSON "Raw (uncompressed)" du player (voir README, section Share) qui utilise
-// les anciens noms d'instruments ror-player (ls/ms/hs/sn/sh) vers les noms batucada Troup'akada
-// (lg/mg/hg/ca/ch) introduits par le renommage des instruments (voir CLAUDE.md, Modification 3).
+// Convertit un export JSON "Données brutes" du player qui utilise les anciens identifiants d'instruments
+// du player (lg/mg/hg/ca/ch, utilisés jusqu'au 2026-10-14) vers les identifiants ror-player
+// (ls/ms/hs/sn/sh), revenus pour pouvoir importer les morceaux RoR sans conversion (voir CLAUDE.md,
+// Modification 3). Rarement utile : import-tunes.mjs, le bouton Importer et le chargement des
+// brouillons font déjà cette conversion automatiquement.
 //
 // Usage : node scripts/convert-legacy-instruments.mjs entree.json sortie.json
 
 import { readFileSync, writeFileSync } from "node:fs";
-
-const INSTRUMENT_MAP = {
-	ls: "lg", // Surdo grave
-	ms: "mg", // Surdo médium
-	hs: "hg", // Surdo aigu
-	sn: "ca", // Caixa
-	sh: "ch"  // Chocalho
-	// re, ta, ag, ot : identifiants inchangés, pas besoin d'entrée ici
-};
-
-function translateKey(key) {
-	return INSTRUMENT_MAP[key] ?? key;
-}
-
-// Une valeur de frappe est soit une suite de frappes ("X  X..."), soit une référence à un autre
-// instrument du même pattern ("@ls") — dans les deux cas, seule la clé d'instrument doit changer.
-function translateStrokeValue(value) {
-	if (typeof value !== "string")
-		return value;
-
-	const reference = value.match(/^@([a-z]{2})$/);
-	return reference ? `@${translateKey(reference[1])}` : value;
-}
-
-function translatePattern(pattern) {
-	const result = {};
-	for (const [key, value] of Object.entries(pattern))
-		result[translateKey(key)] = translateStrokeValue(value);
-	return result;
-}
+import { translatePattern } from "./lib/tuneData.mjs";
 
 const [, , inputPath, outputPath] = process.argv;
 if (!inputPath || !outputPath) {

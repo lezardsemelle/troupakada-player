@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 // Fusionne un export "Données brutes (non compressées)" du bouton Partager du player dans
 // src/troupakadaTunes.json — le fichier qui sert de source de vérité pour les morceaux composés
-// par Troup'akada (voir src/troupakadaTunes.ts). Traduit au passage les anciens noms d'instruments
-// (ls/ms/hs/sn/sh) si le fichier en contient encore (voir CLAUDE.md, Modification 3).
+// par Troup'akada (voir src/troupakadaTunes.ts). Les identifiants d'instruments sont ceux de ror-player
+// (ls/ms/hs/sn/sh) ; un export utilisant les anciens identifiants du player (lg/mg/hg/ca/ch) est
+// converti au passage (voir CLAUDE.md, Modification 3).
 //
 // Usage : node scripts/import-tunes.mjs export.json
 //

@@ -13,6 +13,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { buildTuneSheet } from "./lib/odsSheet.mjs";
+import { translatePattern } from "./lib/tuneData.mjs";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const dataPath = join(scriptDir, "..", "src", "troupakadaTunes.json");
@@ -24,8 +25,13 @@ if (!tuneName) {
 }
 
 const data = JSON.parse(readFileSync(dataPath, "utf-8"));
-const tune = data[tuneName];
-if (!tune) {
+const rawTune = data[tuneName];
+// Un morceau encore écrit avec les anciens identifiants (lg/mg/hg/ca/ch) est converti à la volée.
+const tune = rawTune && {
+	...rawTune,
+	patterns: Object.fromEntries(Object.entries(rawTune.patterns ?? {}).map(([name, pattern]) => [name, translatePattern(pattern)]))
+};
+if (!rawTune) {
 	console.error(`Morceau "${tuneName}" introuvable dans ${dataPath}.`);
 	console.error(`Morceaux disponibles : ${Object.keys(data).join(", ")}`);
 	process.exit(1);

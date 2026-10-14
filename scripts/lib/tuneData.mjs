@@ -2,16 +2,19 @@
 // Utilisée à la fois par scripts/import-tunes.mjs (CLI) et par le plugin Vite du bouton
 // "Enregistrer" (vite.config.ts), pour ne pas dupliquer la validation entre les deux.
 
-export const VALID_INSTRUMENTS = new Set([ "lg", "mg", "hg", "ti", "re", "ca", "ta", "ag", "ch", "ot" ]);
+export const VALID_INSTRUMENTS = new Set([ "ls", "ms", "hs", "ti", "re", "sn", "ta", "ag", "sh", "ot" ]);
 export const VALID_PATTERN_PROPERTIES = new Set([ "length", "time", "speed", "upbeat", "loop", "displayName", "volumeHack" ]);
 
+// Le player a utilisé un temps ses propres identifiants (lg/mg/hg/ca/ch) avant de revenir à ceux de
+// ror-player (2026-10-14), pour importer les morceaux RoR sans conversion. Les exports et brouillons
+// de cette période sont convertis ici (même table que src/legacyInstruments.ts).
 const INSTRUMENT_MAP = {
-	ls: "lg", // Surdo grave
-	ms: "mg", // Surdo médium
-	hs: "hg", // Surdo aigu
-	sn: "ca", // Caixa
-	sh: "ch"  // Chocalho
-	// re, ta, ag, ot : identifiants inchangés
+	lg: "ls", // Surdo grave
+	mg: "ms", // Surdo médium
+	hg: "hs", // Surdo aigu
+	ca: "sn", // Caixa
+	ch: "sh"  // Chocalho
+	// ti, re, ta, ag, ot : identifiants inchangés
 };
 
 function translateKey(key) {
@@ -22,12 +25,13 @@ function translateStrokeValue(value) {
 	if (typeof value !== "string")
 		return value;
 
-	const reference = value.match(/^@([a-z]{2})$/);
-	return reference ? `@${translateKey(reference[1])}` : value;
+	// "@xx" seul (export brut) ou suivi d'un diff (export compressé)
+	const reference = value.match(/^@([a-z]{2})(.*)$/s);
+	return reference ? `@${translateKey(reference[1])}${reference[2]}` : value;
 }
 
-// Convertit un pattern venant d'un ancien export (noms d'instruments ror-player d'origine) vers
-// la nomenclature batucada Troup'akada. Sans effet si le pattern utilise déjà les nouveaux noms.
+// Convertit un pattern utilisant les anciens identifiants du player (lg/mg/hg/ca/ch) vers ceux de
+// ror-player. Sans effet si le pattern utilise déjà les identifiants ror-player.
 export function translatePattern(pattern) {
 	const result = {};
 	for (const [key, value] of Object.entries(pattern))

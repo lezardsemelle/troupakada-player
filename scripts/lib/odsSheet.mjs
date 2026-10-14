@@ -10,19 +10,19 @@
 
 import { buildZip } from "./zip.mjs";
 
-export const INSTRUMENT_KEYS = ["lg", "mg", "hg", "ti", "re", "ca", "ta", "ag", "ch", "ot"];
+export const INSTRUMENT_KEYS = ["ls", "ms", "hs", "ti", "re", "sn", "ta", "ag", "sh", "ot"];
 
 // French display names, kept in sync by hand with src/config.ts's `instruments-*` translations (assets/i18n/fr.json).
 const INSTRUMENT_NAMES = {
-	lg: "Surdo grave",
-	mg: "Surdo médium",
-	hg: "Surdo aigu",
+	ls: "Surdo grave",
+	ms: "Surdo médium",
+	hs: "Surdo aigu",
 	ti: "Timbal",
 	re: "Repique",
-	ca: "Caixa",
+	sn: "Caixa",
 	ta: "Tamborim",
 	ag: "Agogô",
-	ch: "Chocalho",
+	sh: "Chocalho",
 	ot: "Voix / Autres"
 };
 
@@ -100,7 +100,7 @@ function getMnemonic(pattern) {
 
 /** Whether every instrument in this row is one of the three Surdos — grouped without a free line between them, per the style guide. */
 function isSurdoRow(row) {
-	return row.instruments.every((instr) => instr === "lg" || instr === "mg" || instr === "hg");
+	return row.instruments.every((instr) => instr === "ls" || instr === "ms" || instr === "hs");
 }
 
 /** "Surdos" when all three play identically (matches the official sheetbook's "All Surdos"), otherwise the joined instrument names. */

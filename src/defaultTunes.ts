@@ -49,131 +49,131 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		video: "https://tube.rhythms-of-resistance.org/videos/embed/37596e72-e93b-44f1-8770-760be8e5ce87",
 		patterns: {
 			"Karla Break": {
-				lg: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX               ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX               ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: { 0: .1, 16: .4, 32: .7, 48: 1  }
 			},
 			"8 up": {
-				lg: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: crescendo(32)
 			},
 			"8 down": {
-				lg: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: decrescendo(32)
 			},
 			"Clave": {
-				lg: 'X  X  X   X X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X  X  X   X X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			"Clave 4x": {
 				displayName: "Clave 4× soft to loud",
-				lg: 'X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: { 0: .1, 16: .4, 32: .7, 48: 1  }
 			},
 			'Clave Inverted': {
-				lg: '  X X   X  X  X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: '  X X   X  X  X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Progressive': {
-				lg: 'X   X   X   X   X X X X X X X X XXXXXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X   X   X   X   X X X X X X X X XXXXXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Progressive Inverted': {
-				lg: 'XXXXXXXXXXXXXXXXX X X X X X X X X   X   X   X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'XXXXXXXXXXXXXXXXX X X X X X X X X   X   X   X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Progressive Karla': {
-				lg: 'X   X   X   X   X X X X X X X X XXXXXXXXXXXXXXXXX               ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X   X   X   X   X X X X X X X X XXXXXXXXXXXXXXXXX               ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'4 Silence': {
-				lg: repeat(16, ' ')
+				ls: repeat(16, ' ')
 			},
 			'8 Silence': {
-				lg: repeat(32, ' ')
+				ls: repeat(32, ' ')
 			},
 			'12 Silence': {
-				lg: repeat(48, ' ')
+				ls: repeat(48, ' ')
 			},
 			'16 Silence': {
-				lg: repeat(64, ' ')
+				ls: repeat(64, ' ')
 			},
 			'Boom Break': {
-				lg: 'X               ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X               ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Yala Break': {
-				lg: 'X X   X X   X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X X   X X   X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			"Whistle in": {
 				ot: 'y   y   y   y   '
@@ -188,112 +188,112 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			"Call Break Oi": {
 				displayName: 'Oi Break',
 				time: 3,
-				lg: 'X  XXXX     ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'X  XXXX     ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: '         A  '
 			},
 			"Call Break Ua": {
 				displayName: 'Ua Break',
 				time: 3,
-				lg: 'X  XXXX     ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'X  XXXX     ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: '         B  '
 			},
 			'Star Wars': {
-				lg: '            X       X           ',
-				mg: 'X   X   X       X       X       ',
-				hg: '               X       X        '
+				ls: '            X       X           ',
+				ms: 'X   X   X       X       X       ',
+				hs: '               X       X        '
 			},
 			'Star Wars Extended': {
-				lg: '            X       X                               X           ',
-				mg: 'X   X   X       X       X                       X       X       ',
-				hg: '               X       X                       X       X        ',
+				ls: '            X       X                               X           ',
+				ms: 'X   X   X       X       X                       X       X       ',
+				hs: '               X       X                       X       X        ',
 				re: '                                X   X   X                       ',
 				ta: '                                            X                   '
 			},
 			'Star Wars Extended Extended': {
-				lg: '            X       X                               X                                                 X     X       X           ',
-				mg: 'X   X   X       X       X                       X       X           X  X              X                         X       X       ',
-				hg: '               X       X                       X       X                                                       X       X        ',
+				ls: '            X       X                               X                                                 X     X       X           ',
+				ms: 'X   X   X       X       X                       X       X           X  X              X                         X       X       ',
+				hs: '               X       X                       X       X                                                       X       X        ',
 				re: '                                X   X   X                                                                                       ',
-				ca: '@re',
+				sn: '@re',
 				ta: '                                            X                                                   XXX     X                       ',
 				ag: '                                                                a       a   a  aooo     o   o  o                                '
 			},
 			"Wulf Break": {
-				lg: 'X X   XXX X    XX X    XX X     X X   XXX X    XX X X X X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X   XXX X    XX X    XX X     X X   XXX X    XX X X X X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X       X       X       X       X       X  XX X X X X       ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re',
+				sh: '@re',
 				ot: '                                                          E D   '
 			},
 			'Hardcore Break': {
-				lg: repeat(2, '              XXX             XXX             XXX       XXXXXXXX') +
+				ls: repeat(2, '              XXX             XXX             XXX       XXXXXXXX') +
 					repeat(1, 'X   X   X   X XXX   X   X   X XXX   X   X   X XXX   X   XXXXXXXX') +
 					repeat(1, 'X X X X X X X XXX X X X X X X XXX X X X X X X XXX X X X XXXXXXXX'),
-				mg: '@lg',
-				hg: '@lg',
+				ms: '@ls',
+				hs: '@ls',
 				re: repeat(1, '              XXX             XXX             XXX       XXXXXXXX') +
 					repeat(1, 'X   X   X   X XXX   X   X   X XXX   X   X   X XXX   X   XXXXXXXX') +
 					repeat(2, 'X X X X X X X XXX X X X X X X XXX X X X X X X XXX X X X XXXXXXXX'),
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: repeat(3, 'o o o o o o o ooo o o o o o o ooo o o o o o o ooo o o o oooooooo') +
 					repeat(1, 'a a a a a a a aaa a a a a a a aaa a a a a a a aaa a a a aaaaaaaa'),
-				ch: '@re',
+				sh: '@re',
 			},
 			'Hard Core Break': {
 				displayName: "Hardcore Break (original)",
-				lg: repeat(2, '              XXX             XXX             XXX       XXXXXXXX') + repeat(2, 'X X X X X X X XXX X X X X X X XXX X X X X X X XXX X X X XXXXXXXX'),
-				mg: '@lg',
-				hg: '@lg',
+				ls: repeat(2, '              XXX             XXX             XXX       XXXXXXXX') + repeat(2, 'X X X X X X X XXX X X X X X X XXX X X X X X X XXX X X X XXXXXXXX'),
+				ms: '@ls',
+				hs: '@ls',
 				re: repeat(1, '              XXX             XXX             XXX       XXXXXXXX') + repeat(3, 'X X X X X X X XXX X X X X X X XXX X X X X X X XXX X X X XXXXXXXX'),
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: repeat(3, 'o o o o o o o ooo o o o o o o ooo o o o o o o ooo o o o oooooooo') + repeat(1, 'a a a a a a a aaa a a a a a a aaa a a a a a a aaa a a a aaaaaaaa'),
-				ch: '@re',
+				sh: '@re',
 				volumeHack: {
-					lg: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
-					mg: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
-					hg: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
+					ls: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
+					ms: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
+					hs: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
 					re: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
-					ca: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
+					sn: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
 					ta: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 },
-					ch: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 }
+					sh: { 66:  .3, 78:  1, 82:  .3, 94:  1, 98:  .3, 110: 1, 114: .3, 120: 1, 130: .6, 142: 1, 146: .6, 158: 1, 162: .6, 174: 1, 178: .6, 184: 1 }
 				}
 			},
 			'Nellie the Elephant Break': {
-				lg: '            X X             X X             X X XX XX XX XX X X XX XX XX XX X X XX XX XX XX X X ' + repeat(2, '                ') + repeat(3, 'X  X  X         ') + 'X           XXX ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '            X X             X X             X X XX XX XX XX X X XX XX XX XX X X XX XX XX XX X X ' + repeat(2, '                ') + repeat(3, 'X  X  X         ') + 'X           XXX ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'XX XX XX XX     XX XX XX XX     XX XX XX XX     XX XX XX XX X X XX XX XX XX X X XX XX XX XX X X ' + repeat(2, '                ') + repeat(3, '        X  X  X ') + 'X           XXX ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: '                                                                                                ' + repeat(2, 'DDDDDDDDDDDDDDDD') + repeat(3, '                ') + '                ',
 				volumeHack: Object.assign({ 48: .2, 64: .6, 80: 1, 128: .2, 144: .6, 160: 1 }, crescendo(32, 96))
 			},
 			'Super Mario Break': {
-				lg: '     X          ',
-				mg: 'XX X  X         ',
-				hg: '        X       ',
+				ls: '     X          ',
+				ms: 'XX X  X         ',
+				hs: '        X       ',
 				ag: '            o   '
 			},
 			'Punky Monkey Break': {
@@ -307,25 +307,25 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		video: "https://tube.rhythms-of-resistance.org/videos/embed/37596e72-e93b-44f1-8770-760be8e5ce87",
 		patterns: {
 			"Democracy Break": {
-				lg: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                X X X XX XX X X                 X X X XX XX X X                                                 X  X  X   X X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                X X X XX XX X X                 X X X XX XX X X                                                 X  X  X   X X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
 				ot: '                                                * , - ?: ;< = >                 * , - ?: ;< = >                 * , - ?: ;< = > * , - ?: ;< = > * , - ?: ;< = >                 ',
 				volumeHack: { 0: .1, 16: .4, 32: .7, 48: 1, 112: .4, 128: .7, 144: 1 }
 			},
 			'Tout le monde': {
-				lg: 'X     X X     X X  XX X X   X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'X     X X     X X  XX X X   X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: 'b     c d     e g  qj k m   n   '
 			},
 			'Dance Break': {
@@ -334,37 +334,37 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			},
 			'Wir sind hier': {
 				time: 2,
-				lg: "     XX      XX              XX ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg",
+				ls: "     XX      XX              XX ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls",
 				ot: "K [\\    K [^    _ ` { | }~ À    "
 			},
 			'Keep it in the ground': {
-				lg: "                          X X   ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg",
+				ls: "                          X X   ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls",
 				ot: "Á   Â   Ã ÄÅ ÆÇ Á Â Ã ÄÅ        "
 			},
 			'Keine Profite mit der Miete': {
 				time: 4,
-				lg: "                X XXX X X X X X ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg",
+				ls: "                X XXX X X X X X ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls",
 				ot: "È ÉÊË Ì Í Î Ï Ì                 "
 			}
 		}
@@ -377,58 +377,58 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			"Tune": {
 				loop: true,
-				lg: 's   s   s   s   s   s   X   X   ',
-				mg: '0     X 0     X 0     X X X X X ',
-				hg: '@mg',
+				ls: 's   s   s   s   s   s   X   X   ',
+				ms: '0     X 0     X 0     X X X X X ',
+				hs: '@ms',
 				re: 'f  hs r f  hs r f  hs r s r s r ',
-				ca: 'X...X..XX..X....X...X..XX..X....',
+				sn: 'X...X..XX..X....X...X..XX..X....',
 				ta: 'X X X X XX XX X X X X X XX XX X ',
 				ag: 'a a o o aa o oo a a o o aa o oo ',
-				ch: '................................'
+				sh: '................................'
 			},
 			"Break 1": {
-				lg: 'X       X       X       X XXXXX ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X       X       X       X XXXXX ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '   XXXX    XXXX    XXXX X XXXXX ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			"Bra Break": {
-				lg: '        XX XX           XX XX           XX XX   X X X X XX XX X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '        XX XX           XX XX           XX XX   X X X X XX XX X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X X X           X X X           X X X           X X X X XX XX X ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			// Repris tel quel de "Special Breaks" / "Wulf Break" : la description du morceau le cite
 			// parmi les breaks d'Afoxé, autant l'avoir directement sous la main en Composer.
 			"Wolf Break": {
 				displayName: "Loup-Garou Break",
-				lg: 'X X   XXX X    XX X    XX X     X X   XXX X    XX X X X X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X   XXX X    XX X    XX X     X X   XXX X    XX X X X X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X       X       X       X       X       X  XX X X X X       ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re',
+				sh: '@re',
 				ot: '                                                          E D   '
 			},
 			"Tamborim Stroke": {
-				lg: 'X X X X XX XX X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X X X X XX XX X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 1", "Tune", "Tune", "Bra Break", "Tune", "Tune", "Tamborim Stroke"]
@@ -441,45 +441,45 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'r r X  XrXr X   ',
-				mg: 'XXXXXXXXX       ',
-				hg: '            XXXX',
+				ls: 'r r X  XrXr X   ',
+				ms: 'XXXXXXXXX       ',
+				hs: '            XXXX',
 				re: 'f   f   f  XXX  ',
-				ca: '....X.......X...',
+				sn: '....X.......X...',
 				ta: 'X   X  XXX  X   ',
 				ag: '  o a   oa  a   ',
-				ch: '................'
+				sh: '................'
 			},
 			'Break 1': {
 				upbeat: 1,
-				lg: 'XX X X X X X X X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'XX X X X X X X X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 2': {
-				lg: 'X             X X             X X              XX X X X X X X X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X             X X             X X              XX X X X X X X X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  XXX XX XX X     XXX XX XX X     XXX XX XX X  XX X X X X X X X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 3': {
-				lg: 'X     XXXX      X X X  X        X     XXXX        X  X  X      XX X X X X X X X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '....X.......X.......X.......X.......X.......X.......X.......X.......X.......X...',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X     XXXX      X X X  X        X     XXXX        X  X  X      XX X X X X X X X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '....X.......X.......X.......X.......X.......X.......X.......X.......X.......X...',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Tune", "Tune", "Break 1", "Tune", "Tune", "Tune", "Tune", "Break 2", "Tune", "Tune", "Tune", "Tune", "Break 3", "Break 3", "Tune", "Tune", "Tune", "Tune"]
@@ -491,44 +491,44 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 's   X   s   X   ',
-				mg: 'X  XX  XX  XX X ',
-				hg: '@mg',
+				ls: 's   X   s   X   ',
+				ms: 'X  XX  XX  XX X ',
+				hs: '@ms',
 				re: '  f  f    f  f  ',
-				ca: '..XX..X...XX..X.',
+				sn: '..XX..X...XX..X.',
 				ta: '  X   X   X X X ',
 				ag: 'a  ao  ao a a   ',
-				ch: 'X..XX..XX..XX..X'
+				sh: 'X..XX..XX..XX..X'
 			},
 			'Intro': {
-				lg: repeat(4, '                ') + repeat(3, '        XX XX X ') + '    X       X   ',
-				mg: repeat(4, '                ') + repeat(3, '        XX XX X ') + 'X       X   X X ',
-				hg: repeat(4, '                ') + repeat(3, '        XX XX X ') + '            X X ',
+				ls: repeat(4, '                ') + repeat(3, '        XX XX X ') + '    X       X   ',
+				ms: repeat(4, '                ') + repeat(3, '        XX XX X ') + 'X       X   X X ',
+				hs: repeat(4, '                ') + repeat(3, '        XX XX X ') + '            X X ',
 				re: repeat(4, '                ') + repeat(3, 'XX XX X         ') + '  X   X   X X X ',
-				ca: repeat(4, '                ') + repeat(3, '        XX XX X ') + '                ',
+				sn: repeat(4, '                ') + repeat(3, '        XX XX X ') + '                ',
 				ta: repeat(8, '  X   X   X X X '),
-				ag: '@ca',
-				ch: '@ca'
+				ag: '@sn',
+				sh: '@sn'
 			},
 			'No-Cent-For-Axel-Break': {
-				lg: '        XX XX X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: '        XX XX X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: '98 76 5         '
 			},
 			'Tension Break': {
-				lg: '    X       X       X   XX XX X ',
-				mg: '  X   X   X   X   X   X XX XX X ',
-				hg: '                        XX XX X ',
-				re: '@hg',
+				ls: '    X       X       X   XX XX X ',
+				ms: '  X   X   X   X   X   X XX XX X ',
+				hs: '                        XX XX X ',
+				re: '@hs',
 				ta: 'XX XX X         XX XX X XX XX X ',
-				ag: '@hg',
-				ch: '@hg'
+				ag: '@hs',
+				sh: '@hs'
 			}
 		},
 		exampleSong: [ "Intro", "Tune", "Tune", "Tune", "Tune", "No-Cent-For-Axel-Break", "Tune", "Tune", "Tune", "Tune", "Tension Break", "Tune", "Tune", "Tune", "Tune" ]
@@ -540,44 +540,44 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "X   X   X   X   X   X   X   X   ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X   X   X   X   X   X   X   X   ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "r X r X r X r X r X r X r XXr X ",
-				ca: "....X.......X.......X.......X...",
+				sn: "....X.......X.......X.......X...",
 				ta: "X  X  X  X        XX            ",
 				ag: "o  a  a o  a  a o  a  a o   a   ",
-				ch: "................................"
+				sh: "................................"
 			},
 			"Break 1": {
-				lg: "X       X  X  X ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg"
+				ls: "X       X  X  X ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls"
 			},
 			"Break 2": {
-				lg: "XXX XXX XXX XXX ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg"
+				ls: "XXX XXX XXX XXX ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls"
 			},
 			"Call Break": {
-				lg: "                X X X X X X XXX X   X   X   X   X           XXX ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "                X X X X X X XXX X   X   X   X   X           XXX ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "X X X X X X XXX X   X   X   X   X   X   X   X   X           XXX ",
-				ca: "                                X X X X X X XXX X           XXX ",
+				sn: "                                X X X X X X XXX X           XXX ",
 				ta: "                                                X           XXX ",
 				ag: "                                                X           XXX ",
-				ch: "                                                X           XXX "
+				sh: "                                                X           XXX "
 			}
 		},
 		exampleSong: ["Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune", "Call Break", "Tune", "Tune"]
@@ -589,36 +589,36 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: repeat(4, "X  XX X X  XX X "),
-				mg: repeat(4, "          XXXX  "),
+				ls: repeat(4, "X  XX X X  XX X "),
+				ms: repeat(4, "          XXXX  "),
 				re: "f X       X X X f X       X X X f   X X f   X X f   f   f X X X ",
-				ca: repeat(2, "...X..X....X..X....X..X..X.X..X."),
+				sn: repeat(2, "...X..X....X..X....X..X..X.X..X."),
 				ta: repeat(4, "    XXX   X X X "),
 				ag: "    o o o           a a a       o       o       a   a   a       ",
-				ch: repeat(4, "...X..X....X....")
+				sh: repeat(4, "...X..X....X....")
 			},
 			"Break 1": {
-				lg: "X   X X X   X X X   X   X       ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg"
+				ls: "X   X X X   X X X   X   X       ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls"
 			},
 			"Break 2": {
-				lg: "X X             X X             X X             XXX XXX X X X X ",
-				mg: "@lg",
+				ls: "X X             X X             X X             XXX XXX X X X X ",
+				ms: "@ls",
 				re: "        XXX XXX         XXX XXX         XXX XXX XXX XXX X X X X "
 			},
 			"Intro": {
 				upbeat: 6,
-				lg: "r r r r r       r r r r r       r r r r   r r r   r r r   r   r r r r r r       r r r r r       r r r r   r   r   r   r               ",
-				mg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg"
+				ls: "r r r r r       r r r r r       r r r r   r r r   r r r   r   r r r r r r       r r r r r       r r r r   r   r   r   r               ",
+				ms: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls"
 			}
 		},
 		exampleSong: ["Intro", "Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune"]
@@ -634,121 +634,121 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X       XX  X       XX  X       XX  X    X   X  ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X       XX  X       XX  X       XX  X    X   X  ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X zX zX zX zX zX zX zX zX zX zX zX zXXXX  XXXX  ',
-				ca: 'X..X..X..X..X..X..X..X..X..X..X..X..X..X..X..X..',
+				sn: 'X..X..X..X..X..X..X..X..X..X..X..X..X..X..X..X..',
 				ta: 'X XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX X',
 				ag: 'aaaa  oooo              aaaa  oooo              ',
-				ch: 'X..X..X..X..X..X..X..X..X..X..X..X..X..X..X..X..'
+				sh: 'X..X..X..X..X..X..X..X..X..X..X..X..X..X..X..X..'
 			},
 			'Break 1': {
 				upbeat: 4,
-				lg: 'XX  X XX X  XX  X       XX  X XX X  XX  X       XX  X XX X  XX  X       XX  X    X   X              ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'XX  X XX X  XX  X       XX  X XX X  XX  X       XX  X XX X  XX  X       XX  X    X   X              ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '                   X  X                    X  X                    X  X                             ',
-				ca: '                   X  X                    X  X                    X  X                 XXXX  XXXX  ',
+				sn: '                   X  X                    X  X                    X  X                 XXXX  XXXX  ',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 2': {
 				upbeat: 4,
-				lg: 'XX  X XX  X XX  X       XX    X  XX  X  X       XX  X XX  X XX  X       XX    X  XX  X              ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: 'XX  X XX  X XX  X       XX    X  XX  X  X       XX  X XX  X XX  X       XX    X  XX  X  XXXX  XXXX  ',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'XX  X XX  X XX  X       XX    X  XX  X  X       XX  X XX  X XX  X       XX    X  XX  X              ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: 'XX  X XX  X XX  X       XX    X  XX  X  X       XX  X XX  X XX  X       XX    X  XX  X  XXXX  XXXX  ',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			"Break 3": {
-				lg: "XXXX  XXXX  ",
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: "XXXX  XXXX  ",
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			"Bra Break": {
 				displayName: "Call Break",
-				lg: '                                                                        X XX XX XX              ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '                                                                        X XX XX XX              ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'XXXXXXXXXX              XXXXXXXXXX              XXXX        XXXXXXXXXX              XXXXXXX     ',
-				ca: '            XXXXXXXXXX              XXXXXXXXXX        XXXX                          XXXXXXX     ',
-				ta: '@ca',
-				ag: '@ca',
-				ch: '@ca',
+				sn: '            XXXXXXXXXX              XXXXXXXXXX        XXXX                          XXXXXXX     ',
+				ta: '@sn',
+				ag: '@sn',
+				sh: '@sn',
 				ot: '                                                                                             F  '
 			},
 			"Karla Break (3⁄4)": {
-				lg: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX           ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX           ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: { 0: .1, 12: .4, 24: .7, 36: 1  }
 			},
 			"8 up (3⁄4)": {
-				lg: 'XXXXXXXXXXXXXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: crescendo(24)
 			},
 			"8 down (3⁄4)": {
-				lg: 'XXXXXXXXXXXXXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: decrescendo(24)
 			},
 			'Progressive (3⁄4)': {
-				lg: 'X  X  X  X  X XX XX XX XXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X  X  X  X  X XX XX XX XXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Progressive Inverted (3⁄4)': {
-				lg: 'XXXXXXXXXXXXX XX XX XX XX  X  X  X  ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'XXXXXXXXXXXXX XX XX XX XX  X  X  X  ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Progressive Karla (3⁄4)': {
-				lg: 'X  X  X  X  X XX XX XX XXXXXXXXXXXXXX           ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X  X  X  X  X XX XX XX XXXXXXXXXXXXXX           ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Tune", "Break 1", "Tune", "Break 2", "Tune", "Break 3", "Tune", "Bra Break", "Tune" ]
@@ -761,38 +761,38 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "X  X     X X  X X  X     X X  X ",
-				mg: "    X       X       X       X   ",
-				hg: "      XX     XX       XX     XX ",
+				ls: "X  X     X X  X X  X     X X  X ",
+				ms: "    X       X       X       X   ",
+				hs: "      XX     XX       XX     XX ",
 				re: "X X  X X   X  X X X  X X        ",
-				ca: "..XX..X...XX..X...XX..X...XX..X.",
+				sn: "..XX..X...XX..X...XX..X...XX..X.",
 				ta: "    X    X X        X    f XX XX",
 				ag: "o ooao o o oa   o ooao o        ",
-				ch: "..XX..XX..XX..XX..XX..XX..XX..XX"
+				sh: "..XX..XX..XX..XX..XX..XX..XX..XX"
 			},
 			"Break 1": {
-				lg: "X     X                         ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X     X                         ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "          XXX X X X   X X   X   ",
 				time: 8
 			},
 			"Break 2": {
-				lg: "XX  XX  XX  XX  ",
-				mg: "@lg",
-				hg: "  XX  XX  XX  XX",
-				re: "@hg",
-				ca: "..XX..XX..XX..XX",
-				ta: "@hg",
+				ls: "XX  XX  XX  XX  ",
+				ms: "@ls",
+				hs: "  XX  XX  XX  XX",
+				re: "@hs",
+				sn: "..XX..XX..XX..XX",
+				ta: "@hs",
 				ag: "ooaaooaaooaaooaa"
 			},
 			"Call Break": {
-				lg: "X     X                         X     X                         X     X                         X X     X X     X X     X X    ",
-				mg: "@lg",
-				hg: "X     X                         X     X                         X     X                             X X     X X     X X     X X",
+				ls: "X     X                         X     X                         X     X                         X X     X X     X X     X X    ",
+				ms: "@ls",
+				hs: "X     X                         X     X                         X     X                             X X     X X     X X     X X",
 				re: "          XXX X X X   X X   X             XXX X X X   X X   X             XXX X X X   X X   X       X X     X X     X X     X X",
-				ca: "X     X                         X     X                         X     X                         . . X X . . X X . . X X . . X X",
-				ta: "@hg",
+				sn: "X     X                         X     X                         X     X                         . . X X . . X X . . X X . . X X",
+				ta: "@hs",
 				ag: "o     o                         o     o                         o     o                         o o a a o o a a o o a a o o a a",
 				time: 8
 			}
@@ -806,38 +806,38 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: repeat(4, "X   X X X   X X "),
-				mg: repeat(4, "X XX    X XX    "),
+				ls: repeat(4, "X   X X X   X X "),
+				ms: repeat(4, "X XX    X XX    "),
 				re: "X         XX XX X         XX XX X         XX XX XXXXX X XXXXX X ",
-				ca: repeat(4, "f XXf XXf XXf XX"),
+				sn: repeat(4, "f XXf XXf XXf XX"),
 				ag: "  ooa ooa         aao aao         ooa ooa         aao     aao   "
 			},
 			"Break 1": {
-				lg: "X   X   X   X   ",
-				mg: "@lg",
+				ls: "X   X   X   X   ",
+				ms: "@ls",
 				re: "  X   X   X   X ",
-				ca: "@re",
+				sn: "@re",
 				ag: "@re"
 			},
 			"Break 2": {
-				lg: "X   X   X   X   X               X               X               X   X   X   X   ",
-				mg: "@lg",
+				ls: "X   X   X   X   X               X               X               X   X   X   X   ",
+				ms: "@ls",
 				re: "  X   X   X   X     X XX XX X X     X XX XX X X     X XX XX X X   X   X   X   X ",
-				ca: "@re",
+				sn: "@re",
 				ag: "@re"
 			},
 			"Double Break 2": {
-				lg: "X   X   X   X   X               X               X               X   X   X   X   X               X               X               X   X   X   X   ",
-				mg: "@lg",
+				ls: "X   X   X   X   X               X               X               X   X   X   X   X               X               X               X   X   X   X   ",
+				ms: "@ls",
 				re: "  X   X   X   X     X XX XX X X     X XX XX X X     X XX XX X X   X   X   X   X     X XX XX X X     X XX XX X X     X XX XX X X   X   X   X   X ",
-				ca: "@re",
+				sn: "@re",
 				ag: "@re"
 			},
 			"Intro": {
-				lg: repeat(3, "X    XX    XX   "),
-				mg: "@lg",
+				ls: repeat(3, "X    XX    XX   "),
+				ms: "@ls",
 				re: repeat(3, "  XX    XX    X "),
-				ca: "@re",
+				sn: "@re",
 				ag: "@re"
 			}
 		},
@@ -850,63 +850,63 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'XX  0    XX 0   XX  0    XX 0   ',
-				mg: '@lg',
-				hg: '    0 XX    0 XX    0 XX    0 XX',
+				ls: 'XX  0    XX 0   XX  0    XX 0   ',
+				ms: '@ls',
+				hs: '    0 XX    0 XX    0 XX    0 XX',
 				re: '  XX  X   XX  X   XX  XX  XX  X ',
-				ca: '....X.......X.......X.......X...',
+				sn: '....X.......X.......X.......X...',
 				ta: '@re',
 				ag: 'aa.oo.aa.oo.a.a.oo.aa.oo.aa.o.o.',
-				ch: '................................'
+				sh: '................................'
 			},
 			'Break 1': {
-				lg: 'XX XX XX XX X X XX XX XX XX X X XX XX XX XX X X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'XX XX XX XX X X XX XX XX XX X X XX XX XX XX X X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: { 0: .2, 16: .6, 32: 1  }
 			},
 			'Bra Break (Maestra)': {
 				displayName: "Call Break (Maestra)",
-				lg: '            X X             X X             X X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: '            X X             X X             X X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: 'ww ww ww ww     ww ww ww ww     ww ww ww ww     '
 			},
 			'Bra Break (Repi)': {
 				displayName: "Call Break (Repi)",
-				lg: '            X X             X X             X X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '            X X             X X             X X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'XX XX XX XX     XX XX XX XX     XX XX XX XX     ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Bra Break (Snare)': {
 				displayName: "Call Break (Snare)",
-				lg: '            X X             X X             X X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: 'XX XX XX XX     XX XX XX XX     XX XX XX XX     ',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: '            X X             X X             X X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: 'XX XX XX XX     XX XX XX XX     XX XX XX XX     ',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Cross Kicks': {
-				lg: 'XX  0       0   ',
-				hg: '    0       0 XX'
+				ls: 'XX  0       0   ',
+				hs: '    0       0 XX'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 1", "Tune", "Tune", "Bra Break (Repi)", "Tune", "Tune", "Cross Kicks", "Tune", "Tune" ]
@@ -919,78 +919,78 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "X       X X     X       X X     X       X X     X       XXXX    ",
-				mg: "   X  X     X  X   X  X     X  X   X  X     X  X   X  X     XXXX",
-				hg: "@mg",
+				ls: "X       X X     X       X X     X       X X     X       XXXX    ",
+				ms: "   X  X     X  X   X  X     X  X   X  X     X  X   X  X     XXXX",
+				hs: "@ms",
 				re: "X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...",
-				ca: "@re",
+				sn: "@re",
 				ta: "X  X      f X   X  X            X  X      f X   X  X    XXXX    ",
 				ag: "o  a            o  a  a o o a  ao  a            o  a  a o o a  a",
-				ch: "X..X..X...X.X.X.X..X..X.........X..X..X...X.X.X.X..X..X.XXXXXXXX"
+				sh: "X..X..X...X.X.X.X..X..X.........X..X..X...X.X.X.X..X..X.XXXXXXXX"
 			},
 			"Break 1": {
-				lg: "X   X   X   X   X   X   X                 X",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X   X   X   X   X   X   X                 X",
+				ms: "@ls",
+				hs: "@ls",
 				re: "X   X   X   X   X   X   X     f     X     X",
-				ca: "@lg",
-				ta: "@lg",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "a   a   a   a   a   a   a                  ",
-				ch: "@lg",
+				sh: "@ls",
 				time: 12
 			},
 			"Break 2": {
-				lg: "                                          X                                               X                                               X     X   X   X   X   X   X   X                 X",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "                                          X                                               X                                               X     X   X   X   X   X   X   X                 X",
+				ms: "@ls",
+				hs: "@ls",
 				re: "X        X                          X           X        X                          X           X        X                          X           X   X   X   X   X   X   X     f     X     X",
-				ca: "@re",
+				sn: "@re",
 				ta: "@re",
 				ag: "a        a                          a           a        a                          a           a        a                          a           a   a   a   a   a   a   a                  ",
-				ch: "@re",
+				sh: "@re",
 				time: 12
 			},
 			"Intro": {
-				lg: "                                                                                                                                                                                                                                                        XXXX    ",
-				mg: "                                                                                                                                                                                                                                                            XXXX",
+				ls: "                                                                                                                                                                                                                                                        XXXX    ",
+				ms: "                                                                                                                                                                                                                                                            XXXX",
 				re: "r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   r  r  rr  r r   ",
-				ca: "@re",
+				sn: "@re",
 				ta: "                                                                                                                                X  X      f X   X  X            X  X      f X   X  X            X  X      f X   X  X            X  X      f X   X  X            ",
 				ag: "                                                                o  a            o  a  a o o a  ao  a            o  a  a o o a  ao  a            o  a  a o o a  ao  a            o  a  a o o a  ao  a            o  a  a o o a  ao  a            o  a  a o o a  a",
-				ch: "                                                                                                                                                                                                X..X..X...X.X.X.X..X..X.........X..X..X...X.X.X.X..X..X.XXXXXXXX"
+				sh: "                                                                                                                                                                                                X..X..X...X.X.X.X..X..X.........X..X..X...X.X.X.X..X..X.XXXXXXXX"
 			},
 			"Tune (6/8)": {
 				loop: true,
-				lg: "X     XX    X     XX",
-				mg: "  X XX   X X  X XX   X X",
-				hg: "@mg",
+				ls: "X     XX    X     XX",
+				ms: "  X XX   X X  X XX   X X",
+				hs: "@ms",
 				re: "X.X.XX.X.X..X.X.XX.X.X..",
-				ca: "@re",
+				sn: "@re",
 				ta: "X X X  f X  f X X    X X",
 				ag: "o a aaoo a ao a aaoo a a",
-				ch: "X..X..X..X..X..X..X..X..",
+				sh: "X..X..X..X..X..X..X..X..",
 				time: 3
 			},
 			"Intro (6/8)": {
-				lg: "                                    XXX XXX XXX",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
+				ls: "                                    XXX XXX XXX",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "o a aaoo a ao a aaoo a ao a aaoo a a           ",
-				ch: "@lg",
+				sh: "@ls",
 				time: 3
 			},
 			"Crest Break (6/8)": {
-				lg: "    XX    XX          XX    XX    XX          XX            XXX XXX XXX",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "    XX    XX          XX    XX    XX          XX            XXX XXX XXX",
+				ms: "@ls",
+				hs: "@ls",
 				re: "XXXX  XXXX  XXXXXXXXXX  XXXX  XXXX  XXXXXXXXXX  X X XX X X X           ",
-				ca: "@lg",
-				ta: "@lg",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "    aa    oo          aa    oo    aa          oo            aaa ooo ooa",
-				ch: "@lg",
+				sh: "@ls",
 				time: 3
 			}
 		},
@@ -1004,65 +1004,65 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			Tune: {
 				loop: true,
 				time: 12,
-				lg: 'X                       X                       X                       X     X  X              ',
-				mg: '                  X                       X                       X     X     X  X        X     ',
-				hg: '         X  X  X  X  X           X  X  X  X  X           X  X  X  X  X  X     X  X              ',
+				ls: 'X                       X                       X                       X     X  X              ',
+				ms: '                  X                       X                       X     X     X  X        X     ',
+				hs: '         X  X  X  X  X           X  X  X  X  X           X  X  X  X  X  X     X  X              ',
 				re: 'f        h  X     X  X  f        h  X     X  X  f        h  X     X  X  X     X  X              ',
-				ca: '.  .  .  .  X  .  X  X  .  .  .  .  X  .  X  X  .  .  .  .  X  .  X  X  X  .  X  X  .  .        ',
+				sn: '.  .  .  .  X  .  X  X  .  .  .  .  X  .  X  X  .  .  .  .  X  .  X  X  X  .  X  X  .  .        ',
 				ta: '      X  X        X        X     X        X           X  X        X        X     X              ',
 				ag: 'o     a  a  a     o  o     a     a  a     o  o  o     a  a  a     o  o      a   a   a   a   a   ',
-				ch: 'X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X     X  X              '
+				sh: 'X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X  .  X     X  X              '
 			},
 			"Break 1": {
-				lg: '        X XX            X XX          X X     X X   X   X XX    ',
-				mg: '        X XX            X XX          X X     X X   X   X XX  X ',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
+				ls: '        X XX            X XX          X X     X X   X   X XX    ',
+				ms: '        X XX            X XX          X X     X X   X   X XX  X ',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
 				ag: 'o aaa oo      o o aaa oo      o o aaa   o aaa   o aao aao       ',
-				ch: '@lg'
+				sh: '@ls'
 			},
 			"Break 2": {
-				lg: '        X XX            X XX        X XX    X XX        X XX    ',
-				mg: '        X XX            X XX        X XX    X XX        X XX  X ',
-				hg: '@lg',
-				re: '@lg',
-				ca: '....X.XXX.XX........X.XXX.XX........X.XX....X.XX....X.XXX.XX    ',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: '        X XX            X XX        X XX    X XX        X XX    ',
+				ms: '        X XX            X XX        X XX    X XX        X XX  X ',
+				hs: '@ls',
+				re: '@ls',
+				sn: '....X.XXX.XX........X.XXX.XX........X.XX....X.XX....X.XXX.XX    ',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			"Break 3": {
-				lg: 'X XX    X XX    X XXX XXX XX    ',
-				mg: 'X XX    X XX    X XXX XXX XX  X ',
-				hg: '@lg',
+				ls: 'X XX    X XX    X XXX XXX XX    ',
+				ms: 'X XX    X XX    X XXX XXX XX  X ',
+				hs: '@ls',
 				re: '      X       X X XXX XXX XX    ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '      X       X o aoo aoo oo  a ',
-				ch: '@re'
+				sh: '@re'
 			},
 			"Bongo Break 1": {
 				loop: true,
-				lg: 'X   X   X   X   X   X   X XX    ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X   X   X   X   X   X   X XX    ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '   X  X  X X  X    X  X       X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: 'o  ao a oa ao a o  ao a o oo  a ',
-				ch: '@re'
+				sh: '@re'
 			},
 			"Bongo Break 2": {
 				loop: true,
-				lg: 'X   X   X   X   X   X   X XX  X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X   X   X   X   X   X   X XX  X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X XX XX X XX XX X XX XX       X ',
 				ta: '@re',
 				ag: 'o  ao a oa ao a o  ao a o oo  a ',
-				ch: '@re'
+				sh: '@re'
 			},
 			"Monkey Break": {
 				ot: '(  (  ( )  )  ) '
@@ -1077,64 +1077,64 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: '0   X   0   X X ',
-				mg: 'X   0   X   0   ',
-				hg: 'X X 0   XX X0   ',
+				ls: '0   X   0   X X ',
+				ms: 'X   0   X   0   ',
+				hs: 'X X 0   XX X0   ',
 				re: '  XX  XX  XX  XX',
-				ca: 'X.X.X..X.X..X...',
+				sn: 'X.X.X..X.X..X...',
 				ta: 'X X XX X X X XX ',
 				ag: 'a a oo a a o oo ',
-				ch: '................'
+				sh: '................'
 			},
 			'Break 1': {
-				lg: repeat(3, 'X X XX          ') + 'X X XX X X X XX ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: repeat(3, 'X X XX          ') + 'X X XX X X X XX ',
+				ms: '@ls',
+				hs: '@ls',
 				re: repeat(3, '       X X X XX ') + 'X X XX X X X XX ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 2': {
-				lg: repeat(3, '       X X X XX ') + 'X X XX X X X XX ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@re',
+				ls: repeat(3, '       X X X XX ') + 'X X XX X X X XX ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@re',
 				ta: repeat(3, 'X X XX          ') + 'X X XX X X X XX ',
-				ag: '@lg',
-				ch: '@lg'
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 3' : {
-				lg: repeat(4, 'X             X X               '),
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: repeat(3, 'X             X X               ') + 'X             X X.X.X..X.X..XXXX',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: repeat(4, 'X             X X               '),
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: repeat(3, 'X             X X               ') + 'X             X X.X.X..X.X..XXXX',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 3 (Agogô continues)' : {
-				lg: repeat(4, 'X             X X               '),
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: repeat(3, 'X             X X               ') + 'X             X X.X.X..X.X..XXXX',
-				ta: '@lg',
+				ls: repeat(4, 'X             X X               '),
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: repeat(3, 'X             X X               ') + 'X             X X.X.X..X.X..XXXX',
+				ta: '@ls',
 				ag: repeat(8, 'a a oo a a o oo '),
-				ch: '@lg'
+				sh: '@ls'
 			},
 			'Break 5': {
-				lg: '              X X             X X     X X     X X   X   X   X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: 'X.X.X..X.X..X     X.X..X.X..X     X X     X X     X   X   X   X ',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: '              X X             X X     X X     X X   X   X   X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: 'X.X.X..X.X..X     X.X..X.X..X     X X     X X     X   X   X   X ',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Singing Break': {
 				ot: '4 3 21 C H I M# '
@@ -1150,14 +1150,14 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X         X  X  X         X     X         X  X  X         X     ',
-				mg: '      XXXX            XXXX            XXXX            XXXX      ',
-				hg: '    X       X       X       X       X       X       X       X   ',
+				ls: 'X         X  X  X         X     X         X  X  X         X     ',
+				ms: '      XXXX            XXXX            XXXX            XXXX      ',
+				hs: '    X       X       X       X       X       X       X       X   ',
 				re: '    X  X X XX XX    X       X       X  X X XX XX    X       X   ',
-				ca: '....X..X....X.......X..X....X   ....X..X....X...X.X.X.X.X.X.X.X.',
+				sn: '....X..X....X.......X..X....X   ....X..X....X...X.X.X.X.X.X.X.X.',
 				ta: '    X     X X       X   X X X       X     X X       X   X X X   ',
 				ag: 'o ao ao a       o ao ao a       o ao ao a       o ao ao a       ',
-				ch: '................................................................'
+				sh: '................................................................'
 			},
 			'Break 1': {
 				displayName: 'Dance Break',
@@ -1165,34 +1165,34 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 				ot: 'TUVWY Z '
 			},
 			'Break 2': {
-				lg: 'X  X X  X  X X  X  X X          ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  X X  X  X X  X  X X          ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  X   X   X   X   X   X XXXX    ',
-				ca: '@re',
+				sn: '@re',
 				ta: '  X   X   X   X   X   X         ',
 				ag: '@ta',
-				ch: '@ta'
+				sh: '@ta'
 			},
 			'Break 3': {
-				lg: 'X     X   X  X  X     X   X  X  X     X   X  X  ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X     X   X  X  X     X   X  X  X     X   X  X  ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Hip-Hop Break': {
-				lg: 'X  X     X X    X  X   X X X  X X  X     X X                    X  X     X X    X  X   X X X  X X  X     X X                    ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  X     X X    X  X   X X X  X X  X     X X                    X  X     X X    X  X   X X X  X X  X     X X                    ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X       X       X       X       X       X   Xr Xr Xr Xr XXrr    X       X       X       X       X       X                   ',
-				ca: '    X       X       X       X       X       X                       X       X       X       X       X       X     X   X   X   X ',
+				sn: '    X       X       X       X       X       X                       X       X       X       X       X       X     X   X   X   X ',
 				ta: '    X       X       X       X       X       X                       X       X       X       X       X       X                   ',
 				ag: '@ta',
-				ch: '@ta'
+				sh: '@ta'
 			}
 		},
 		exampleSong: [ "Tune", "Break 2", "Tune", "Break 3", "Break 1", "Tune", "Hip-Hop Break", "Tune" ]
@@ -1205,40 +1205,40 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X   X   X X     X   X   X X     X   X   X X             X   X   ',
-				mg: 'X   X   X   X   X   X   X   X   X   X   X   X       X X         ',
-				hg: 'X   X   X     X X   X   X     X X   X   X     X X X             ',
+				ls: 'X   X   X X     X   X   X X     X   X   X X             X   X   ',
+				ms: 'X   X   X   X   X   X   X   X   X   X   X   X       X X         ',
+				hs: 'X   X   X     X X   X   X     X X   X   X     X X X             ',
 				re: 'f XrX XrX f X r f XrX XrX f X r f XrX XrX f X r f XrX XrX f X r ',
-				ca: 'X..XX..XX.......X..XX..XX.X.X.X.X..XX..XX.......X..XX..XX.X.X.X.',
+				sn: 'X..XX..XX.......X..XX..XX.X.X.X.X..XX..XX.......X..XX..XX.X.X.X.',
 				ta: 'XX      X X X   XX      X X X   XX      X X X   XX      X X X   ',
 				ag: 'o oao oao o a o o oao oao o a o o oao oao o a o o oao oao o a o ',
-				ch: '................................................................'
+				sh: '................................................................'
 			},
 			'Break 1': {
-				lg: 'X X XX  X   X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X X XX  X   X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 2': {
-				lg: 'X   X   X   XXX ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X   X   X   XXX ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  X   X   X XXX ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re'
 			},
 			'White Shark': {
-				lg: 'X               X       X               X       X       X       X   X   X   X   X   X   X   X   X   X   X   X   X       X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X               X       X               X       X       X       X   X   X   X   X   X   X   X   X   X   X   X   X       X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '   X               X       X               X       X       X      X   X   X   X   X   X   X   X   X   X   X   X   X     X       ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '                                                                                ooa         ooa ooa         ooa                 '
 			}
@@ -1251,63 +1251,63 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "X r X  rX r X  rX r X  rX r X  r",
-				mg: "  X    X  X    X  X    X  X XXXX",
-				hg: "@mg",
+				ls: "X r X  rX r X  rX r X  rX r X  r",
+				ms: "  X    X  X    X  X    X  X XXXX",
+				hs: "@ms",
 				re: "X  XX  XX  XX  XX  XX  XXX XX  X",
-				ca: "...XX.X ...XX.X....XX.XX X XX.X.",
+				sn: "...XX.X ...XX.X....XX.XX X XX.X.",
 				ta: "               XX X XX X X XX X ",
 				ag: "o a oa o a oao                  ",
-				ch: "X X X X X X X X X X X X X X X X ",
+				sh: "X X X X X X X X X X X X X X X X ",
 			},
 			"Break 1": {
-				lg: "        XXXXX   ",
-				hg: "XXXXX           ",
+				ls: "        XXXXX   ",
+				hs: "XXXXX           ",
 				ag: "aaaaa  aooooo  o"
 			},
 			"Break 2": {
-				lg: "X  X    X  X    X  X   X   X    ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X  X    X  X    X  X   X   X    ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "    XX      XX      XX   X  XXXX",
-				ca: "@re",
+				sn: "@re",
 				ta: "@re",
 				ag: "    oo      oo      oo   o  oooo",
-				ch: "@re"
+				sh: "@re"
 			},
 			"Break 3": {
 				ag: "o a oa oa  oao aa a oao a  oao o"
 			},
 			"Ping Pong Break": {
-				lg: "X XX  X X XX  X",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X XX  X X XX  X",
+				ms: "@ls",
+				hs: "@ls",
 				re: "    XX X    XX X",
-				ca: "@re",
+				sn: "@re",
 				ta: "@re",
 				ag: "    oo o    oo o",
-				ch: "@re"
+				sh: "@re"
 			},
 			"Kick back": {
 				loop: true,
-				lg: "X   X   X   X   ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X   X   X   X   ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "   X  X    X  X ",
-				ca: "@re",
+				sn: "@re",
 				ta: "@re",
 				ag: "  ao  a  aaa  a ",
-				ch: "@re"
+				sh: "@re"
 			},
 			"Call Break": {
-				lg: "   XX r    XX r    XXrr    XX r ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "   XX r    XX r    XXrr    XX r ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "f     rf f    rf     rrf f    r ",
-				ca: "@re",
+				sn: "@re",
 				ta: "@re",
 				ag: "   oo r    oo r    oorr    oo r ",
-				ch: "   XX      XX      XX      XX   "
+				sh: "   XX      XX      XX      XX   "
 			}
 		},
 		exampleSong: ["Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune", "Break 3", "Tune", "Tune", "Ping Pong Break", "Tune", "Tune", "Kick back", "Kick back", "Kick back", "Kick back", "Tune", "Tune", "Call Break", "Tune", "Tune"]
@@ -1319,54 +1319,54 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X  X  X X X     X  X  X X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  X  X X X     X  X  X X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'f  hf  hf  hf  hf  hf  hf  hXhrh',
-				ca: '....X.......X.......X.......X...',
+				sn: '....X.......X.......X.......X...',
 				ta: '    X       X X     X     X X   ',
 				ag: 'o  a  o   a a a o  a  o   a a a ',
-				ch: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
+				sh: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
 			},
 			"Break 1": {
-				lg: 'X X     X X   X X X     X       X X     X X   X X X     X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X     X X   X X X     X       X X     X X   X X X     X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X X     X       X X   X   X     X X     X       X X   XXX   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			"Break 2": {
-				lg: 'X X X X X X X X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
+				ls: 'X X X X X X X X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
 				ag: 'o o o o o o o o ',
-				ch: '@lg'
+				sh: '@ls'
 			},
 			"Tune (Variant 1)": {
-				lg: 'X       X X   X X       X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X       X X   X X       X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'f  hf  hf  hf  hf  hf  hf  hXhrh',
-				ca: '....X.......X.......X.......X...',
+				sn: '....X.......X.......X.......X...',
 				ta: '    X       X X   XXX   X X X   ',
 				ag: 'o  a  o   a a a o  a  o   a a a ',
-				ch: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
+				sh: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
 			},
 			"Tune (Variant 2)": {
-				lg: 'X X     X X   X X X     X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X     X X   X X X     X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'f  hf  hf  hf  hf  hf  hf  hXhrh',
-				ca: '....X.......X.......X.......X...',
+				sn: '....X.......X.......X.......X...',
 				ta: '    X       X X     X     X X   ',
 				ag: 'o  a  o   a a a o  a  o   a a a ',
-				ch: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
+				sh: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune" ]
@@ -1379,66 +1379,66 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X       X       X X     X       ',
-				mg: '  X   X     X         X     X   ',
-				hg: '    X   X   X       X   X   X   ',
+				ls: 'X       X       X X     X       ',
+				ms: '  X   X     X         X     X   ',
+				hs: '    X   X   X       X   X   X   ',
 				re: 'r X   X r   X   r X XXr r   X XX',
-				ca: '..X...X.....X.....X.XXX.....X.XX',
+				sn: '..X...X.....X.....X.XXX.....X.XX',
 				ta: 'X X   X X   X XXX X   X X   X   ',
 				ag: 'o a   a o   a     a   a o   a   ',
-				ch: '................................'
+				sh: '................................'
 			},
 			'Yala Break': {
-				lg: 'X X   X X   X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X X   X X   X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Kick Back 1': {
 				loop: true,
-				lg: 'X       X       X       X       X       X       X       X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X       X       X       X       X       X       X       X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  X   X     X     X   X     X     X   X     X     X   X     X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: 'a a aaa a aaa aaa a aaa a aaa aao o ooo o ooo ooo o ooo o ooo oo',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Kick Back 2': {
 				loop: true,
-				lg: 'X       X       X       X X     ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X       X       X       X X     ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '   X  X    X  X    X  X     X   ',
-				ca: '   X  X    X  X    X  X     X ..',
+				sn: '   X  X    X  X    X  X     X ..',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 3': {
-				lg: '    X       X       X X     X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: 'XXXX            XXXX    XXXX    ',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: '    X       X       X X     X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: 'XXXX            XXXX    XXXX    ',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Hook Break': {
-				lg: 'X X     X       X       X X     X   X   X   X   X       X       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X     X       X       X X     X   X   X   X   X       X       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '   XXX    XXX XX  XXXXX     X XX  XX  XX  XX  XX  X   X     X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Yala Break", "Tune", "Tune", "Break 3", "Tune", "Tune", "Hook Break", "Tune", "Tune", "Kick Back 1", "Kick Back 1", "Tune", "Tune", "Kick Back 2", "Kick Back 2", "Tune", "Tune" ]
@@ -1451,33 +1451,33 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 's  X    s  X    s  X    X X X X ',
-				mg: '      XX      XX      XX      XX',
-				hg: '   X  X    X  X    X  X   X   X ',
+				ls: 's  X    s  X    s  X    X X X X ',
+				ms: '      XX      XX      XX      XX',
+				hs: '   X  X    X  X    X  X   X   X ',
 				re: 'r  X  X r  X  X r  X  X r X r X ',
-				ca: 'X..X..X.X..X..X.X..X..X.X...X...',
+				sn: 'X..X..X.X..X..X.X..X..X.X...X...',
 				ta: 'X  X    X  X    X  X    X X X   ',
 				ag: 'o  a  a o  a  a o  a  a o a o a ',
-				ch: '................................'
+				sh: '................................'
 			},
 			'Break 1': {
-				lg: 'X   X   X   X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X   X   X   X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'r  X  X r X r X ',
-				ca: 'X..X..X.X...X...',
+				sn: 'X..X..X.X...X...',
 				ta: 'X  X    X X X   ',
 				ag: 'o  a  a o a o a ',
-				ch: 'XXXXXXXXXXXXXXXX'
+				sh: 'XXXXXXXXXXXXXXXX'
 			},
 			'Break 2': {
-				lg: 'X               ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
+				ls: 'X               ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
 				ot: '        R   S   '
 			}
 		},
@@ -1490,46 +1490,46 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X X    X  X     X X    X  X   s ',
-				mg: 'X X    X        X X    X        ',
-				hg: 'X X      XX     X X      XX     ',
+				ls: 'X X    X  X     X X    X  X   s ',
+				ms: 'X X    X        X X    X        ',
+				hs: 'X X      XX     X X      XX     ',
 				re: 'f   X       X   f   X       X h ',
-				ca: 'XX..X..X....X...XX..X..X....X...',
+				sn: 'XX..X..X....X...XX..X..X....X...',
 				ta: '    X  X  X X       X    XX X   ',
 				ag: 'o o a  o  o a   o o a    oo a   ',
-				ch: 'X...X...X...X...X...X...X...X...'
+				sh: 'X...X...X...X...X...X...X...X...'
 			},
 			'Kick Back 1': {
 				loop: true,
-				lg: 'X      X  X     ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X      X  X     ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X       X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Kick Back 2': {
 				loop: true,
-				lg: 'X X    X XX     ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X    X XX     ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X       X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 1': {
-				lg: 'X      X X X    ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X      X X X    ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X       X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Kick Back 1", "Kick Back 1", "Kick Back 1", "Kick Back 1", "Kick Back 2", "Kick Back 2", "Kick Back 2", "Kick Back 2", "Tune", { patternName: "Tune", length: 4 }, "Break 1", "Tune", "Tune" ]
@@ -1541,34 +1541,34 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: '    X       X X     X       X X ',
-				mg: 'XXXX    XX      XXXX    XX      ',
-				hg: ' X    X  X    X  X    X  X    X ',
+				ls: '    X       X X     X       X X ',
+				ms: 'XXXX    XX      XXXX    XX      ',
+				hs: ' X    X  X    X  X    X  X    X ',
 				re: ' f  r X  f  r X  f  r X  f  r X ',
-				ca: 'XX..X...XX..X...XX..X..X.X..X...',
+				sn: 'XX..X...XX..X...XX..X..X.X..X...',
 				ta: 'X  X    X  X  X X  X    X  X  X ',
 				ag: 'ooo a o aa  o   aaa   o aa  o   ',
-				ch: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
+				sh: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
 			},
 			'Break 1': {
-				lg: 'XXX             XXX X           XXX             XXX X X XX  X   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
+				ls: 'XXX             XXX X           XXX             XXX X X XX  X   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
 				ag: '      o aa  o         o aa  o         o aa  o   ooo o o oo  o   ',
-				ch: '@lg'
+				sh: '@ls'
 			},
 			'Break 2': {
-				lg: 'X  XX X X  XX X ',
-				mg: 'X  XX X X  XX   ',
-				hg: '@mg',
-				re: '@mg',
-				ca: '@mg',
-				ta: '@mg',
-				ag: '@mg',
-				ch: '@mg'
+				ls: 'X  XX X X  XX X ',
+				ms: 'X  XX X X  XX   ',
+				hs: '@ms',
+				re: '@ms',
+				sn: '@ms',
+				ta: '@ms',
+				ag: '@ms',
+				sh: '@ms'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune" ]
@@ -1580,35 +1580,35 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "X   0 X X   0 X X   0 X X   X",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X   0 X X   0 X X   0 X X   X",
+				ms: "@ls",
+				hs: "@ls",
 				re: "  XX  X   XX  X   XX  X f X X",
-				ca: "....X.......X.......X.......X...",
+				sn: "....X.......X.......X.......X...",
 				ta: "X X X   X X X   X X XX XX   X",
 				ag: "a a o  oa a o  oa a a a o   o  o",
-				ch: "@ca"
+				sh: "@sn"
 			},
 			"Break 1": {
-				lg: "X X X   X X X   X X XX XX    ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
+				ls: "X X X   X X X   X X XX XX    ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "a a o   a a o   a a aa ao    ",
-				ch: ". . .   . . .   . . .. ..    ",
+				sh: ". . .   . . .   . . .. ..    ",
 				ot: "                            F"
 			},
 			'Break 2': {
-				lg: '                X X XXX X X X                   X X XXX   X X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '                X X XXX X X X                   X X XXX   X X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X   X  XX X X                   X   X  XX X X                   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune" ]
@@ -1621,34 +1621,34 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X   0 XX    0   X   0 XX    0   X   0 XX    0   X   0 XX X XX X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X   0 XX    0   X   0 XX    0   X   0 XX    0   X   0 XX X XX X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X  XX  X X XX X X  XX  X X XX X X  XX  X X XX X X  XX  X X XX X ',
-				ca: '....X.......X.......X.......X.......X.......X.......X.......X...',
+				sn: '....X.......X.......X.......X.......X.......X.......X.......X...',
 				ta: '    X       X       X  X X XX       X       X       X  X X XX   ',
 				ag: 'o  oa o o  oa o o  oa o o  oa o o  oa o o  oa o o  oa o o  oa o ',
-				ch: '................................................................'
+				sh: '................................................................'
 			},
 			'Break 2': {
-				lg: 'XXXXXXXXXXXXXXXXX   X   X   X   X X    X X      X X    X X      ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXX   X   X   X   X X    X X      X X    X X      ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'XXXXXXXXXXXXXXXXX   X   X   X       X      XXXX     X      XXXX ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 2 Inverted': {
-				lg: 'XXXXXXXXXXXXXXXXX   X   X   X   X X    X X      X X    X X      X X    X X      X X    X X      X   X   X   X   XXXXXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXX   X   X   X   X X    X X      X X    X X      X X    X X      X X    X X      X   X   X   X   XXXXXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'XXXXXXXXXXXXXXXXX   X   X   X       X      XXXX     X      XXXX     X      XXXX     X      XXXX X   X   X   X   XXXXXXXXXXXXXXXX',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Tune", "Break 2", "Tune", "Break 2 Inverted", "Tune" ]
@@ -1659,42 +1659,42 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "    X       X       X       X       X       X       X       X X ",
-				mg: "XXX     XXX     XXX     X X X  XXXX     XXX     XXX     X X X   ",
-				hg: "      X       X       X XXXXX X       X       X       X XXXXXXX ",
+				ls: "    X       X       X       X       X       X       X       X X ",
+				ms: "XXX     XXX     XXX     X X X  XXXX     XXX     XXX     X X X   ",
+				hs: "      X       X       X XXXXX X       X       X       X XXXXXXX ",
 				re: "f   XXX f XXX X f   XXX f XXX   f   XXX f XXX X f   XXX f XXX   ",
-				ca: "X..X..X.X..X..X.X..X..X.X...X...X..X..X.X..X..X.X..X..X.X...f   ",
+				sn: "X..X..X.X..X..X.X..X..X.X...X...X..X..X.X..X..X.X..X..X.X...f   ",
 				ta: "X  XX X X  XX X X  XX X X  XX   X  XX X X  XX X X  XX X X       ",
 				ag: "a o a oa o aa a a o a oa o aa   a o a oa o aa a a o a oaooooa   ",
-				ch: "X..X..X.X..X..X.X..X..X.X...X...X..X..X.X..X..X.X..X..X.X...X   "
+				sh: "X..X..X.X..X..X.X..X..X.X...X...X..X..X.X..X..X.X..X..X.X...X   "
 			},
 			"Break 1": {
-				lg: "XXX   X XXX   X XXX   X X XXX   ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "X...........................f   ",
-				ta: "@lg",
+				ls: "XXX   X XXX   X XXX   X X XXX   ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "X...........................f   ",
+				ta: "@ls",
 				ag: "aaa   o aaa   o aaa   o a ooa   "
 			},
 			"Break 2": {
-				lg: "    X X     X X     X X     X X ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "    X X     X X     X X     X X ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "XXX     XXX     XXX     XX Xf   ",
-				ca: "@re",
+				sn: "@re",
 				ta: "XXX     XXX     XXX     XX XX   ",
 				ag: "a o a oa o aa a a o a oa o aa   "
 			},
 			"Washing Machine Break": {
-				lg: "X       X  X X  X       X  XXXX X       X  X X  X       X  XXXX ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X       X  X X  X       X  XXXX X       X  X X  X       X  XXXX ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "X   X       X  XX   X           X   X       X  XX   X   X       ",
-				ca: "............................................................... ",
+				sn: "............................................................... ",
 				ta: "@re",
 				ag: "o   o       a  ao   o          oo   o       a  ao   o   a      a",
-				ch: "@re"
+				sh: "@re"
 			}
 		},
 		exampleSong: ["Tune", "Break 1", "Tune", "Break 2", "Tune", "Washing Machine Break", "Tune"]
@@ -1707,24 +1707,24 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				"lg": "X       X       X       X       ",
-				"mg": "   XX X    XX X    XX X    XX X ",
-				"hg": "@mg",
+				"ls": "X       X       X       X       ",
+				"ms": "   XX X    XX X    XX X    XX X ",
+				"hs": "@ms",
 				"re": "                  Xr Xr   rXrh  ",
-				"ca": "ff.X..X.ff.X..X.ff.X..X.ff.X..X.",
+				"sn": "ff.X..X.ff.X..X.ff.X..X.ff.X..X.",
 				"ta": "                        X X X X ",
 				"ag": "  ooo o aoaoaoa                 "
 			},
 			"Hey Break": {
 				displayName: "Hey! Break",
-				"lg": "XX  r           ",
-				"mg": "@lg",
-				"hg": "@lg",
-				"re": "@lg",
-				"ca": "@lg",
-				"ta": "@lg",
+				"ls": "XX  r           ",
+				"ms": "@ls",
+				"hs": "@ls",
+				"re": "@ls",
+				"sn": "@ls",
+				"ta": "@ls",
 				"ag": "oo  r           ",
-				"ch": "XX              ",
+				"sh": "XX              ",
 				"ot": "        F       "
 			}
 		},
@@ -1737,42 +1737,42 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X X X X XXX XXX X X X X XXX XXX X X X X XXX XXX X X X X X   X   ',
-				mg: 's s s s         s s s s         s s s s         s s s s X   X   ',
-				hg: '        XXX XXX         XXX XXX         XXX XXX         X   X   ',
+				ls: 'X X X X XXX XXX X X X X XXX XXX X X X X XXX XXX X X X X X   X   ',
+				ms: 's s s s         s s s s         s s s s         s s s s X   X   ',
+				hs: '        XXX XXX         XXX XXX         XXX XXX         X   X   ',
 				re: 'f r   rrf r  r  f r   rrf r  r  f r   rrf r  r  f r   rrf X  s  ',
-				ca: '. . X . . . X . . . X . . . X . . . X . . . X . . . X . . . X . ',
+				sn: '. . X . . . X . . . X . . . X . . . X . . . X . . . X . . . X . ',
 				ta: '    X  X  X XX  X  X  X  XX XXX     X  X  X XX  X  X  X  XX XXX ',
 				ag: 'o   o   o a aa  o a aa  o   o   a   a   a o oo  o o o o o   a   ',
-				ch: '. . X . . . X . . . X . . . X . . . X . . . X . . . X . . . X . '
+				sh: '. . X . . . X . . . X . . . X . . . X . . . X . . . X . . . X . '
 			},
 			Intro: {
-				lg: 's   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s        X X XX ',
-				mg: '                               X   X   X   X   X   X   X   X   X   X   X   X   X         X X XX ',
-				hg: '                             X   X   X   X   X   X   X   X   X   X   X   X   X   X       X X XX ',
+				ls: 's   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s   s        X X XX ',
+				ms: '                               X   X   X   X   X   X   X   X   X   X   X   X   X         X X XX ',
+				hs: '                             X   X   X   X   X   X   X   X   X   X   X   X   X   X       X X XX ',
 				re: '  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX  zX         X X XX ',
-				ca: '                                                         f   f   f   f   f   f   f ....X X X XX ',
+				sn: '                                                         f   f   f   f   f   f   f ....X X X XX ',
 				ta: '                                                        X   X   X   X   X   X   X        X X XX ',
 				ag: '                                                aao         aao             aao          a a aa '
 			},
 			'Break 1': {
-				lg: 'rrr X XXr rrX   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
+				ls: 'rrr X XXr rrX   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
 				ag: 'rrr o oor rro a '
 			},
 			'Break 2': {
-				lg: 'X X X X X       ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'X X X X X       ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: '          F     '
 			}
 		},
@@ -1786,67 +1786,67 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			Tune: {
 				loop: true,
 				time: 12,
-				lg: stretch(4, 12, 'X   s X X   s X X   s X X   s X '),
-				mg: stretch(4, 12, '    s   X         s     X   X   '),
-				hg: stretch(4, 12, 'X   s         X   s         X   '),
+				ls: stretch(4, 12, 'X   s X X   s X X   s X X   s X '),
+				ms: stretch(4, 12, '    s   X         s     X   X   '),
+				hs: stretch(4, 12, 'X   s         X   s         X   '),
 				re: stretch(4, 12, 'rrX s   f  f  f       Xhr Xhr Xh'),
-				ca: stretch(4, 12, 'X..XX..XX..XX.X.X..XX..XX...X.X.'),
+				sn: stretch(4, 12, 'X..XX..XX..XX.X.X..XX..XX...X.X.'),
 				ta: stretch(4, 12, 'X   X XXX X   f       f     ') + stretch(3, 12, 'XXX'),
 				ag: stretch(4, 12, 'o   a   o     o   a   o o   o   '),
-				ch: stretch(4, 12, 'X..XX..XX..XX..XX..XX..XX..XX..X')
+				sh: stretch(4, 12, 'X..XX..XX..XX..XX..XX..XX..XX..X')
 			},
 			"Break 1": {
-				lg: 'X X X XX X XX X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X X X XX X XX X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			"Break 2": {
-				lg: repeat(3, '                      XXX XX  XX'),
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
+				ls: repeat(3, '                      XXX XX  XX'),
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
 				ag: repeat(3, 'o   a   o     o                 ') + 'o a o  o a oo o                 ',
-				ch: '@lg'
+				sh: '@ls'
 			},
 			"Double Break": {
 				time: 12,
-				lg: repeat(2, stretch(4, 12, 'X hXX hXX hXX hX')),
-				mg: repeat(2, stretch(4, 12, '  s X    s  X X ')),
-				hg: repeat(2, stretch(4, 12, 'X s    X s    X ')),
+				ls: repeat(2, stretch(4, 12, 'X hXX hXX hXX hX')),
+				ms: repeat(2, stretch(4, 12, '  s X    s  X X ')),
+				hs: repeat(2, stretch(4, 12, 'X s    X s    X ')),
 				re: stretch(4, 12, 'rrX s   f  f  f       Xhr Xhr Xh'),
-				ca: stretch(4, 12, 'X..XX..XX..XX.X.X..XX..XX...X.X.'),
+				sn: stretch(4, 12, 'X..XX..XX..XX.X.X..XX..XX...X.X.'),
 				ta: stretch(4, 12, 'X   X XXX X   f       f     ') + stretch(3, 12, 'XXX'),
 				ag: repeat(2, stretch(4, 12, 'o a o  o a oo oa')),
-				ch: stretch(4, 12, 'X..XX..XX..XX..XX..XX..XX..XX..X')
+				sh: stretch(4, 12, 'X..XX..XX..XX..XX..XX..XX..XX..X')
 			},
 			"Kick Back 1": {
 				loop: true,
 				time: 12,
-				lg: stretch(4, 12, 'X   X  X   XX X '),
-				mg: '@lg',
-				hg: '@lg',
+				ls: stretch(4, 12, 'X   X  X   XX X '),
+				ms: '@ls',
+				hs: '@ls',
 				re: stretch(4, 12, '  X       X ') + stretch(3, 12, 'XXX'),
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: stretch(4, 12, 'oaaoaaoa        '),
-				ch: '@re'
+				sh: '@re'
 			},
 			"Mozambique Break": {
-				lg: '   h  0    h  0 ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '   h  0    h  0 ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'r r rr r rr rr r',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: 'X X XX X XX XX X'
+				sh: 'X X XX X XX XX X'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune", "Double Break", "Tune", "Tune", "Mozambique Break", "Tune", "Tune", "Kick Back 1", "Kick Back 1", "Kick Back 1", "Kick Back 1", "Tune", "Tune" ]
@@ -1859,61 +1859,61 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			Tune: {
 				loop: true,
 				upbeat: 2,
-				lg: 's s   h X X   h s s   h X X X h s s   h X X   h s s   h X   X h s ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 's s   h X X   h s s   h X X X h s s   h X X   h s s   h X   X h s ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X r   fh fh f   X r   fh fh f   X r   fh fh f   X r   fh fh f ',
-				ca: '  X..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..X',
+				sn: '  X..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..XX..X',
 				ta: '    X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X ',
 				ag: '  a a . o o o . a a a . o o o . a a a . o o o . a a a . o o o . a ',
-				ch: '@ca'
+				sh: '@sn'
 			},
 			'Break 1': {
-				lg: '  X X   X  X  X   X X   XX XX   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: '  X X   X  X  X   X X   XX XX   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 2': {
 				upbeat: 2,
-				lg: 's s     s s     s s     s s     s ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 's s     s s     s s     s s     s ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X r   fh fh f   X r   fh fh f ',
-				ca: '  X..XX..XX..XX..XX..XX..XX..XX..X',
+				sn: '  X..XX..XX..XX..XX..XX..XX..XX..X',
 				ta: '    X X   X  X  X   X X   X  X  X ',
 				ag: '  a a . o o o . a a a . o o o . a ',
-				ch: '@ca'
+				sh: '@sn'
 			},
 			'Break 2*': {
 				upbeat: 2,
-				lg: 's s     s s     s s     s s     s ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 's s     s s     s s     s s     s ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X r   fh fh f   X r   fh fh f ',
-				ca: '  X..XX..XX..XX..XX..XX..XX..XX..X',
+				sn: '  X..XX..XX..XX..XX..XX..XX..XX..X',
 				ta: '    X X   X  X  X   X X   X  X  X ',
 				ag: '  a a . o o o . a a a . o o o . a ',
 				volumeHack: {
-					lg: crescendo(32),
-					mg: crescendo(32),
-					hg: crescendo(32)
+					ls: crescendo(32),
+					ms: crescendo(32),
+					hs: crescendo(32)
 				}
 			},
 			'Bra Break': {
 				displayName: "Call Break",
-				lg: '                        XX XX   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '                        XX XX   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X X X   X  X  X   X X           ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Tune", "Break 1", "Tune", "Bra Break", "Tune" ]
@@ -1925,73 +1925,73 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "X   X   X   X   ",
-				mg: "      X        X",
-				hg: "  X       X     ",
+				ls: "X   X   X   X   ",
+				ms: "      X        X",
+				hs: "  X       X     ",
 				re: "  X   X   X  f r",
-				ca: "..X...X...X..X.X",
+				sn: "..X...X...X..X.X",
 				ta: " X   X   X XX  X",
 				ag: "   a    a  a   a"
 			},
 			'Break 1': {
-				lg: "        X       ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "X.X.X.X.X       ",
-				ta: "@lg",
+				ls: "        X       ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "X.X.X.X.X       ",
+				ta: "@ls",
 				ag: "        o       ",
 				ot: "            F   "
 			},
 			'Break 2': {
-				lg: " X X X X X X X XX X X X X       ",
-				mg: "                X X X X X       ",
-				hg: "X X X X X X X X X X X X X       ",
+				ls: " X X X X X X X XX X X X X       ",
+				ms: "                X X X X X       ",
+				hs: "X X X X X X X X X X X X X       ",
 				re: "        r r r r rrrrXXXXX       ",
-				ca: "        . . . . X.X.XXXXX       ",
+				sn: "        . . . . X.X.XXXXX       ",
 				ta: "            X X X X X X X       ",
 				ag: "                           ooooo",
 			},
 			'Break 3': {
-				lg: "X X X X X X X X ",
-				mg: "    X X X X X X ",
-				hg: "      X X X X X ",
+				ls: "X X X X X X X X ",
+				ms: "    X X X X X X ",
+				hs: "      X X X X X ",
 				re: "        X X X X ",
-				ca: "          X X X ",
+				sn: "          X X X ",
 				ta: "            X X ",
 				ag: "              o "
 			},
 			'Call break': {
-				lg: "X               ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X               ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "        X       ",
-				ca: "@re",
+				sn: "@re",
 				ta: "@re",
 				ag: "        o       ",
 				ot: "    F       F   ",
 			},
 			'Shouting break': {
 				displayName: 'Shouting break (replace with own shout)',
-				lg: "X            XX ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
+				ls: "X            XX ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "a            aa ",
-				ch: "@lg",
+				sh: "@ls",
 				ot: "  '  =Å \\ l     ",
 			},
 			'Break 5': {
-				lg: "X           XXXX",
-				mg: "X            XXX",
-				hg: "X             XX",
+				ls: "X           XXXX",
+				ms: "X            XXX",
+				hs: "X             XX",
 				re: "X              X",
-				ca: "X               ",
+				sn: "X               ",
 				ta: "X XXXX         X",
 				ag: "o      a        ",
-				ch: "X               "
+				sh: "X               "
 			}
 		},
 		exampleSong: ['Tune', 'Tune', 'Tune', 'Tune', 'Break 1', 'Tune', 'Tune', 'Tune', 'Tune', 'Break 2', 'Tune', 'Tune', 'Tune', 'Tune', 'Break 3', 'Tune', 'Tune', 'Tune', 'Tune', 'Call break', 'Tune', 'Tune', 'Tune', 'Tune', 'Shouting break', 'Tune', 'Tune', 'Tune', 'Tune', 'Break 5', 'Tune', 'Tune', 'Tune', 'Tune']
@@ -2004,46 +2004,46 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X  X            ',
-				mg: '     XX       X ',
-				hg: '        X  X    ',
+				ls: 'X  X            ',
+				ms: '     XX       X ',
+				hs: '        X  X    ',
 				re: 'XX  X       X   ',
-				ca: '....X...XX..X...',
+				sn: '....X...XX..X...',
 				ta: 'X  XX X X  XX X ',
 				ag: 'o  oa o o  oa o ',
-				ch: '................'
+				sh: '................'
 			},
 			'Bra Break': {
 				displayName: "Call Break",
-				lg: '    X     X         X     X     ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: 'XXXXX XXXXX     XXXXX XXXXX     ',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: '    X     X         X     X     ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: 'XXXXX XXXXX     XXXXX XXXXX     ',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 1': {
-				lg: 'X X X X X X X X ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'X X X X X X X X ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: crescendo(16)
 			},
 			'Break 2': {
-				lg: 'X X X X XX XX X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X X X XX XX X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  X   X  X X  X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Tune", "Tune", "Bra Break", "Tune", "Tune", "Tune", "Tune", "Break 1", "Tune", "Tune", "Tune", "Tune", "Break 2", "Tune", "Tune", "Tune", "Tune" ]
@@ -2055,45 +2055,45 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: '    XXXX    XXXX',
-				mg: 'X XX        XXXX',
-				hg: '        X XX    ',
+				ls: '    XXXX    XXXX',
+				ms: 'X XX        XXXX',
+				hs: '        X XX    ',
 				re: 'X rrX rr rrrX r ',
-				ca: '..XX..XX..XX..XX',
+				sn: '..XX..XX..XX..XX',
 				ta: '  XX XX   XX XX ',
 				ag: 'oa  o aa o  a oo',
-				ch: '@ca'
+				sh: '@sn'
 			},
 			"Funky gibbon" : {
-				lg: 'X   X   X  XX X XX              X   X   X  XX X X               ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X   X   X  XX X XX              X   X   X  XX X X               ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  r   r   r   r   r   r   r   r   r   r   r   r   r   r   r   r ',
-				ca: '..X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X.',
+				sn: '..X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X.',
 				ta: '@re',
 				ag: '@re',
-				ch: '  X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X '
+				sh: '  X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X '
 			},
 			"Monkey break" : {
-				lg: '  XX XX   XX XX ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: '  XX XX   XX XX ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: 'G       G       '
 			},
 			"Break 2": {
-				lg: 'X   X       X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X   X       X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  XX  XX XXX  X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Tune", "Tune", "Monkey break", "Tune", "Tune", "Tune", "Tune", "Break 2", "Tune", "Tune", "Tune", "Tune", "Funky gibbon", "Funky gibbon", "Tune", "Tune", "Tune", "Tune" ]
@@ -2105,76 +2105,76 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: '    X       X X     X     X     ',
-				mg: 'X       X       X       X       ',
-				hg: 'X       X       X       X     X ',
+				ls: '    X       X X     X     X     ',
+				ms: 'X       X       X       X       ',
+				hs: 'X       X       X       X     X ',
 				re: 'f XXX X XXX X XXf XXX X fXX X   ',
-				ca: 'X...X.X..X..X.X.X...X.X..X..X...',
+				sn: 'X...X.X..X..X.X.X...X.X..X..X...',
 				ta: 'X XX  X XX  X XX  X XX   XX   X ',
 				ag: 'a  o  a   o   a a  o  a  aa o   ',
-				ch: '................................'
+				sh: '................................'
 			},
 			'Break 1': {
-				lg: '        X X X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '        X X X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X XX Xf X X X   ',
-				ca: '@lg',
-				ta: '@lg',
+				sn: '@ls',
+				ta: '@ls',
 				ag: '        o o o a ',
-				ch: '@lg'
+				sh: '@ls'
 			},
 			'Break 2': {
-				lg: '                        X X X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '                        X X X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  XX XX   XX XX   XX XX X X X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: 'a       a       a       a a a   ',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 3': {
-				lg: '                                                X X X X X   X   ',
-				mg: '        XXX XXX         XXX XXX         XXX XXX             X   ',
-				hg: '@mg',
-				re: '@mg',
-				ca: '@mg',
+				ls: '                                                X X X X X   X   ',
+				ms: '        XXX XXX         XXX XXX         XXX XXX             X   ',
+				hs: '@ms',
+				re: '@ms',
+				sn: '@ms',
 				ta: 'X X X X         X X X X         X X X X                     X   ',
-				ag: '@mg',
-				ch: '@mg'
+				ag: '@ms',
+				sh: '@ms'
 			},
 			'Clave Plus': {
-				lg: 'X  X  X   XXX   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X  X  X   XXX   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Disco Barricade Break': {
-				lg: '                X  X  X   XXX   ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: '                X  X  X   XXX   ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: 'İ Ǐ İ Ǐ Ī ĨĮ Ĳ                  '
 			},
 			'Bra Break': {
 				displayName: "Call Break",
-				lg: '                        X  X X  ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '                        X  X X  ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'f XXXX r XXXX r X XX rr X  X X  ',
-				ca: '@lg',
+				sn: '@ls',
 				ta: '       X      X      XX X  X X  ',
 				ag: '       a      a      aa        a',
-				ch: '@lg'
+				sh: '@ls'
 			}
 		},
 		exampleSong: ['Tune', 'Tune', 'Tune', 'Tune', 'Break 1', 'Tune', 'Tune', 'Tune', 'Tune', 'Break 2', 'Tune', 'Tune', 'Tune', 'Tune', 'Break 3', 'Tune', 'Tune', 'Tune', 'Tune', 'Clave Plus', 'Tune', 'Tune', 'Tune', 'Tune', 'Disco Barricade Break', 'Tune', 'Tune', 'Tune', 'Tune', 'Bra Break', 'Tune', 'Tune', 'Tune', 'Tune']
@@ -2187,58 +2187,58 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		video: "https://tube.rhythms-of-resistance.org/videos/embed/a8253384-c3bb-4b9f-a50c-aa954288bb37",
 		patterns: {
 			Intro: {
-				lg: "      XXXXXXX         XXX XXX   ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "      XXXXXXX         XXX XXX   ",
+				ms: "@ls",
+				hs: "@ls",
 				ot: "D  D            D  D            ",
 			},
 			Tune: {
 				loop: true,
-				lg: "X  X    s   s   X  X    s   s   ",
-				mg: "      XXXXXXX         XXX XXX   ",
-				hg: "@mg",
+				ls: "X  X    s   s   X  X    s   s   ",
+				ms: "      XXXXXXX         XXX XXX   ",
+				hs: "@ms",
 				re: "f hf hXhf h Xhrhf hf hXhf h Xhrh",
-				ca: "X..X........X...X..X........X...",
+				sn: "X..X........X...X..X........X...",
 				ta: "  XX  XX      XX  XX  XX      XX",
 				ag: "a  a  a o a o   a  a  a o a o   ",
 				ot: "D  D            D  D            ",
 			},
 			"Break 1": {
-				lg: "X X X X X X X X ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
+				ls: "X X X X X X X X ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "o o o o o o o o ",
 			},
 			"Break 2": {
-				lg: "X  X            X  X            ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
+				ls: "X  X            X  X            ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "a  a            a  a            ",
 				ot: "D  D            D  D            ",
 			},
 			"Beast Break": {
-				lg: "X  X            X  X            ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "X  X            X  X            ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "      XXXXXXX         XXX XXX   ",
-				ca: "@lg",
-				ta: "@lg",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "      aaaaaaa         aaa aaa   ",
 				ot: "D  D            D  D            ",
 			},
 			"Beast Break Inverted": {
-				lg: "      XXXXXXX         XXX XXX   ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
+				ls: "      XXXXXXX         XXX XXX   ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "a  a            a  a            ",
 				ot: "D  D            D  D            ",
 			},
@@ -2253,67 +2253,67 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X  X  0 X  X  0 X  X  0 X  X  0 ',
-				mg: '0  X  X 0  X  X 0  X  X 0  X  X ',
-				hg: '0     X 0     X 0     X 0     X ',
+				ls: 'X  X  0 X  X  0 X  X  0 X  X  0 ',
+				ms: '0  X  X 0  X  X 0  X  X 0  X  X ',
+				hs: '0     X 0     X 0     X 0     X ',
 				re: '  X   X   X   X   X   X  XXX  X ',
-				ca: '..XX..X...XX..X...XX..X...XX..X.',
+				sn: '..XX..X...XX..X...XX..X...XX..X.',
 				ta: '  X   X   X   X   X   X   XX  X ',
 				ag: 'o a o a oa ao a o a  oooo a o   ',
-				ch: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
+				sh: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
 			},
 			'Kick Back 1': {
 				loop: true,
-				lg: 'X  X    X  X    X  X    X  X    ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  X    X  X    X  X    X  X    ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '      X       X       X       X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Kick Back 2': {
 				loop: true,
-				lg: 'X  X X  X  X X  X  X X  X  X X  ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  X X  X  X X  X  X X  X  X X  ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  X   X   X   X   X   X   X   X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: 'oaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoa',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 2': {
-				lg: 'X           XXX ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X           XXX ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 3': {
-				lg: 'X  X  X         ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  X  X         ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '        X  X  X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Zorro-Break': {
 				loop: true,
-				lg: 'X       X       X       X  X  X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X       X       X       X  X  X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  X   X   X   X   X   X  XXX  X ',
-				ca: '..XX..X...XX..X...XX..X...XX..X.',
+				sn: '..XX..X...XX..X...XX..X...XX..X.',
 				ta: '  X   X   X   X   X   X   XX  X ',
 				ag: 'o a o a oa ao a o a  oooo a o   ',
-				ch: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
+				sh: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 2", "Tune", "Tune", "Break 3", "Tune", "Tune", "Kick Back 1", "Kick Back 1", "Kick Back 2", "Kick Back 2", "Tune", "Tune", "Zorro-Break", "Zorro-Break", "Tune", "Tune" ]
@@ -2326,76 +2326,76 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			Tune: {
 				loop: true,
 				time: 12,
-				lg: stretch(4, 12, repeat(2, 'XXXXXXXXX   X               X X ')),
-				mg: stretch(4, 12, repeat(2, '  ss       XX     ss       XX   ')),
-				hg: stretch(4, 12, repeat(2, '            X X XXXXXXXXX   X   ')),
+				ls: stretch(4, 12, repeat(2, 'XXXXXXXXX   X               X X ')),
+				ms: stretch(4, 12, repeat(2, '  ss       XX     ss       XX   ')),
+				hs: stretch(4, 12, repeat(2, '            X X XXXXXXXXX   X   ')),
 				re: stretch(4, 12, repeat(2, 's XXf   s XXf   s XXf   XXX f   ')),
-				ca: stretch(4, 12, repeat(2, '....X.......X.......X..XX..XX...')),
+				sn: stretch(4, 12, repeat(2, '....X.......X.......X..XX..XX...')),
 				ta: stretch(4, 12, 'X  XX   X  XX   X  XX  XX  XX   X  XX   X  XX   X  XX   ') + stretch(3, 12, 'XXX   '),
 				ag: stretch(4, 12, repeat(2, 'a  aa  oo  oo a a  aa  oo  oo a ')),
-				ch: stretch(4, 12, repeat(2, '................................'))
+				sh: stretch(4, 12, repeat(2, '................................'))
 			},
 			'Oh Shit': {
-				lg: 'X               ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'X               ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: '        N   O   '
 			},
 			'Fuck Off': {
-				lg: 'X               ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'X               ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: '        P   Q   '
 			},
 			'Break 1': {
-				lg: 'X      XX         X    XX       ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X      XX         X    XX       ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X     X         X     X X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 2': {
-				lg: 'XX  XX  XX  X     XX  XX  XX    ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'XX  XX  XX  X     XX  XX  XX    ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  XX  XX  XX    XX  XX  XX  X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 3': {
-				lg: 'X   X   X   X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X   X   X   X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: ' XX  XX  XX     ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Küsel Break': {
-				lg: 'X XXX X X X X                   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X XXX X X X X                   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '                X XXX X X X X   ',
-				ca: 'X..XX..XX...X.X.X.X.X.X.X.X.X...',
+				sn: 'X..XX..XX...X.X.X.X.X.X.X.X.X...',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Skipping Agogo': {
 				displayName: "Skipping Agogô",
@@ -2408,10 +2408,10 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			},
 			'Eye of the tiger': {
 				time: 12,
-				lg: stretch(4, 12, '                                              X                 '),
-				mg: stretch(4, 12, '           X               X               X                    '),
-				hg: stretch(4, 12, 'X       X     X         X     X         X                       '),
-				ca: stretch(4, 12, '................................................                '),
+				ls: stretch(4, 12, '                                              X                 '),
+				ms: stretch(4, 12, '           X               X               X                    '),
+				hs: stretch(4, 12, 'X       X     X         X     X         X                       '),
+				sn: stretch(4, 12, '................................................                '),
 				ag: stretch(4, 12, '                                                ') + 'oaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoaoa'
 			}
 		},
@@ -2424,97 +2424,97 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: '0   X   0   X X ',
-				mg: 'X   0   X   0   ',
-				hg: '0     X 0   XXXX',
+				ls: '0   X   0   X X ',
+				ms: 'X   0   X   0   ',
+				hs: '0     X 0   XXXX',
 				re: '  XX  XX  XX  XX',
-				ca: 'X..X..X...X..X..',
+				sn: 'X..X..X...X..X..',
 				ta: 'X  X  X   X X   ',
 				ag: 'o a a oo a aa o ',
-				ch: '................'
+				sh: '................'
 			},
 			'Bra Break': {
 				displayName: "Call Break",
-				lg: '          X X             X X             X X                                                                 X ',
-				mg: '          X X             X X             X X                                                                   ',
-				hg: '@mg',
+				ls: '          X X             X X             X X                                                                 X ',
+				ms: '          X X             X X             X X                                                                   ',
+				hs: '@ms',
 				re: 'f XX XX X       f XX XX X       f XX XX X                                                                       ',
-				ca: '          X X             X X             X X                   X..X..X...X.X...X..X..X...X.X...X..X..X...X.X...',
+				sn: '          X X             X X             X X                   X..X..X...X.X...X..X..X...X.X...X..X..X...X.X...',
 				ta: '          X X             X X             X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   ',
-				ag: '@mg',
-				ch: '@mg'
+				ag: '@ms',
+				sh: '@ms'
 			},
 			'Break 1': {
-				lg: '                X X XX XX                       X  X  X X                                  XX                              XX                              XX                   ',
-				mg: '@lg',
-				hg: '                X X XX XX                       X  X  X X                                  XX                              XX                              XX               XXXX',
+				ls: '                X X XX XX                       X  X  X X                                  XX                              XX                              XX                   ',
+				ms: '@ls',
+				hs: '                X X XX XX                       X  X  X X                                  XX                              XX                              XX               XXXX',
 				re: 'XX XX XXXX XX                   XX XX XXXX XX                                              XX                              XX                              XX                   ',
-				ca: '                X X XX XX                       X  X  X X       X..X..X.X..X..X.X..X..X.X       X..X..X.X..X..X.X..X..X.X       X..X..X.X..X..X.X..X..X.X       X  X  X   X     ',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '                X X XX XX                       X  X  X X       X..X..X.X..X..X.X..X..X.X       X..X..X.X..X..X.X..X..X.X       X..X..X.X..X..X.X..X..X.X       X  X  X   X     ',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 2': {
-				lg: '            XXXX            XXXX            XXXX            XXXX',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '            XXXX            XXXX            XXXX            XXXX',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 3': {
-				lg: '                X  XX X XX XX X                 X  XX X XX XX X                 X  XX X X       X  XX X X       X  X  X         ',
-				mg: '@lg',
-				hg: '                X  XX X XX XX X                 X  XX X XX XX X                 X  XX X X       X  XX X X       X  X  X     XXXX',
+				ls: '                X  XX X XX XX X                 X  XX X XX XX X                 X  XX X X       X  XX X X       X  X  X         ',
+				ms: '@ls',
+				hs: '                X  XX X XX XX X                 X  XX X XX XX X                 X  XX X X       X  XX X X       X  X  X     XXXX',
 				re: '                                X  X  X   X                     X  X  X   X              fX X X          fX X X                 ',
-				ca: 'X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...',
+				sn: 'X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...',
 				ta: '                                X  X  X   X                     X  X  X   X                 X X             X X                 ',
 				ag: '                                X  X  X   X                     X  X  X   X                 a a             a a                 ',
-				ch: '                                X  X  X   X                     X  X  X   X                                                     '
+				sh: '                                X  X  X   X                     X  X  X   X                                                     '
 			},
 			'SOS Break': {
-				lg: 'X       X       X       X       X       X       X       X     X ',
-				mg: 'X       X       X       X       X       X       X       X       ',
-				hg: '@mg',
+				ls: 'X       X       X       X       X       X       X       X     X ',
+				ms: 'X       X       X       X       X       X       X       X       ',
+				hs: '@ms',
 				re: '  XX XX   X X     XX XX   X X     XX XX   X X     XX XX   X X   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Knock On The Door Break': {
 				time: 12,
-				lg: stretch(3, 12, 'X        XXX') + stretch(4, 12, 'X               X  X  X   X X X X               '),
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: repeat(4, stretch(4, 12, 'X..XX..XX..XX..X')),
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: stretch(3, 12, 'X        XXX') + stretch(4, 12, 'X               X  X  X   X X X X               '),
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: repeat(4, stretch(4, 12, 'X..XX..XX..XX..X')),
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Knock On The Door (Cut)': {
 				time: 12,
-				lg: stretch(3, 12, 'X        XXX') + stretch(4, 12, 'X               X  X  X   X X X X               '),
-				mg: '@lg',
-				hg: '@lg',
+				ls: stretch(3, 12, 'X        XXX') + stretch(4, 12, 'X               X  X  X   X X X X               '),
+				ms: '@ls',
+				hs: '@ls',
 				re: stretch(3, 12, 'X        XXX') + stretch(4, 12, 'X               X  X  X   X X X X X XX X X X XX '),
-				ca: repeat(4, stretch(4, 12, 'X..XX..XX..XX..X')),
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: repeat(4, stretch(4, 12, 'X..XX..XX..XX..X')),
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Dancing Break': {
-				lg: repeat(3, 'X  X   XX   X                   ') + 'X  X   XX   X                 X ',
-				mg: repeat(4, 'X  X   XX   X                   '),
-				hg: '@lg',
+				ls: repeat(3, 'X  X   XX   X                   ') + 'X  X   XX   X                 X ',
+				ms: repeat(4, 'X  X   XX   X                   '),
+				hs: '@ls',
 				re: repeat(4, '                X  X   XX   X   '),
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Tune", "Tune", "Bra Break", "Tune", "Tune", "Tune", "Tune", "Break 1", "Tune", "Tune", "Tune", "Tune", "Break 2", "Tune", "Tune", "Tune", "Tune", "Break 3", "Tune", "Tune", "Tune", "Tune", "SOS Break", "Tune", "Tune", "Tune", "Tune", "Knock On The Door Break", "Knock On The Door (Cut)", "Tune", "Tune", "Tune", "Tune", "Dancing Break", "Tune", "Tune", "Tune", "Tune" ]
@@ -2525,56 +2525,56 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "0   X   0   X X ",
-				mg: "X   0   X   0   ",
-				hg: "0     X 0   XXXX",
+				ls: "0   X   0   X X ",
+				ms: "X   0   X   0   ",
+				hs: "0     X 0   XXXX",
 				re: "  XX  XX  XX  XX",
-				ca: "X..X..X...X..X..",
+				sn: "X..X..X...X..X..",
 				ta: "X XX XXX  X  X  ",
 				ag: "o a a oo a aa o ",
-				ch: "................"
+				sh: "................"
 			},
 			"Break 1": {
-				lg: "                X X XX XX                       X  X  X X                                  XX                              XX                              XX                   ",
-				mg: "@lg",
-				hg: "                X X XX XX                       X  X  X X                                  XX                              XX                              XX               XXXX",
+				ls: "                X X XX XX                       X  X  X X                                  XX                              XX                              XX                   ",
+				ms: "@ls",
+				hs: "                X X XX XX                       X  X  X X                                  XX                              XX                              XX               XXXX",
 				re: "XX XX XXXX XX                   XX XX XXXX XX                                              XX                              XX                              XX                   ",
-				ca: "                X X XX XX                       X  X  X X       X..X..X.X..X..X.X..X..X.X       X..X..X.X..X..X.X..X..X.X       X..X..X.X..X..X.X..X..X.X       X  X  X   X     ",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg"
+				sn: "                X X XX XX                       X  X  X X       X..X..X.X..X..X.X..X..X.X       X..X..X.X..X..X.X..X..X.X       X..X..X.X..X..X.X..X..X.X       X  X  X   X     ",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls"
 			},
 			"Break 2": {
-				lg: "            XXXX            XXXX            XXXX            XXXX",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "            XXXX            XXXX            XXXX            XXXX",
+				ms: "@ls",
+				hs: "@ls",
 				re: "X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   ",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg"
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls"
 			},
 			"Break 3": {
-				lg: "                X  XX X XX XX X                 X  XX X XX XX X                 X  XX X X       X  XX X X       X  X  X         ",
-				mg: "@lg",
-				hg: "                X  XX X XX XX X                 X  XX X XX XX X                 X  XX X X       X  XX X X       X  X  X     XXXX",
+				ls: "                X  XX X XX XX X                 X  XX X XX XX X                 X  XX X X       X  XX X X       X  X  X         ",
+				ms: "@ls",
+				hs: "                X  XX X XX XX X                 X  XX X XX XX X                 X  XX X X       X  XX X X       X  X  X     XXXX",
 				re: "                                X  X  X   X                     X  X  X   X              fX X X          fX X X                 ",
-				ca: "X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...",
+				sn: "X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...X...",
 				ta: "                                X  X  X   X                     X  X  X   X                 X X             X X                 ",
 				ag: "                                X  X  X   X                     X  X  X   X                 a a             a a                 ",
-				ch: "                                X  X  X   X                     X  X  X   X                                                     "
+				sh: "                                X  X  X   X                     X  X  X   X                                                     "
 			},
 			"Pickup": {
-				hg: "            XXXX"
+				hs: "            XXXX"
 			},
 			"Stop on 1": {
-				lg: "X               ",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg"
+				ls: "X               ",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls"
 			},
 			"Tam Entrada": {
 				time: 3,
@@ -2596,79 +2596,79 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "0   X   0   X   0   X   0   X   ",
-				mg: "X   0   X   0   X   0   X   0   ",
-				hg: "0     XX0     XX0     XX0 X XXXX",
+				ls: "0   X   0   X   0   X   0   X   ",
+				ms: "X   0   X   0   X   0   X   0   ",
+				hs: "0     XX0     XX0     XX0 X XXXX",
 				re: "  XX  XX  XX  XX  XX  XX  XX  XX",
-				ca: "X..X..X...X.X...X..X..X...X.X...",
+				sn: "X..X..X...X.X...X..X..X...X.X...",
 				ta: "X  X  X   X X   X  X  X   X X   ",
 				ag: "o  a  o   a a   o  a  o   a a   ",
-				ch: "................................"
+				sh: "................................"
 			},
 			"Bra Break": {
 				displayName: "Call Break",
-				lg: "          X X             X X             X X                                                                 X ",
-				mg: "          X X             X X             X X                                                                   ",
-				hg: "@mg",
+				ls: "          X X             X X             X X                                                                 X ",
+				ms: "          X X             X X             X X                                                                   ",
+				hs: "@ms",
 				re: "f XX XX X       f XX XX X       f XX XX X                                                                       ",
-				ca: "          X X             X X             X X                   X..X..X...X.X...X..X..X...X.X...X..X..X...X.X...",
+				sn: "          X X             X X             X X                   X..X..X...X.X...X..X..X...X.X...X..X..X...X.X...",
 				ta: "          X X             X X             X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   ",
-				ag: "@mg",
-				ch: "@mg"
+				ag: "@ms",
+				sh: "@ms"
 			},
 			"SOS Break": {
-				lg: "X       X       X       X       X       X       X       X     X ",
-				mg: "X       X       X       X       X       X       X       X       ",
-				hg: "@mg",
+				ls: "X       X       X       X       X       X       X       X     X ",
+				ms: "X       X       X       X       X       X       X       X       ",
+				hs: "@ms",
 				re: "  XX XX   X X     XX XX   X X     XX XX   X X     XX XX   X X   ",
-				ca: "@re",
+				sn: "@re",
 				ta: "@re",
 				ag: "@re",
-				ch: "@re"
+				sh: "@re"
 			},
 			"Knock On The Door Break": {
 				time: 12,
-				lg: "X                                   X   X   X   X                                               X        X        X           X     X     X     X                                               ",
-				mg: "@lg",
-				hg: "@lg",
-				re: "@lg",
-				ca: "X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  ",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg"
+				ls: "X                                   X   X   X   X                                               X        X        X           X     X     X     X                                               ",
+				ms: "@ls",
+				hs: "@ls",
+				re: "@ls",
+				sn: "X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  ",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls"
 			},
 			"Knock On The Door (Cut)": {
 				time: 12,
-				lg: "X                                   X   X   X   X                                               X        X        X           X     X     X     X                                               ",
-				mg: "X                                   X   X   X   X                                               X        X        X           X     X     X     X                                               ",
-				hg: "@mg",
+				ls: "X                                   X   X   X   X                                               X        X        X           X     X     X     X                                               ",
+				ms: "X                                   X   X   X   X                                               X        X        X           X     X     X     X                                               ",
+				hs: "@ms",
 				re: "X                                   X   X   X   X                                               X        X        X           X     X     X     X     X     X  X     X     X     X     X  X     ",
-				ca: "X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  ",
-				ta: "@mg",
-				ag: "@mg",
-				ch: "@mg"
+				sn: "X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  X  .  .  X  ",
+				ta: "@ms",
+				ag: "@ms",
+				sh: "@ms"
 			},
 			"Dancing Break": {
-				lg: "X  X   XX   X                   X  X   XX   X                   X  X   XX   X                   X  X   XX   X                 X ",
-				mg: "X  X   XX   X                   X  X   XX   X                   X  X   XX   X                   X  X   XX   X                   ",
-				hg: "@mg",
+				ls: "X  X   XX   X                   X  X   XX   X                   X  X   XX   X                   X  X   XX   X                 X ",
+				ms: "X  X   XX   X                   X  X   XX   X                   X  X   XX   X                   X  X   XX   X                   ",
+				hs: "@ms",
 				re: "                X  X   XX   X                   X  X   XX   X                   X  X   XX   X                   X  X   XX   X   ",
-				ca: "@re",
+				sn: "@re",
 				ta: "@re",
 				ag: "@re",
-				ch: "@re"
+				sh: "@re"
 			},
 			"Pickup": {
-				lg: "              X "
+				ls: "              X "
 			},
 			"Stop on 1": {
-				lg: "X               ",
-				hg: "@lg",
-				re: "@lg",
-				ca: "@lg",
-				ta: "@lg",
-				ag: "@lg",
-				ch: "@lg"
+				ls: "X               ",
+				hs: "@ls",
+				re: "@ls",
+				sn: "@ls",
+				ta: "@ls",
+				ag: "@ls",
+				sh: "@ls"
 			},
 			"Fancy Tam Line": {
 				ta: repeat(2, "X  X  X   X X   X  X  X   X X   ") + repeat(2, "X  X  X   X X XXX  X  X XXX X   ")
@@ -2687,47 +2687,47 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X  tX t X  tX t X  tX t X  tX t ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  tX t X  tX t X  tX t X  tX t ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X..X..X..XX..XX.X..X..X..XX..XX.',
-				ca: 'X..X..X...X..X..X..X..X...X..X..',
+				sn: 'X..X..X...X..X..X..X..X...X..X..',
 				ta: ' X XX X XX XX  X X XXXX X  XX   ',
 				ag: 'o  aa oo a oo a o  aa oo a oo a ',
-				ch: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
+				sh: 'X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.'
 			},
 			'Break 1': {
-				lg: 'X  tX t XX XX   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  tX t XX XX   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X..X..X.XX XX   ',
-				ca: 'X..X..X.XX XX   ',
+				sn: 'X..X..X.XX XX   ',
 				ta: ' X XX X XX XX   ',
 				ag: 'o  aa ooXX XX   ',
-				ch: 'X X X X XX XX   ',
+				sh: 'X X X X XX XX   ',
 				ot: 'y w w           '
 			},
 			'Break 2': {
-				lg: repeat(4, 'X X X X X       '),
-				mg: '@lg',
-				hg: '@lg',
+				ls: repeat(4, 'X X X X X       '),
+				ms: '@ls',
+				hs: '@ls',
 				re: repeat(4, '          XX XX '),
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re',
+				sh: '@re',
 				volumeHack: { 0: .1, 16: .4, 32: .7, 48: 1  }
 			},
 			'Intro': {
 				upbeat: 1,
-				lg: '         XX XX           XX XX           XX XX           XX XX                       X X X X XX X    X X   X X   X                   X X X X XX X    X X   X X   X                   X X X X XX X    X X   X X   X                   X X X X XX X    X X   X X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '         XX XX           XX XX           XX XX           XX XX                       X X X X XX X    X X   X X   X                   X X X X XX X    X X   X X   X                   X X X X XX X    X X   X X   X                   X X X X XX X    X X   X X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'fX X X          fX X X          fX X X          fX X X           X..X..X..X..ffffX                               X..X..X..X..ffffX                               X..X..X..X..ffffX                               X..X..X..X..ffffX                               ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Intro", "Tune", "Tune", "Break 1", "Tune", "Tune", "Break 2", "Tune", "Tune" ]
@@ -2739,77 +2739,77 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: '    X X     XXXX    X X     XXXX    X X     XXXX    X X     XXXX',
-				mg: 'X       X       X       X       X       X       X       X       ',
-				hg: '    X X     X X     X X X X XXXX    X X     X X     X X X X XXXX',
+				ls: '    X X     XXXX    X X     XXXX    X X     XXXX    X X     XXXX',
+				ms: 'X       X       X       X       X       X       X       X       ',
+				hs: '    X X     X X     X X X X XXXX    X X     X X     X X X X XXXX',
 				re: 'X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..',
-				ca: '@re',
+				sn: '@re',
 				ta: 'X XX    X XX    X XX    X XX    X XX    X XX    X XXX XXX XX    ',
 				ag: repeat(4, '  a o o aa oa o '),
-				ch: '................................................................'
+				sh: '................................................................'
 			},
 			'Intro': {
-				lg: '                           XX X X             X X             X X             X XX X X X    X X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '                           XX X X             X X             X X             X XX X X X    X X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X X X X X  XXXXXX X X X X          fXX X fXXX      fXX X fXXX      fXX X fXXX            fXX    ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Break 1': {
 				loop: true,
-				lg: 'X               X               X               X               ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X               X               X               X               ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..',
-				ca: '@re',
+				sn: '@re',
 				ta: 'X XX    X XX    X XX    X XX    X XX    X XX    X XXX XXX XX    ',
 				ag: repeat(4, '  a o o aa oa o '),
-				ch: '................................................................'
+				sh: '................................................................'
 			},
 			'Break 2': {
-				lg: 'X               X             X X               X               ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X               X             X X               X               ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'XXrXXXrXXXrXX r XXrXXXrXXXrXX r XXrXXXrXXXrXXXrXX X X X fXX X X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '  X   X   X   X   X   X   X   X   X   X   X   XXX X X X     X X ',
 				ag: '@ta',
-				ch: '@ta'
+				sh: '@ta'
 			},
 			'Break 3': {
-				lg: 'X  X  X         X  X  X         ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  X  X         X  X  X         ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '        X  X  X         XXXXX X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Whistle Break': {
 				loop: true,
-				lg: 'X  XX  XXX XX   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  XX  XXX XX   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  X   X   X   X ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Outro': {
 				upbeat: 2,
-				lg: 'X XX X X X      X X               ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X XX X X X      X X               ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X XX X X X fXXX X X               ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Intro", "Tune", "Break 1", "Tune", "Break 2", "Tune", "Break 3", "Tune", "Whistle Break", "Tune", "Outro" ]
@@ -2822,39 +2822,39 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			Tune: {
 				loop: true,
 				upbeat: 1,
-				lg: 'X0 00 X 0 X     X0 00 X 0        ',
-				mg: ' X XX   X        X XX   X        ',
-				hg: '     X               X           ',
+				ls: 'X0 00 X 0 X     X0 00 X 0        ',
+				ms: ' X XX   X        X XX   X        ',
+				hs: '     X               X           ',
 				re: '     X      hX       X    X XrXh ',
-				ca: ' ....X.......X.X.....X.......X...',
+				sn: ' ....X.......X.X.....X.......X...',
 				ta: '     X       X X     X       X   ',
 				ag: ' a a o  a a ao o a a o  a        ',
-				ch: ' ................................'
+				sh: ' ................................'
 			},
 			'Break 1': {
-				lg: '                ',
-				mg: '                ',
-				hg: '                ',
+				ls: '                ',
+				ms: '                ',
+				hs: '                ',
 				ag: 'ooooo o a       ',
 				ot: '           uvx  '
 			},
 			'Break 2': {
 				upbeat: 3,
-				lg: 'X               X               X                  ',
-				mg: ' XX       X      XX       X      XX       X        ',
-				hg: '   X               X               X               ',
-				ch: '   XXXXXXXX        XXXXXXXX        XXXXXXXX        '
+				ls: 'X               X               X                  ',
+				ms: ' XX       X      XX       X      XX       X        ',
+				hs: '   X               X               X               ',
+				sh: '   XXXXXXXX        XXXXXXXX        XXXXXXXX        '
 			},
 			'Bra Break': {
 				displayName: "Call Break",
-				lg: repeat(3, '    X       X X '),
-				mg: '@lg',
-				hg: '@lg',
+				ls: repeat(3, '    X       X X '),
+				ms: '@ls',
+				hs: '@ls',
 				re: repeat(3, 'X X    X X X    '),
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 2", "Break 1", "Tune", "Tune", "Bra Break", "Break 1", "Tune", "Tune" ]
@@ -2867,30 +2867,30 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: "        X       X       X   X   X ",
-				hg: "    XXX     XXX     XXX     X   X ",
+				ls: "        X       X       X   X   X ",
+				hs: "    XXX     XXX     XXX     X   X ",
 				re: "  X  X  X  XXXX   X X X X  XXXX   ",
-				ca: "  ...XX.....X.X......XX.....X.X...",
+				sn: "  ...XX.....X.X......XX.....X.X...",
 				ta: "    X       X     X X X X   X     ",
 				ag: "o a     o a     o a a a   a       ",
-				ch: "  ................................",
+				sh: "  ................................",
 				upbeat: 2
 			},
 			"Break 1": {
-				lg: "    X X     X X             X     ",
+				ls: "    X X     X X             X     ",
 				ot: "i l     i l     i l p $ % &       ",
 				upbeat: 2
 			},
 			'Bra Break': {
 				displayName: "Call Break",
-				lg: "                X     X X                       X     X X                       X     X X                       ",
-				mg: "@lg",
-				hg: "@lg",
+				ls: "                X     X X                       X     X X                       X     X X                       ",
+				ms: "@ls",
+				hs: "@ls",
 				re: "X..X..X.X..X..X.                X..X..X.X..X..X.                X..X..X.X..X..X.                X  X  X X       ",
-				ca: "@lg",
-				ta: "@lg",
+				sn: "@ls",
+				ta: "@ls",
 				ag: "                o     o a  a  a                 o     o a  a  a                 o     o a  a  a                 ",
-				ch: "@lg",
+				sh: "@ls",
 				ot: "                                                                                                            '   "
 			}
 		},
@@ -2905,24 +2905,24 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X  X              X  X        X  X        XXXX  ',
-				mg: '            X  X        X  X                    ',
-				hg: '      XXXX                          X  X        ',
+				ls: 'X  X              X  X        X  X        XXXX  ',
+				ms: '            X  X        X  X                    ',
+				hs: '      XXXX                          X  X        ',
 				re: repeat(4, 'X  X  X XX  '),
-				ca: repeat(4, 'X..X..X..X..'),
+				sn: repeat(4, 'X..X..X..X..'),
 				ta: 'XXXX        XXXX        XXXX  XXXX  XXXX        ',
 				ag: 'oooa oa oa  oooa oa oa  oooa  oooa  ooo   aaao  ',
-				ch: repeat(4, 'X XX  X XX  ')
+				sh: repeat(4, 'X XX  X XX  ')
 			},
 			'Rented a Tent Break': {
-				lg: 'XXX  X  X   XXX  X  X   XXX   XXX   XXX      X  ',
-				mg: 'XXX  X  X   XXX  X  X   XXX   XXX   XXX   XXX   ',
-				hg: '   X  X  X     X  X  X     X     X        XXX   ',
+				ls: 'XXX  X  X   XXX  X  X   XXX   XXX   XXX      X  ',
+				ms: 'XXX  X  X   XXX  X  X   XXX   XXX   XXX   XXX   ',
+				hs: '   X  X  X     X  X  X     X     X        XXX   ',
 				re: 'XXXX XX XX  XXXX XX XX  XXXX  XXXX  XXX   XXXX  ',
-				ca: 'XXXX.XX.XX..XXXX.XX.XX..XXXX..XXXX..XXX...XXXX..',
+				sn: 'XXXX.XX.XX..XXXX.XX.XX..XXXX..XXXX..XXX...XXXX..',
 				ta: '@re',
 				ag: 'oooa oa oa  oooa oa oa  oooa  oooa  ooo   aaao  ',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Tune", "Rented a Tent Break", "Tune" ]
@@ -2936,49 +2936,49 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 			Tune: {
 				upbeat: 1,
 				loop: true,
-				lg: " XX      X X     XX      X X     ",
-				mg: "@lg",
-				hg: "     X       X       X       X   ",
+				ls: " XX      X X     XX      X X     ",
+				ms: "@ls",
+				hs: "     X       X       X       X   ",
 				re: "hX rhX  hX rhX  hX rhX  hX rhX  h",
-				ca: " ....X..X....X..X....X..X....X..X",
+				sn: " ....X..X....X..X....X..X....X..X",
 				ta: " X     X X X   X X               ",
 				ag: " o     o o o   o o               ",
-				ch: ".X X.X  .X X.X  .X X.X  .X X.X  ."
+				sh: ".X X.X  .X X.X  .X X.X  .X X.X  ."
 			},
 			"Doppler Break": {
 				upbeat: 1,
-				lg: "                                 XXXXXXXXXXXXXXXXssssssssssssssss",
-				mg: "                             XXXXXXXXsssssssssssssssssssssssssss ",
-				hg: "                 rrrrrrrrrrrrXXXX                                ",
+				ls: "                                 XXXXXXXXXXXXXXXXssssssssssssssss",
+				ms: "                             XXXXXXXXsssssssssssssssssssssssssss ",
+				hs: "                 rrrrrrrrrrrrXXXX                                ",
 				re: " rrrrrrrrrrrrrrrrrrrrrrrrrrrrXXXX                                ",
-				ca: "     rrrrrrrrrrrrrrrrrrrrrrrrXXXX                                ",
+				sn: "     rrrrrrrrrrrrrrrrrrrrrrrrXXXX                                ",
 				ta: "                             XXXX                                ",
-				ch: ".X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  ."
+				sh: ".X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  ."
 			},
 			"Break 1": {
 				"upbeat": 1,
-				"lg": " X               X                                               ",
-				"mg": "         X       X               X                               ",
-				"hg": "         X               X       X               Xsssssssssss    ",
+				"ls": " X               X                                               ",
+				"ms": "         X       X               X                               ",
+				"hs": "         X               X       X               Xsssssssssss    ",
 				"re": " h                       X               r       X               ",
-				"ca": "                                         r                       ",
+				"sn": "                                         r                       ",
 				"ta": "                                         X                       ",
-				"ch": ".X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  ."
+				"sh": ".X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  .X X.X  ."
 			},
 			"Tamborim Stroke": {
-				"lg": "X     X X X   X X               ",
-				"mg": "@lg",
-				"hg": "@lg",
-				"re": "@lg",
-				"ca": "@lg",
-				"ta": "@lg",
+				"ls": "X     X X X   X X               ",
+				"ms": "@ls",
+				"hs": "@ls",
+				"re": "@ls",
+				"sn": "@ls",
+				"ta": "@ls",
 				"ag": "o     o o o   o o               ",
-				"ch": "@lg"
+				"sh": "@ls"
 			}
 		},
 		exampleSong: [
-			{ patternName: "Tune", instruments: ["lg", "mg", "hg", "ch"] },
-			{ patternName: "Tune", instruments: ["lg", "mg", "hg", "ch"] },
+			{ patternName: "Tune", instruments: ["ls", "ms", "hs", "sh"] },
+			{ patternName: "Tune", instruments: ["ls", "ms", "hs", "sh"] },
 			"Break 1",
 			"Tune", "Tune", "Tune", "Tune",
 			"Doppler Break",
@@ -2994,54 +2994,54 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: '0     XX0     X 0     XX0   X X ',
-				mg: '@lg',
-				hg: 's  X    s  X    s  X    ss sX   ',
+				ls: '0     XX0     X 0     XX0   X X ',
+				ms: '@ls',
+				hs: 's  X    s  X    s  X    ss sX   ',
 				re: '  X   X  X X  X   X   X  X X  X ',
-				ca: 'X..X..X.X..X..X.X..X..X.X..X..X.',
+				sn: 'X..X..X.X..X..X.X..X..X.X..X..X.',
 				ta: '  X   X  X X  X   X   X  X X  X ',
 				ag: 'a.ooo.aa.o.oo.ooo.aaa.oo.a.aa.oo',
-				ch: '................................'
+				sh: '................................'
 			},
 			'Break 1': {
-				lg: '                XX XX XX        ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: '                XX XX XX        ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				ot: 'J           L               F   '
 			},
 			'Silence Break': {
-				lg: '              XX',
-				ag: '@lg'
+				ls: '              XX',
+				ag: '@ls'
 			},
 			'Break 2': {
-				lg: 'X  s          X X  s          X ',
-				hg: 'X  s            X  s            ',
+				ls: 'X  s          X X  s          X ',
+				hs: 'X  s            X  s            ',
 				re: 'X..X..XXXX.XX.X.X..X..XXXX.XX...',
-				ca: '@re',
+				sn: '@re',
 				ta: '      XXXX XX X       XXXX XX   ',
 				ag: '      aaaa oa a       oooo ao   '
 			},
 			'Break 2 (Cut)': {
-				lg: 'X  s          X X  s  ssss sX X ',
-				hg: 'X  s            X  s  ssss sX   ',
+				ls: 'X  s          X X  s  ssss sX X ',
+				hs: 'X  s            X  s  ssss sX   ',
 				re: 'X..X..XXXX.XX.X.X..X..XXXX.XX...',
-				ca: '@re',
+				sn: '@re',
 				ta: '      XXXX XX X       XXXX XX   ',
 				ag: '      aaaa oa a       oooo ao   '
 			},
 			'Cross Break': {
-				lg: 'X  s          X X  s          X ',
-				hg: 'X  s            X  s            '
+				ls: 'X  s          X X  s          X ',
+				hs: 'X  s            X  s            '
 			},
 			'Cross Eight Break': {
-				lg: 'X X X X X X X X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X X X X X X X ',
+				ms: '@ls',
+				hs: '@ls',
 				volumeHack: crescendo(16)
 			}
 		},
@@ -3054,24 +3054,24 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: '   XX 0    XX 0    XX 0 X X X 0 ',
-				mg: 's   s X s   s X s   s X s   s X ',
-				hg: '@mg',
+				ls: '   XX 0    XX 0    XX 0 X X X 0 ',
+				ms: 's   s X s   s X s   s X s   s X ',
+				hs: '@ms',
 				re: 'X  X  X X  X  X X  X  X X  X  X ',
-				ca: 'X..X..X.X..X..X.X..X..X.X..X..X.',
+				sn: 'X..X..X.X..X..X.X..X..X.X..X..X.',
 				ta: 'X X X X X X X X XX              ',
 				ag: 'a a o o oa a oo a a o o oa a oo ',
-				ch: 'X.......X.......X.......X.......'
+				sh: 'X.......X.......X.......X.......'
 			},
 			'Scissor Break': {
-				lg: 'X X X X XX X XX ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X X X X XX X XX ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Scissor Break", "Tune", "Tune" ]
@@ -3086,117 +3086,117 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X     X     X     X     ',
-				mg: '  X X   X X   X X   XXXX',
-				hg: '@mg',
+				ls: 'X     X     X     X     ',
+				ms: '  X X   X X   X X   XXXX',
+				hs: '@ms',
 				re: '  X X   XXX   X X   XXX ',
-				ca: '..X.X...X.X...X.X.XXXXXX',
+				sn: '..X.X...X.X...X.X.XXXXXX',
 				ta: '  X X   X X       X X X ',
 				ag: 'o a a o a a o a a o     ',
-				ch: 'X X X X XXX X X X X XXX '
+				sh: 'X X X X XXX X X X X XXX '
 			},
 			'Break 2': {
-				lg: 'X X X                   ',
-				mg: '      X X X             ',
-				hg: '            X X X       ',
+				ls: 'X X X                   ',
+				ms: '      X X X             ',
+				hs: '            X X X       ',
 				re: '                  XXXXXX',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 3': {
-				lg: 'X X X       X X X       X X   X X   X X X X     ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X X       X X X       X X   X X   X X X X     ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '      X           X         X     X X X X X     ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 5': {
-				lg: '                  XXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '..X.X...X.X...X.X.XXXXXX',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: '                  XXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '..X.X...X.X...X.X.XXXXXX',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Bra Break': {
 				displayName: "Call Break",
-				lg: '      X           X         X     X     X X     ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '      X           X         X     X     X X     ',
+				ms: '@ls',
+				hs: '@ls',
 				re: 'X X X       X X X       X X   X X   X X         ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Cut-throat Break': {
-				lg: 'X     X     X           ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X     X     X           ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  X X   X X   X X       ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Cut-throat Break Fast': {
-				lg: 'X  X  X                 ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X  X  X                 ',
+				ms: '@ls',
+				hs: '@ls',
 				re: ' XX XX XX               ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			"Karla Break (6⁄4)": {
-				lg: repeat(3, 'XXXXXXXXXXXXXXXXXXXXXXXX') + 'X                       ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: repeat(3, 'XXXXXXXXXXXXXXXXXXXXXXXX') + 'X                       ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: { 0: .1, 24: .4, 48: .7, 72: 1  }
 			},
 			"8 up (6⁄4)": {
-				lg: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg',
+				ls: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls',
 				volumeHack: crescendo(48)
 			},
 			'Progressive (6⁄4)': {
-				lg: 'X     X     X     X     X X X X X X X X X X X X XXXXXXXXXXXXXXXXXXXXXXXX',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X     X     X     X     X X X X X X X X X X X X XXXXXXXXXXXXXXXXXXXXXXXX',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			'Progressive Karla (6⁄4)': {
-				lg: 'X     X     X     X     X X X X X X X X X X X X XXXXXXXXXXXXXXXXXXXXXXXXX                       ',
-				mg: '@lg',
-				hg: '@lg',
-				re: '@lg',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				ls: 'X     X     X     X     X X X X X X X X X X X X XXXXXXXXXXXXXXXXXXXXXXXXX                       ',
+				ms: '@ls',
+				hs: '@ls',
+				re: '@ls',
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Break 2", "Tune", "Tune", "Break 3", "Tune", "Tune", "Break 5", "Tune", "Tune", "Bra Break", "Tune", "Tune", "Cut-throat Break", "Tune", "Tune" ]
@@ -3208,40 +3208,40 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: repeat(4, 'X   X   X   X   '),
-				mg: repeat(4, '  XX     XXX    '),
-				hg: repeat(2, '      XX      XX      XXXXXXXXXX'),
+				ls: repeat(4, 'X   X   X   X   '),
+				ms: repeat(4, '  XX     XXX    '),
+				hs: repeat(2, '      XX      XX      XXXXXXXXXX'),
 				re: repeat(2, 'X XX  r X X X rrX XX  r  XXXX rr'),
-				ca: repeat(4, 'f.X...X...X...X.'),
+				sn: repeat(4, 'f.X...X...X...X.'),
 				ta: 'X X     X X     XX XXX XX       X XX XX X X X X XX XXX XX       ',
 				ag: repeat(4, 'ooooo a   a   a '),
-				ch: repeat(4, '................')
+				sh: repeat(4, '................')
 			},
 			'Pat 1': {
-				lg: '              XXX     XXX       ',
-				mg: '   X X     X X                  ',
-				hg: 'XXXXXXXXX                       '
+				ls: '              XXX     XXX       ',
+				ms: '   X X     X X                  ',
+				hs: 'XXXXXXXXX                       '
 			},
 			'Pat 2': {
-				lg: '              XXX     XXX       ',
-				mg: '   X X     X X                  ',
-				hg: 'XXXXXXXXXXXXX                   '
+				ls: '              XXX     XXX       ',
+				ms: '   X X     X X                  ',
+				hs: 'XXXXXXXXXXXXX                   '
 			},
 			'Break 1': {
-				lg: '   XX  XX X X    XXXX  XX X X      XX  XX X X    XXXX  XX       ',
-				mg: '@lg',
-				hg: '@lg',
-				ca: 'X               X               X               X               '
+				ls: '   XX  XX X X    XXXX  XX X X      XX  XX X X    XXXX  XX       ',
+				ms: '@ls',
+				hs: '@ls',
+				sn: 'X               X               X               X               '
 			},
 			'Break 2': {
-				lg: 'X X   XXX X    XX X    XX X     X X   XXX X    X X X X X        ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X X   XXX X    XX X    XX X     X X   XXX X    X X X X X        ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '    X       X       X       X       X       X  X X X X X        ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re',
+				sh: '@re',
 				ot: '                                                            A   '
 			}
 		},
@@ -3256,53 +3256,53 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: repeat(2, 's   X XX        '),
-				mg: repeat(2, 'X X             '),
-				hg: repeat(2, '            XXXX'),
+				ls: repeat(2, 's   X XX        '),
+				ms: repeat(2, 'X X             '),
+				hs: repeat(2, '            XXXX'),
 				re: repeat(2, ' XXX XXX XXX XXX'),
-				ca: repeat(2, 'X..X....X.XX....'),
+				sn: repeat(2, 'X..X....X.XX....'),
 				ta: 'X X X X X X X X XX              ',
 				ag: repeat(2, 'o a o  o o ao   '),
-				ch: repeat(2, '................')
+				sh: repeat(2, '................')
 			},
 			'Intro': {
 				loop: true,
 				re: repeat(4, 'r rrr r r r r r '),
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Intro+Surdos': {
 				loop: true,
-				lg: 'X         X X X X           X X X       X X X X X           X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: 'X         X X X X           X X X       X X X X X           X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: repeat(4, 'r rrr r r r r r '),
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Boum Shakala Break': {
-				lg: 'X XXX X XXX X X X XXX X XXX X X X XXX X XXX X X                 ',
-				mg: '@lg',
-				hg: 'X XXX X XXX X X X XXX X XXX X X X XXX X XXX X X             XXXX',
+				ls: 'X XXX X XXX X X X XXX X XXX X X X XXX X XXX X X                 ',
+				ms: '@ls',
+				hs: 'X XXX X XXX X X X XXX X XXX X X X XXX X XXX X X             XXXX',
 				re: '  XXX   XXX   X   XXX   XXX   X   XXX   XXX   X                 ',
-				ca: '  XXX   XXX   X   XXX   XXX   X   XXX   XXX   X X..X..XXX       ',
+				sn: '  XXX   XXX   X   XXX   XXX   X   XXX   XXX   X X..X..XXX       ',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			},
 			'Break 2': {
-				lg: 'X XX  XX XXXX XXX XX  XX X XX   X XX  XX XXXX XXX XX  XX X XX   X XX  XX XXXX XXX XX  XX X XX   ',
-				mg: '@lg',
-				hg: 'X XX  XX XXXX XXX XX  XX X XX   X XX  XX XXXX XXX XX  XX X XX   X XX  XX XXXX XXX XX  XX X XX XX',
+				ls: 'X XX  XX XXXX XXX XX  XX X XX   X XX  XX XXXX XXX XX  XX X XX   X XX  XX XXXX XXX XX  XX X XX   ',
+				ms: '@ls',
+				hs: 'X XX  XX XXXX XXX XX  XX X XX   X XX  XX XXXX XXX XX  XX X XX   X XX  XX XXXX XXX XX  XX X XX XX',
 				re: '                         X XX                            X XX                            X XX   ',
-				ca: '@re',
+				sn: '@re',
 				ta: '@re',
 				ag: '@re',
-				ch: '@re'
+				sh: '@re'
 			}
 		},
 		exampleSong: [ "Intro", "Intro", "Intro+Surdos", "Intro+Surdos", "Tune", "Tune", "Boum Shakala Break", "Tune", "Tune", "Break 2", "Tune", "Tune" ]
@@ -3315,47 +3315,47 @@ const rawTunes: {[tuneName: string]: RawTune} = {
 		patterns: {
 			Tune: {
 				loop: true,
-				lg: 'X  X  X  X  X  X                ',
-				mg: '@lg',
-				hg: '                        X  X  X ',
+				ls: 'X  X  X  X  X  X                ',
+				ms: '@ls',
+				hs: '                        X  X  X ',
 				re: 'f   h X f   h   f   h X f   h   ',
-				ca: 'X...X...X...X.....XXX...XXX.X...',
+				sn: 'X...X...X...X.....XXX...XXX.X...',
 				ta: '    X       X       X       X   ',
 				ag: '  aaa o aaa o     aaa           ',
-				ch: '...XX......XX......XX......XX...'
+				sh: '...XX......XX......XX......XX...'
 			},
 			"Bra Break": {
 				displayName: "Call Break",
-				lg: repeat(3, '        X       ') + 'X     X X  X  X ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: repeat(3, '        X       ') + 'X     X X  X  X ',
+				ms: '@ls',
+				hs: '@ls',
 				re: repeat(3, 'f hr hr         ') + 'X     X X  X  X ',
-				ca: repeat(3, '                ') + '..XXX...XXX.X...',
+				sn: repeat(3, '                ') + '..XXX...XXX.X...',
 				ta: repeat(3, '           X  X ') + 'X     X X  X  X ',
 				ag: '@ta',
-				ch: '@ta'
+				sh: '@ta'
 			},
 			"Kick Back 1": {
 				loop: true,
-				lg: '            X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '            X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  XXX   XXX     ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			},
 			"Kick Back 2": {
 				loop: true,
-				lg: '    X       X   ',
-				mg: '@lg',
-				hg: '@lg',
+				ls: '    X       X   ',
+				ms: '@ls',
+				hs: '@ls',
 				re: '  XXX   XXX     ',
-				ca: '@lg',
-				ta: '@lg',
-				ag: '@lg',
-				ch: '@lg'
+				sn: '@ls',
+				ta: '@ls',
+				ag: '@ls',
+				sh: '@ls'
 			}
 		},
 		exampleSong: [ "Tune", "Tune", "Bra Break", "Tune", "Tune", "Kick Back 1", "Kick Back 1", "Kick Back 2", "Kick Back 2", "Tune", "Tune" ]

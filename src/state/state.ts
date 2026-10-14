@@ -7,6 +7,7 @@ import { CompressedPattern, compressedPatternValidator, compressPattern, Pattern
 import config from "../config";
 import * as z from "zod";
 import { getI18n } from "../services/i18n";
+import { migrateLegacyState } from "../legacyInstruments";
 
 export type State = z.infer<typeof stateValidator>;
 export const stateValidator = z.object({
@@ -85,6 +86,9 @@ export function extendStateFromCompressed(
 	importOptions?: boolean,
 	ignoreMissingDefaultPatterns?: boolean
 ): Array<string> {
+	// Anciens identifiants d'instruments du player (lg/mg/hg/ca/ch) → ror-player, voir legacyInstruments.ts
+	object = migrateLegacyState(object);
+
 	if(importOptions) {
 		if(object.songIdx != null)
 			state.songIdx = object.songIdx;

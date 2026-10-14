@@ -4,57 +4,57 @@
 		"speed": 120,
 		"patterns": {
 			"Tune": {
-				"lg": "    X       X   X   X   X   X",
-				"mg": "X       X       X       X",
-				"hg": "    XX X    X X     XX X    X X",
+				"ls": "    X       X   X   X   X   X",
+				"ms": "X       X       X       X",
+				"hs": "    XX X    X X     XX X    X X",
 				"re": "X  X  X   X X   X  X  X   X X",
-				"ca": "X..X..X...X.X...X..X..X...X.X...",
+				"sn": "X..X..X...X.X...X..X..X...X.X...",
 				"ta": "X X XX X X XX X X X XX X X XX X",
 				"ag": "a a oo o a ao o a a oo o a ao o",
-				"ch": ".X....X........XX...X...X...X...",
+				"sh": ".X....X........XX...X...X...X...",
 				"length": 8
 			},
 			"break 1": {
-				"lg": "X             X X           X X X         X X X   X   X   X   X",
-				"mg": "X             X X           X X X         X X X X   X   X   X",
-				"hg": "@lg",
+				"ls": "X             X X           X X X         X X X   X   X   X   X",
+				"ms": "X             X X           X X X         X X X X   X   X   X",
+				"hs": "@ls",
 				"re": "X             X X           X X X         X X X",
-				"ca": "@re",
+				"sn": "@re",
 				"ta": "@re",
 				"ag": "a             a a           a a a         a a a",
 				"length": 16
 			},
 			"Break 2": {
-				"lg": "X   X   X   X",
-				"mg": "@lg",
-				"hg": "@lg",
+				"ls": "X   X   X   X",
+				"ms": "@ls",
+				"hs": "@ls",
 				"re": "                X X X X X X X",
-				"ca": "@re",
+				"sn": "@re",
 				"ta": "@re",
 				"ag": "                a a a a a a a",
 				"ot": "                              F",
 				"length": 8
 			},
 			"Clave Samba": {
-				"lg": "X  X  X   X X X     X       X   X  X  X   X X X     X       X   X  X  X   X X X     X       X   X  X  X   X X X X  X  X   X X X X  X  X   X X X",
-				"mg": "X  X  X   X X X X       X       X  X  X   X X X X       X       X  X  X   X X X X       X       X  X  X   X X X X  X  X   X X X X  X  X   X X X",
-				"hg": "X  X  X   X X X     XX X    X X X  X  X   X X X     XX X    X X X  X  X   X X X     XX X    X X X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"ls": "X  X  X   X X X     X       X   X  X  X   X X X     X       X   X  X  X   X X X     X       X   X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"ms": "X  X  X   X X X X       X       X  X  X   X X X X       X       X  X  X   X X X X       X       X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"hs": "X  X  X   X X X     XX X    X X X  X  X   X X X     XX X    X X X  X  X   X X X     XX X    X X X  X  X   X X X X  X  X   X X X X  X  X   X X X",
 				"re": "X  X  X   X X X X  X  X   X X   X  X  X   X X X X  X  X   X X   X  X  X   X X X X  X  X   X X   X  X  X   X X X X  X  X   X X X X  X  X   X X X",
-				"ca": "X  X  X   X X X X..X..X...X.X...X  X  X   X X X X..X..X...X.X...X  X  X   X X X X..X..X...X.X...X  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"sn": "X  X  X   X X X X..X..X...X.X...X  X  X   X X X X..X..X...X.X...X  X  X   X X X X..X..X...X.X...X  X  X   X X X X  X  X   X X X X  X  X   X X X",
 				"ta": "X  X  X   X X X X X XX X X XX X X  X  X   X X X X X XX X X XX X X  X  X   X X X X X XX X X XX X X  X  X   X X X X  X  X   X X X X  X  X   X X X",
 				"ag": "o  o  o   o o o a a oo o a ao o o  o  o   o o o a a oo o a ao o o  o  o   o o o a a oo o a ao o o  o  o   o o o o  o  o   o o o o  o  o   o o o",
-				"ch": "X..X..X. .X.X.X..X....X........XX..X..X. .X.X.X..X....X........XX..X..X. .X.X.X..X....X........XX  X  X   X X X X  X  X   X X X X  X  X   X X X",
+				"sh": "X..X..X. .X.X.X..X....X........XX..X..X. .X.X.X..X....X........XX..X..X. .X.X.X..X....X........XX  X  X   X X X X  X  X   X X X X  X  X   X X X",
 				"length": 36
 			},
 			"Baguettes dans le nez": {
-				"lg": "                  X     X                 X     X                       X   X   X   X   X   X   X           X                                   ",
-				"mg": "@lg",
-				"hg": "@lg",
+				"ls": "                  X     X                 X     X                       X   X   X   X   X   X   X           X                                   ",
+				"ms": "@ls",
+				"hs": "@ls",
 				"re": "   XXXX  X  X              XXXX  X  X              XXXX  X  X           X   X   X   X   X   X   X           X                                   ",
-				"ca": "@lg",
-				"ta": "@lg",
+				"sn": "@ls",
+				"ta": "@ls",
 				"ag": "                  o     o                 o     o                       o   o   o   o   o   o   o           o                                   ",
-				"ch": "@lg",
+				"sh": "@ls",
 				"time": 12,
 				"length": 12
 			}
@@ -80,24 +80,24 @@
 		"descriptionFilename": "olodum",
 		"patterns": {
 			"Break d'entree": {
-				"lg": "X  X  X X  X  X                 X  X  X X  X  X",
-				"mg": "@lg",
-				"hg": "@lg",
+				"ls": "X  X  X X  X  X                 X  X  X X  X  X",
+				"ms": "@ls",
+				"hs": "@ls",
 				"re": "                X  X  X X  X  X",
-				"ca": "@re",
+				"sn": "@re",
 				"ta": "@re",
 				"ag": "                o  o  o o  o  o",
 				"length": 12
 			},
 			"Tune": {
-				"lg": "X       X       X       X   X   X       X       X       X   X",
-				"mg": "   X       X       X        X      X       X       X        X",
-				"hg": "      X       X       X   X   X       X       X       X   X   X",
+				"ls": "X       X       X       X   X   X       X       X       X   X",
+				"ms": "   X       X       X        X      X       X       X        X",
+				"hs": "      X       X       X   X   X       X       X       X   X   X",
 				"re": "hXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXhhXXX",
-				"ca": "X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...",
+				"sn": "X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...X..X..XX..X.X...",
 				"ta": "X XXX X   X   X X XXX X   X   X X XXX X   X   X X XXX X X XXX X",
 				"ag": "a  o  a   o o   a  o  a   o o   a  o  a a  o  a a  o  a   o o",
-				"ch": "X..XX..XX..XX..XX..XX..XX..XX..XX  X  X X  X  X X..XX..XX..XX..X",
+				"sh": "X..XX..XX..XX..XX..XX..XX..XX..XX  X  X X  X  X X..XX..XX..XX..X",
 				"length": 16
 			},
 			"Olodum - deuxième partie variante tambourim": {
@@ -117,14 +117,14 @@
 		"descriptionFilename": "rap",
 		"patterns": {
 			"Tune": {
-				"lg": "X           r     X           X     r   X       X           r     X     X     X     r           X           r     X           X     r   X       X           r     X     X     X     r",
-				"mg": "@lg",
-				"hg": "@lg",
+				"ls": "X           r     X           X     r   X       X           r     X     X     X     r           X           r     X           X     r   X       X           r     X     X     X     r",
+				"ms": "@ls",
+				"hs": "@ls",
 				"re": "            X                       X                       X               X       X                       X                       X                       X              X        X",
-				"ca": "@re",
+				"sn": "@re",
 				"ta": "X        X              X     X     X     X     X        X              X     X     X     X     X        X              X     X     X     X     X        X              X     X     X     X",
 				"ag": "o     o                       a     a     a     o     o                                   o     o                       o     a     a     o     o           a     o  a     a     o  a     a",
-				"ch": "      X           X           X           X           X           X           X           X           X           X           X           X           X           X           X           X",
+				"sh": "      X           X           X           X           X           X           X           X           X           X           X           X           X           X           X           X",
 				"time": 12,
 				"length": 16
 			}
@@ -138,19 +138,19 @@
 		"speed": 130,
 		"patterns": {
 			"Tune": {
-				"lg": "s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X",
-				"mg": "@lg",
-				"hg": "@lg",
+				"ls": "s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X s   s   s   s   s   s   s   X X",
+				"ms": "@ls",
+				"hs": "@ls",
 				"re": "  XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r   XX  r",
-				"ca": "X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r",
+				"sn": "X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r X r r r",
 				"ta": "X  X  X X       X  X  X X      XX X   X X X   X X  X  X X   X     X   X   X   X X  X  X X         X   X   X   X  XXX XXX XXXX",
 				"ag": "o  o  a o       o  o  a o      oa o   o a o   o o  o  a o   a     o   o   o   o o  o  a o         o   o   o   o  aaa aaa aaaa",
 				"length": 32
 			},
 			"Break 1": {
-				"lg": "            X               X       X       X                       X   X   X                       X   X   X",
-				"mg": "@lg",
-				"hg": "@lg",
+				"ls": "            X               X       X       X                       X   X   X                       X   X   X",
+				"ms": "@ls",
+				"hs": "@ls",
 				"re": "X  X  X X       X  X  X X      XX X   X X X   X X  X  X X   X     X   X   X   X X  X  X X         X   X   X  XXX XXX XXX XXXX",
 				"ta": "@re",
 				"ag": "o  o  a o       o  o  a o      oa o   o a o   o o  o  a o   a     o   o   o   o o  o  a o         o   o   o  aaa aaa aaa aaaa",
@@ -171,14 +171,14 @@
 		"descriptionFilename": "funk-combatucada",
 		"patterns": {
 			"Tune": {
-				"lg": "X  X  X X X r r X  X  X X     XXX  X  X X X r r X  X  X X       ",
-				"mg": "@lg",
-				"hg": "@lg",
+				"ls": "X  X  X X X r r X  X  X X     XXX  X  X X X r r X  X  X X       ",
+				"ms": "@ls",
+				"hs": "@ls",
 				"re": "f  hf  hf  hf  hf  hf  hf  hXhrhf  hf  hf  hf  hf  hf  hf  hXhrh",
-				"ca": "....X.......X.......X.......X.......X.......X.......X.......X...",
+				"sn": "....X.......X.......X.......X.......X.......X.......X.......X...",
 				"ta": "    X       X X     X     X X       X       X X     X       X X ",
 				"ag": "o  a  o o o a a o  a  o o aaa   o  a  o o o a a o  a  o o aaa   ",
-				"ch": "X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.",
+				"sh": "X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.",
 				"length": 16
 			}
 		}
@@ -191,11 +191,11 @@
 		"descriptionFilename": "sambalek",
 		"patterns": {
 			"Tune": {
-				"lg": "X       X       X       X       ",
-				"mg": "    X       X       X       X   ",
-				"hg": "         X X XXX     X X    XXXX",
+				"ls": "X       X       X       X       ",
+				"ms": "    X       X       X       X   ",
+				"hs": "         X X XXX     X X    XXXX",
 				"re": "X XXX XX X XX X X XXX XX X XX X ",
-				"ca": "X.....f.X.....f.X.....f.X.....f.",
+				"sn": "X.....f.X.....f.X.....f.X.....f.",
 				"ag": "o a o aao aao aao a o aao aao aa",
 				"length": 8
 			}
@@ -209,28 +209,28 @@
 		"descriptionFilename": "reggaeton",
 		"patterns": {
 			"Tune": {
-				"lg": "X       X       X       X   X   ",
-				"mg": "   X       X       X     X X    ",
-				"hg": "      X       X       X       X ",
+				"ls": "X       X       X       X   X   ",
+				"ms": "   X       X       X     X X    ",
+				"hs": "      X       X       X       X ",
 				"re": "  X   X   X   X   X   X  XXX  X ",
-				"ca": "....X.......X.......X.......f...",
+				"sn": "....X.......X.......X.......f...",
 				"ta": "X XX  X X XX  X X XX  X X X X X ",
-				"ch": "X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.",
+				"sh": "X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.",
 				"length": 8
 			},
 			"Cubanito": {
-				"lg": "X   X   X   X   X   X   X   X   ",
+				"ls": "X   X   X   X   X   X   X   X   ",
 				"re": "   X  X    X  X    X  X   XX  X ",
-				"ca": "@re",
+				"sn": "@re",
 				"length": 8
 			},
 			"Agogoton": {
 				"ag": "o  ao a o  ao a o  ao a oo ao a ",
-				"ch": "X   X   X   X   X   X   X   X   ",
+				"sh": "X   X   X   X   X   X   X   X   ",
 				"length": 8
 			},
 			"Hey are you ready": {
-				"ca": "....f.......f.......f.......f...",
+				"sn": "....f.......f.......f.......f...",
 				"length": 8
 			}
 		}
@@ -244,15 +244,24 @@
 		"descriptionFilename": "samba-reggae-combatucada",
 		"patterns": {
 			"Tune": {
-				"lg": "    X       X X     X       X X     X       X X     X       X X ",
-				"mg": "X       X       X       X       X       X       X       X       ",
-				"hg": "    X X     XXXX    X X     XXXX    X X     XXXXXXXXXXXXXXXXXXXX",
+				"ls": "    X       X X     X       X X     X       X X     X       X X ",
+				"ms": "X       X       X       X       X       X       X       X       ",
+				"hs": "    X X     XXXX    X X     XXXX    X X     XXXXXXXXXXXXXXXXXXXX",
 				"ti": "                                                                ",
 				"re": "X  X  X   X X   X         X XXXXX  X  X   X X   X  X  X   X X   ",
-				"ca": "X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..",
+				"sn": "X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..X..X..X...X..X..",
 				"ta": "X  X  X   X X   X  X  X   X X   X  X  X   X X   X  X  X   X X   ",
 				"ag": "a  a  a   o o   a  a  a   o o   a  a  a   o o   o a a oo a aa o ",
 				"length": 16
+			}
+		}
+	},
+	"gfgfg": {
+		"patterns": {
+			"Tune": {
+				"ls": "ss sX  0",
+				"hs": "          X",
+				"length": 4
 			}
 		}
 	}

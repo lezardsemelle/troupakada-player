@@ -1,7 +1,7 @@
 import * as z from "zod";
 import { getI18n } from "./services/i18n";
 
-const instrumentKeys = ["lg", "mg", "hg", "ti", "re", "ca", "ta", "ag", "ch", "ot"] as const;
+const instrumentKeys = ["ls", "ms", "hs", "ti", "re", "sn", "ta", "ag", "sh", "ot"] as const;
 export const instrumentValidator = z.enum(instrumentKeys);
 export type Instrument = z.infer<typeof instrumentValidator>;
 
@@ -73,16 +73,16 @@ const config: Config = {
 	instrumentKeys: [...instrumentKeys],
 
 	instruments: {
-		lg: {
-			name: () => getI18n().t("config.instruments-lg"),
+		ls: {
+			name: () => getI18n().t("config.instruments-ls"),
 			strokes: [ "X", "0", "s", "t", "r" ]
 		},
-		mg: {
-			name: () => getI18n().t("config.instruments-mg"),
+		ms: {
+			name: () => getI18n().t("config.instruments-ms"),
 			strokes: [ "X", "0", "s", "t", "r" ]
 		},
-		hg: {
-			name: () => getI18n().t("config.instruments-hg"),
+		hs: {
+			name: () => getI18n().t("config.instruments-hs"),
 			strokes: [ "X", "0", "s", "t", "r" ]
 		},
 		// Timbal (tambour à main brésilien) : les lettres/chiffres étant tous déjà pris dans `strokes`, ses frappes
@@ -96,8 +96,8 @@ const config: Config = {
 			name: () => getI18n().t("config.instruments-re"),
 			strokes: [ "X", "f", "r", "h", ".", "z", "s" ]
 		},
-		ca: {
-			name: () => getI18n().t("config.instruments-ca"),
+		sn: {
+			name: () => getI18n().t("config.instruments-sn"),
 			strokes: [ ".", "X", "r", "f" ]
 		},
 		ta: {
@@ -108,8 +108,8 @@ const config: Config = {
 			name: () => getI18n().t("config.instruments-ag"),
 			strokes: [ "o", "a", "r", "." ]
 		},
-		ch: {
-			name: () => getI18n().t("config.instruments-ch"),
+		sh: {
+			name: () => getI18n().t("config.instruments-sh"),
 			strokes: [ "X", "." ]
 		},
 		ot: {
@@ -259,30 +259,30 @@ const config: Config = {
 		"Defaults": {
 			displayName: () => getI18n().t("config.stroke-volume-defaults"),
 			volumes: {
-				lg: 0.7,
-				mg: 0.7,
-				hg: 0.7,
+				ls: 0.7,
+				ms: 0.7,
+				hs: 0.7,
 				ti: 1,
 				re: 1.6,
-				ca: 1.2,
+				sn: 1.2,
 				ta: 1.4,
 				ag: 1,
-				ch: 0.5,
+				sh: 0.5,
 				ot: 1
 			}
 		},
 		"Shitty speakers": {
 			displayName: () => getI18n().t("config.stroke-volume-shitty"),
 			volumes: {
-				lg: 1,
-				mg: 1,
-				hg: 1.1,
+				ls: 1,
+				ms: 1,
+				hs: 1.1,
 				ti: 1,
 				re: 1.5,
-				ca: 1.3,
+				sn: 1.3,
 				ta: 1.2,
 				ag: 1,
-				ch: 0.45,
+				sh: 0.45,
 				ot: 1
 			}
 		}
